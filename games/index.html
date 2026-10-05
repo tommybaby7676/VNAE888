@@ -222,7 +222,7 @@
     .metric-num { font-family: "Chakra Petch"; font-size: 1.45rem; font-weight: 700; font-style: italic; color: var(--gold); }
     .metric-lbl { font-size: 0.75rem; color: #4b5563; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; margin-top: 2px; }
 
-    /* 🏷️️ 6 大分類篩選膠囊 (順序：全部 / 老虎機 / 鬥雞 / 真人 / 體育 / 捕魚) */
+    /* 🏷 6 大分類篩選膠囊 (順序：全部 / 老虎機 / 鬥雞 / 真人 / 體育 / 捕魚) */
     .filter-wrapper {
       display: flex; justify-content: center; gap: 10px; margin: 28px 0 16px;
       overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch;
@@ -266,7 +266,7 @@
     .game-thumb img { 
       width: 100%; 
       height: 100%; 
-      object-fit: contain; /* 👈 自相容防切邊核心 */
+      object-fit: contain;
       display: block; 
       transition: transform 0.4s; 
     }
@@ -354,8 +354,49 @@
     .reveal { opacity: 0; transform: translateY(18px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
     .reveal.in { opacity: 1; transform: none; }
 
+    /* 🚀 回到頂端火箭按鈕樣式 */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1.5px solid var(--pink);
+      color: var(--pink);
+      cursor: pointer !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 990;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(16px);
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+    .back-to-top.show {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+    .back-to-top:hover {
+      background: var(--pink);
+      color: #ffffff;
+    }
+    .back-to-top svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+      pointer-events: none;
+    }
+
     /* 📱 手機端極致排版與防擠壓修正 */
     @media (max-width: 768px) {
+      .game-card.mobile-collapsed { display: none !important; }
       .nav-links { display: none; }
       .menu-toggle { display: block; }
       .logo-img { height: var(--logo-height-mobile); }
@@ -381,6 +422,13 @@
 
       .modal-box { max-height: 92vh; }
       .modal-content { padding: 18px; }
+
+      .back-to-top {
+        bottom: 84px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+      }
     }
 
     /* 💬 懸浮社群氣泡容器 */
@@ -658,7 +706,7 @@
     <svg viewBox="0 0 24 24"><path d="M18 15 L12 9 L6 15"/><path d="M12 9 L12 21"/></svg>
   </button>
 
-  <!-- 官方正式頁尾 -->
+  <!-- 官方正式頁尾 (Logo 檔名修正為 logo.png) -->
   <footer>
     <div class="wrap">
       <div class="f-links">
@@ -738,7 +786,7 @@
   <!-- 核心動態引擎 -->
   <script>
     // -------------------------------------------------------------
-    // 1. 廠商純越南文評測資料庫 (彈窗內容在地化)
+    // 1. 廠商純越南文評測資料庫 (彈窗圖檔修正為 .webp)
     // -------------------------------------------------------------
     const providerDatabase = {
       pg: {
@@ -855,7 +903,7 @@
     });
 
     // -------------------------------------------------------------
-    // 3. 手機端卡片折疊控制
+    // 3. 手機端卡片折疊控制 (修復過濾連動與初次折疊狀態)
     // -------------------------------------------------------------
     let isGamesExpanded = false;
 
@@ -940,7 +988,7 @@
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
 
     // -------------------------------------------------------------
-    // 7. 回到頂部按鈕
+    // 7. 回到頂部按鈕 (滾動監聽)
     // -------------------------------------------------------------
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
@@ -1041,8 +1089,18 @@
       });
     })();
 
-    window.addEventListener('resize', updateMobileGamesCollapse);
-    document.addEventListener('DOMContentLoaded', updateMobileGamesCollapse);
+    // -------------------------------------------------------------
+    // 12. 頁面初始化 (確保手機載入時立即折疊卡片)
+    // -------------------------------------------------------------
+    function initMobileCollapse() {
+      if (typeof updateMobileGamesCollapse === 'function') {
+        updateMobileGamesCollapse();
+      }
+    }
+
+    window.addEventListener('resize', initMobileCollapse);
+    window.addEventListener('DOMContentLoaded', initMobileCollapse);
+    initMobileCollapse();
   </script>
 </body>
 </html>
