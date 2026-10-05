@@ -149,6 +149,7 @@
 
     .mobile-actions { display: none; }
     @media (max-width: 768px) {
+      .game-card.mobile-collapsed { display: none !important; }
       .nav-links { display: none !important; }
       .mobile-actions { display: flex !important; align-items: center !important; gap: 10px !important; }
       .nav-in { padding: 0 14px !important; }
@@ -741,7 +742,7 @@
     // -------------------------------------------------------------
     const providerDatabase = {
       pg: {
-        banner: "./PG.jpg",
+        banner: "./PG.webp",
         title: "Sảnh Nổ Hũ PG Soft - Đồ Họa 3D Đỉnh Cao Dọc Màn Hình",
         subtitle: "Tỷ Lệ Hoàn Trả RTP 97.4% | Cơ Chế Combo Đa Tầng Cực Lớn",
         prose: `
@@ -755,7 +756,7 @@
         `
       },
       pp: {
-        banner: "./PP.jpg",
+        banner: "./PP.webp",
         title: "Pragmatic Play - Ông Vua Slots Nổ Hũ Toàn Cầu",
         subtitle: "Cơ Chế Tumble Nổ Liên Hoàn | Nhân Thưởng Ngẫu Nhiên Lên Đến 5,000x",
         prose: `
@@ -769,7 +770,7 @@
         `
       },
       daga: {
-        banner: "./DAGA.jpg",
+        banner: "./DAGA.webp",
         title: "Đá Gà Thomo SV388 - Trường Gà Trực Tiếp CPC7 &amp; CPC9",
         subtitle: "Độc Quyền Bản Quyền Phát Sóng | Đầy Đủ Kèo Meron, Wala, BDD",
         prose: `
@@ -783,7 +784,7 @@
         `
       },
       casino: {
-        banner: "./CASINO.jpg",
+        banner: "./CASINO.webp",
         title: "Casino Trực Tuyến - Sexy Baccarat &amp; Bàn Cược Đẳng Cấp 4K",
         subtitle: "Dealer Nóng Bỏng Chuẩn Quốc Tế | Công Nghệ Nhận Diện Bài Quang Học",
         prose: `
@@ -797,7 +798,7 @@
         `
       },
       sports: {
-        banner: "./SPORTS.jpg",
+        banner: "./SPORTS.webp",
         title: "Cá Cược Thể Thao SABA - Đỉnh Cao Kèo Bóng Đá Trực Tuyến",
         subtitle: "Hàng Ngàn Kèo Trận Mỗi Ngày | Tỷ Lệ Kèo Châu Á &amp; Kèo Tài Xỉu Cạnh Tranh",
         prose: `
@@ -811,7 +812,7 @@
         `
       },
       fish: {
-        banner: "./FISH.jpg",
+        banner: "./FISH.webp",
         title: "Bắn Cá Đổi Thưởng Fish Hunter - Săn Boss Đại Dương X1000",
         subtitle: "Đồ Họa 3D Đại Dương Sắc Nét | Kho Vũ Khí Laser &amp; Bom Băng Đa Dạng",
         prose: `
