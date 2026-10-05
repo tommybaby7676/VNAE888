@@ -66,7 +66,6 @@
       padding-top: var(--nav-height);
     }
 
-    
     .bg-city {
       display: none !important;
     }
@@ -130,12 +129,22 @@
       box-shadow: 0 0 14px rgba(217, 27, 36, 0.35) !important;
     }
 
+    /* 頂部漢堡按鈕：深色質感白底版 */
     .menu-toggle {
-      display: none; background: rgba(217, 27, 36, 0.08); border: 1.5px solid var(--pink);
-      color: var(--pink); font-family: "Chakra Petch"; font-weight: 700;
-      font-size: 0.85rem; padding: 5px 10px; cursor: pointer; border-radius: 4px;
-      line-height: 1; align-items: center; gap: 6px;
-      box-shadow: 0 0 10px rgba(217, 27, 36, 0.2);
+      display: none; 
+      background: #ffffff; 
+      border: 1.5px solid #d1d5db;
+      color: #374151; 
+      font-family: "Chakra Petch", sans-serif; 
+      font-weight: 700;
+      font-size: 0.85rem; 
+      padding: 5px 10px; 
+      cursor: pointer; 
+      border-radius: 4px;
+      line-height: 1; 
+      align-items: center; 
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .mobile-menu {
@@ -178,12 +187,19 @@
        font-size: 0.95rem;
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
+    
+    /* 次要按鈕：實心微白底 + 紅金細邊 */
     .btn-ghost {
-      background: rgba(255, 255, 255, 0.9); color: var(--pink) !important;
-      border: 1.5px solid var(--pink); padding: 11px 22px; font-size: 0.95rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      background: #ffffff !important; 
+      color: var(--pink) !important;
+      border: 1.5px solid var(--pink) !important; 
+      padding: 11px 22px; 
+      font-size: 0.95rem;
+      box-shadow: 0 2px 8px rgba(217, 27, 36, 0.08);
     }
-    .btn-ghost:hover { background: rgba(217, 27, 36, 0.08); }
+    .btn-ghost:hover { 
+      background: rgba(217, 27, 36, 0.06) !important; 
+    }
     .btn-large {
       width: 100%; max-width: 440px; padding: 16px 32px; font-size: 1.15rem; margin: 0 auto;
       animation: btnPulse 2s ease-in-out infinite;
@@ -193,7 +209,7 @@
       50% { transform: scale(1.03); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
     }
 
-    /*  核心：等比自相容輪播容器 */
+    /* 🎠 核心：等比自相容輪播容器 */
     .carousel-container {
       position: relative;
       width: 100%;
@@ -287,21 +303,79 @@
     .stat .n { font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.6rem; color: var(--gold); line-height: 1; }
     .stat .t { color: #4b5563; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-top: 4px; }
 
+    /* 🧭 快速導航（AE888 旗艦白金立體版） */
     .toc {
-      max-width: 1020px; margin: 18px auto 0; background: var(--panel-solid);
-      border: 1px solid var(--line); padding: 16px 18px;
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      max-width: 1020px; 
+      margin: 22px auto 0; 
+      background: #ffffff;
+      border: 1.5px solid rgba(217, 27, 36, 0.2); 
+      padding: 20px 18px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     }
-    .toc-title { font-family: "Chakra Petch"; font-weight: 700; font-size: 0.88rem; letter-spacing: 1.5px; color: var(--pink); margin-bottom: 12px; }
-    .toc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .toc-title { 
+      font-family: "Chakra Petch", sans-serif; 
+      font-weight: 700; 
+      font-size: 0.95rem; 
+      letter-spacing: 1.5px; 
+      color: var(--pink); 
+      margin-bottom: 16px; 
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .toc-title::before, .toc-title::after {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--gold);
+    }
+    
+    /* 網格系統：設定等高對齊 */
+    .toc-grid { 
+      display: grid; 
+      grid-template-columns: repeat(4, 1fr); 
+      gap: 12px; 
+    }
     .toc-grid a {
-      display: flex; align-items: center; justify-content: center; gap: 6px;
-      text-decoration: none; font-family: "Chakra Petch"; font-weight: 700; font-size: 0.82rem;
-      color: #374151; background: #f9fafb; border: 1px solid #e5e7eb;
-      padding: 10px 8px; transition: 0.2s;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      text-align: center;
+      gap: 6px;
+      text-decoration: none; 
+      font-family: "Chakra Petch", "Noto Sans SC", sans-serif; 
+      font-weight: 700; 
+      font-size: 0.84rem;
+      color: #374151; 
+      background: #ffffff; 
+      border: 1px solid rgba(212, 160, 23, 0.28);
+      padding: 12px 10px; 
+      min-height: 52px; /* 👈 強制統一高度，確保 100% 齊平 */
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      transition: all 0.22s ease;
+      word-break: keep-all;
     }
-    .toc-grid a:hover { border-color: var(--pink); color: var(--pink); background: rgba(217, 27, 36, 0.05); transform: translateY(-2px); }
+    .toc-grid a i {
+      color: var(--gold);
+      font-style: normal;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+    .toc-grid a:hover { 
+      border-color: var(--pink); 
+      color: #ffffff; 
+      background: linear-gradient(120deg, var(--pink), var(--purple)); 
+      box-shadow: 0 4px 14px rgba(217, 27, 36, 0.25);
+      transform: translateY(-2px); 
+    }
+    .toc-grid a:hover i {
+      color: #ffffff;
+    }
 
     section { padding: 24px 0; position: relative; scroll-margin-top: calc(var(--nav-height) + 8px); }
     .eyebrow { font-family: "Chakra Petch"; font-weight: 600; font-size: 0.8rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--pink); margin-bottom: 8px; }
@@ -416,12 +490,12 @@
     .back-to-top:hover { background: var(--pink); color: #ffffff; }
     .back-to-top svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2.5; }
 
-    /*手機端極致排版防擠壓修正 */
+    /* 📱 手機端極致排版防擠壓修正 */
     @media (max-width: 768px) {
       .cta-row { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
       .cta-row .btn { width: 100% !important; padding: 11px 4px !important; font-size: 0.8rem !important; }
       
-      /*核心：數據區擠壓斷行問題 */
+      /* 📊 核心：修復 3 欄數據區擠壓斷行問題 */
       .stats {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
@@ -444,7 +518,18 @@
         overflow-wrap: normal !important;
       }
 
-      .toc-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      /* 📱 快速導航兩欄等高對齊 */
+      .toc-grid { 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 8px !important;
+      }
+      .toc-grid a {
+        padding: 10px 6px !important;
+        font-size: 0.78rem !important;
+        line-height: 1.25 !important;
+        min-height: 50px !important;
+      }
+
       .games { grid-template-columns: 1fr; gap: 12px; }
       .feat-grid { grid-template-columns: 1fr; gap: 10px; }
       .inforow { grid-template-columns: 1fr; }
@@ -464,7 +549,7 @@
   <nav>
     <div class="nav-in">
       <a class="logo-box" href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-        <img src="logo.png" alt="AE888 Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="10003.png" alt="AE888 Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <span class="logo-fallback"><span class="dot"></span><span>AE888</span></span>
       </a>
 
@@ -573,7 +658,7 @@
         </div>
       </div>
 
-      <!-- 快速導航 -->
+      <!-- 快速導航 (已升級：100% 等高齊平、金紅旗艦版) -->
       <div class="toc">
         <div class="toc-title">ĐIỀU HƯỚNG NHANH</div>
         <div class="toc-grid">
@@ -601,8 +686,8 @@
       </div>
 
       <div class="games">
-        <!-- 1. 鬥雞 SV388 -->
-        <a class="game track-outbound" href="javascript:void(0);">
+        
+         <a class="game track-outbound" data-href="https://www.ae888.com/promotions/258510d5-0b56-4417-a4a7-e3c8b5cd0c97" href="javascript:void(0);">
           <div class="cover">
             <img src="B1.webp" alt="Đá Gà SV388 Thomo">
           </div>
@@ -612,8 +697,7 @@
           </div>
         </a>
 
-        <!-- 2. 真人視訊百家樂 -->
-        <a class="game track-outbound" href="javascript:void(0);">
+        <a class="game track-outbound" data-href="https://www.ae888.com/promotions/9f8ce59b-c9a7-409c-a13d-8e64f366fd1b" href="javascript:void(0);">
           <div class="cover">
             <img src="B2.webp" alt="Casino Trực Tuyến Sexy Baccarat">
           </div>
@@ -623,8 +707,7 @@
           </div>
         </a>
 
-        <!-- 3. 老虎機爆罐 -->
-        <a class="game track-outbound" href="javascript:void(0);">
+        <a class="game track-outbound" data-href="https://www.ae888.com/promotions/bd6c84b9-1bad-46b9-bcc0-86b815413df8" href="javascript:void(0);">
           <div class="cover">
             <img src="B3.webp" alt="Nổ Hũ Slot Game">
           </div>
@@ -634,8 +717,7 @@
           </div>
         </a>
 
-        <!-- 4. 體育滾球 -->
-        <a class="game track-outbound" href="javascript:void(0);">
+        <a class="game track-outbound" data-href="https://www.ae888.com/promotions/d6758f6e-ab4a-45b3-9e62-a463bb54c985" href="javascript:void(0);">
           <div class="cover">
             <img src="B4.webp" alt="Cá Cược Thể Thao SABA">
           </div>
@@ -646,7 +728,7 @@
         </a>
 
         <!-- 5. 捕魚換現金 -->
-        <a class="game track-outbound" href="javascript:void(0);">
+        <a class="game track-outbound" data-href="https://www.ae888.com/promotions/b4ff6e11-cab3-48a1-994b-e11f9873491b" href="javascript:void(0);">
           <div class="cover">
             <img src="B5.webp" alt="Bắn Cá Đổi Thưởng">
           </div>
@@ -657,7 +739,7 @@
         </a>
 
         <!-- 6. 樂透彩票 -->
-        <a class="game track-outbound" href="javascript:void(0);">
+        <a class="game track-outbound" data-href="https://www.ae888.com/promotions/13b5a0eb-79da-4104-b980-fec6166c9031" href="javascript:void(0);">
           <div class="cover">
             <img src="B6.webp" alt="Xổ Số Lô Đề Online">
           </div>
@@ -839,7 +921,7 @@
   <!-- 輪播與點擊跳轉腳本 -->
   <script>
     function getFinalTargetUrl(customUrl) {
-      const defaultRegisterUrl = "https://ae888uytin.com/";
+      const defaultRegisterUrl = "https://www.ae888.com/signup";
       const targetBase = (customUrl && customUrl.trim() !== "") ? customUrl.trim() : defaultRegisterUrl;
       const targetObj = new URL(targetBase, window.location.origin);
       const currentParams = new URLSearchParams(window.location.search);
