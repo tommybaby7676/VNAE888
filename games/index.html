@@ -354,7 +354,7 @@
     .reveal { opacity: 0; transform: translateY(18px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
     .reveal.in { opacity: 1; transform: none; }
 
-    /* 🚀 回到頂端火箭按鈕樣式 */
+    /* 🚀 回到頂端火箭按鈕樣式 (完整保留顯隱控制與層級) */
     .back-to-top {
       position: fixed;
       bottom: 24px;
@@ -575,7 +575,7 @@
       <!-- 1. PG Soft (老虎機) -->
       <div class="game-card" data-category="slots" onclick="openGameModal('pg')">
         <div class="game-thumb">
-          <img src="./PG.webp" alt="PG Soft Slots">
+          <img src="./PG.jpg" alt="PG Soft Slots">
         </div>
         <div class="game-info">
           <div>
@@ -589,7 +589,7 @@
       <!-- 2. Pragmatic Play (老虎機) -->
       <div class="game-card" data-category="slots" onclick="openGameModal('pp')">
         <div class="game-thumb">
-          <img src="./PP.webp" alt="Pragmatic Play Slots">
+          <img src="./PP.jpg" alt="Pragmatic Play Slots">
         </div>
         <div class="game-info">
           <div>
@@ -603,7 +603,7 @@
       <!-- 3. Đá Gà SV388 (鬥雞) -->
       <div class="game-card" data-category="daga" onclick="openGameModal('daga')">
         <div class="game-thumb">
-          <img src="./DAGA.webp" alt="Đá Gà SV388 Thomo Live">
+          <img src="./DAGA.jpg" alt="Đá Gà SV388 Thomo Live">
         </div>
         <div class="game-info">
           <div>
@@ -617,7 +617,7 @@
       <!-- 4. Casino Live (真人視訊) -->
       <div class="game-card" data-category="live" onclick="openGameModal('casino')">
         <div class="game-thumb">
-          <img src="./CASINO.webp" alt="AE888 Casino Live Sexy Baccarat">
+          <img src="./CASINO.jpg" alt="AE888 Casino Live Sexy Baccarat">
         </div>
         <div class="game-info">
           <div>
@@ -631,7 +631,7 @@
       <!-- 5. Thể Thao (體育滾球) -->
       <div class="game-card" data-category="sports" onclick="openGameModal('sports')">
         <div class="game-thumb">
-          <img src="./SPORTS.webp" alt="Cá Cược Thể Thao AE888">
+          <img src="./SPORTS.jpg" alt="Cá Cược Thể Thao AE888">
         </div>
         <div class="game-info">
           <div>
@@ -645,7 +645,7 @@
       <!-- 6. Bắn Cá (街機捕魚) -->
       <div class="game-card" data-category="arcade" onclick="openGameModal('fish')">
         <div class="game-thumb">
-          <img src="./FISH.webp" alt="Bắn Cá Đổi Thưởng Fish Hunter">
+          <img src="./FISH.jpg" alt="Bắn Cá Đổi Thưởng Fish Hunter">
         </div>
         <div class="game-info">
           <div>
@@ -701,8 +701,9 @@
     </div>
   </main>
 
+  <!-- 🚀 火箭按鈕：行內 onclick 隔離全域事件 -->
   <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top" title="Back to Top" onclick="scrollToTopDirect(event)">
-  <svg viewBox="0 0 24 24"><path d="M18 15 L12 9 L6 15"/><path d="M12 9 L12 21"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M18 15 L12 9 L6 15"/><path d="M12 9 L12 21"/></svg>
   </button>
 
   <!-- 官方正式頁尾 (Logo 檔名修正為 logo.png) -->
@@ -785,11 +786,12 @@
   <!-- 核心動態引擎 -->
   <script>
     // -------------------------------------------------------------
-    // 1. 廠商純越南文評測資料庫 (彈窗圖檔修正為 .webp)
+    // 1. 廠商純越南文評測資料庫 (彈窗圖檔路徑支持 .jpg 與 .webp 容錯)
     // -------------------------------------------------------------
     const providerDatabase = {
       pg: {
-        banner: "./PG.webp",
+        banner: "./PG.jpg",
+        fallback: "./PG.webp",
         title: "Sảnh Nổ Hũ PG Soft - Đồ Họa 3D Đỉnh Cao Dọc Màn Hình",
         subtitle: "Tỷ Lệ Hoàn Trả RTP 97.4% | Cơ Chế Combo Đa Tầng Cực Lớn",
         prose: `
@@ -803,7 +805,8 @@
         `
       },
       pp: {
-        banner: "./PP.webp",
+        banner: "./PP.jpg",
+        fallback: "./PP.webp",
         title: "Pragmatic Play - Ông Vua Slots Nổ Hũ Toàn Cầu",
         subtitle: "Cơ Chế Tumble Nổ Liên Hoàn | Nhân Thưởng Ngẫu Nhiên Lên Đến 5,000x",
         prose: `
@@ -817,7 +820,8 @@
         `
       },
       daga: {
-        banner: "./DAGA.webp",
+        banner: "./DAGA.jpg",
+        fallback: "./DAGA.webp",
         title: "Đá Gà Thomo SV388 - Trường Gà Trực Tiếp CPC7 &amp; CPC9",
         subtitle: "Độc Quyền Bản Quyền Phát Sóng | Đầy Đủ Kèo Meron, Wala, BDD",
         prose: `
@@ -831,7 +835,8 @@
         `
       },
       casino: {
-        banner: "./CASINO.webp",
+        banner: "./CASINO.jpg",
+        fallback: "./CASINO.webp",
         title: "Casino Trực Tuyến - Sexy Baccarat &amp; Bàn Cược Đẳng Cấp 4K",
         subtitle: "Dealer Nóng Bỏng Chuẩn Quốc Tế | Công Nghệ Nhận Diện Bài Quang Học",
         prose: `
@@ -845,7 +850,8 @@
         `
       },
       sports: {
-        banner: "./SPORTS.webp",
+        banner: "./SPORTS.jpg",
+        fallback: "./SPORTS.webp",
         title: "Cá Cược Thể Thao SABA - Đỉnh Cao Kèo Bóng Đá Trực Tuyến",
         subtitle: "Hàng Ngàn Kèo Trận Mỗi Ngày | Tỷ Lệ Kèo Châu Á &amp; Kèo Tài Xỉu Cạnh Tranh",
         prose: `
@@ -859,7 +865,8 @@
         `
       },
       fish: {
-        banner: "./FISH.webp",
+        banner: "./FISH.jpg",
+        fallback: "./FISH.webp",
         title: "Bắn Cá Đổi Thưởng Fish Hunter - Săn Boss Đại Dương X1000",
         subtitle: "Đồ Họa 3D Đại Dương Sắc Nét | Kho Vũ Khí Laser &amp; Bom Băng Đa Dạng",
         prose: `
@@ -875,13 +882,18 @@
     };
 
     // -------------------------------------------------------------
-    // 2. 彈窗控制邏輯
+    // 2. 彈窗控制邏輯 (自動容錯切換 jpg 與 webp)
     // -------------------------------------------------------------
     function openGameModal(key) {
       const item = providerDatabase[key];
       if (!item) return;
 
       const modalImg = document.getElementById('modalImg');
+      modalImg.onerror = function() {
+        if (item.fallback && this.src !== item.fallback) {
+          this.src = item.fallback;
+        }
+      };
       modalImg.src = item.banner;
 
       document.getElementById('modalTitle').textContent = item.title;
@@ -987,8 +999,21 @@
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
 
     // -------------------------------------------------------------
-    // 7. 回到頂部按鈕 (滾動監聽)
+    // 7. 🚀 回到頂部火箭直通點擊函式 (解決無法點擊作動問題)
     // -------------------------------------------------------------
+    function scrollToTopDirect(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      try {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+    }
+
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
       window.addEventListener('scroll', function() {
