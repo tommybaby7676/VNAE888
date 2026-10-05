@@ -1,29 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="vi">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-  <!-- 
-  ================================================================================
-  🎮 【分頁專用】精選遊戲大廳・頂級 SEO 權威架構版 (CHEAT SHEET 小抄)
-  ================================================================================
-  📌 日常換皮 3 分鐘速查指南：
-     Step 1. 【區塊 1】ACTIVE_PIXEL_ID  : 換成對應的 Meta 像素 ID
-     Step 2. 【區塊 2】SEO 標題與品牌詞  : 全域搜尋「MATE369」替換成新品牌名
-     Step 3. 【區塊 4】CSS 品牌主色調    : 保持與主頁一致，若需變色改 :root 即可
-     Step 4. 【區塊 16】defaultRegisterUrl: 換成包網註冊直出線
-     Step 5. 素材清單 (直接放於根目錄，本分頁自動透過 ../ 讀取)：
-             - logo.webp / logo.ico
-             - view.webp (龐克城市背景圖)
-             - bng.webp, pp.webp, pg.webp, sports.webp, casino.webp, FS.webp
-             - 備用防破圖底圖：b1.webp, b2.webp, b3.webp
-  ================================================================================
-  -->
-
-  <!-- ============================================================================
-       【區塊 1】META 像素追蹤 (換案子只需改 ACTIVE_PIXEL_ID)
-       ============================================================================ -->
+  <!-- 像素追蹤 -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -34,7 +15,6 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    // 👇👇👇【修改點 1】換案子填入客戶的 Pixel ID 👇👇👇
     const ACTIVE_PIXEL_ID = "000000000000000"; 
     if (ACTIVE_PIXEL_ID && ACTIVE_PIXEL_ID !== "000000000000000") {
       fbq('init', ACTIVE_PIXEL_ID);
@@ -42,48 +22,37 @@
     }
   </script>
 
-  <!-- ============================================================================
-       【區塊 2】SEO 結構與分頁標題
-       ============================================================================ -->
-  <title>MATE369 | Official Certified Game Providers & High-RTP Pokies Hall</title>
-  <meta name="description" content="Explore certified online casino game providers at MATE369 Australia. Discover high-RTP slots, live tables, and arcade games from BNG, Pragmatic Play, PG Soft, SBOBET, and MT Live.">
+  <!-- SEO 標題與標籤 -->
+  <title>AE888 | Đại Sảnh Trò Chơi Trực Tuyến &amp; Danh Mục Game Đổi Thưởng 2026</title>
+  <meta name="description" content="Khám phá sảnh trò chơi chính thức tại AE888: trực tiếp đá gà Thomo SV388, nổ hũ PG Soft, Pragmatic Play, casino trực tuyến sexy baccarat, thể thao SABA và bắn cá đổi thưởng.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   
-  <meta name="geo.region" content="AU">
-  <meta name="geo.placename" content="Australia">
-  <meta name="geo.position" content="-25.2744;133.7751">
-  <meta name="ICBM" content="-25.2744,133.7751">
+  <link rel="icon" href="../AElogo.ico" type="image/x-icon">
 
-  <link rel="icon" href="../logo.ico" type="image/x-icon">
-
-  <!-- ============================================================================
-       【區塊 3】GOOGLE 科技電競字體引入 (與主頁 100% 一致)
-       ============================================================================ -->
+  <!-- 字體引入 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700;1,900&family=Noto+Sans+SC:wght@400;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- ============================================================================
-       【區塊 4】全站樣式體系 (CSS 視覺控制中心)
-       ============================================================================ -->
   <style>
     :root {
-      /* 🎨 與主頁母版完全一致的品牌色盤 */
-      --bg: #031c10;
-      --panel: rgba(4, 40, 24, 0.85);
-      --panel-solid: #052d1a;
-      --pink: #106539;
-      --magenta: #00ff88;
-      --violet: #56FF4D;
-      --purple: #2FFF6D;
-      --gold: #ffc700;
-      --text: #FFFFFF;
-      --muted: #BFFFD7;
-      --line: rgba(0, 255, 136, 0.22);
+      /* 🎨 AE888 官方專屬配色盤 (白底 + 旗艦紅 + 帝王金) */
+      --bg: #f8f9fa;                        
+      --panel: rgba(255, 255, 255, 0.95);   
+      --panel-solid: #ffffff;               
+
+      --pink: #d91b24;                      
+      --purple: #b30f17;                    
+      --magenta: #d91b24;                   
+      --gold: #d4a017;                      
+
+      --text: #1f2937;                      
+      --muted: #4b5563;                     
+      --line: rgba(217, 27, 36, 0.15);      
       
       --nav-height: 64px;
-      --logo-height-pc: 42px;
-      --logo-height-mobile: 32px;
+      --logo-height-pc: 40px;
+      --logo-height-mobile: 30px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -97,43 +66,42 @@
       padding-top: var(--nav-height);
     }
 
-    /* 🏙️ 主頁同款背景：城市圖、覆蓋層、網格與掃描線 */
-    .bg-city {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: url('../view.webp') center top / cover no-repeat fixed;
-      background-color: var(--bg);
-      opacity: 0.85;
-    }
+    .bg-city { display: none !important; }
+
     .bg-overlay {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: linear-gradient(180deg, rgba(3,28,16,0.2) 0%, rgba(3,28,16,0.55) 60%, rgba(3,28,16,0.85) 100%);
-    }
-    .grid-bg {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: linear-gradient(rgba(0,255,136,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,136,0.05) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .scan {
-      position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.25;
-      background: repeating-linear-gradient(0deg, rgba(0,0,0,0.25) 0 1px, transparent 1px 3px);
+      background: radial-gradient(circle at 50% -10%, rgba(217, 27, 36, 0.06) 0%, rgba(212, 160, 23, 0.03) 45%, transparent 80%);
     }
 
-    /* ✨ 滑鼠光斑 */
+    .grid-bg {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: 
+        linear-gradient(rgba(217, 27, 36, 0.04) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(217, 27, 36, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    .scan {
+      position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.08;
+      background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0 1px, transparent 1px 3px);
+    }
+
     #cursor-glow {
-      position: fixed; width: 450px; height: 450px; border-radius: 50%;
+      position: fixed; width: 420px; height: 420px; border-radius: 50%;
       pointer-events: none; z-index: 1;
-      background: radial-gradient(circle, rgba(0,255,136,0.15), rgba(255,27,141,0.08), transparent 65%);
+      background: radial-gradient(circle, rgba(217, 27, 36, 0.10) 0%, rgba(212, 160, 23, 0.06) 40%, transparent 70%);
       transform: translate(-50%, -50%);
       transition: opacity 0.3s;
     }
 
     .wrap { position: relative; z-index: 3; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
 
-    /* 📌 導航欄 (吸頂) */
+    /* 📌 導航欄 */
     nav {
       position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height);
       z-index: 999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      background: rgba(3, 28, 16, 0.90); border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94); border-bottom: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
     }
     .nav-in {
       max-width: 1180px; height: 100%; margin: 0 auto; padding: 0 20px;
@@ -141,119 +109,54 @@
     }
     .logo-box { display: flex; align-items: center; text-decoration: none; cursor: pointer; }
     .logo-img { height: var(--logo-height-pc); width: auto; max-width: 220px; object-fit: contain; display: block; }
-    .logo-fallback { display: none; align-items: center; gap: 8px; font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.25rem; color: #fff; }
-    .logo-fallback .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 12px var(--magenta); }
+    .logo-fallback { display: none; align-items: center; gap: 8px; font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.25rem; color: #111827; }
+    .logo-fallback .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 12px var(--pink); }
 
-    .nav-links { display: flex; align-items: center; gap: 18px; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--magenta); }
-    .lang {
-      cursor: pointer; border: 1px solid var(--line); padding: 5px 12px;
-      color: var(--muted); font-family: "Chakra Petch"; font-weight: 700; font-size: 0.8rem;
-      background: transparent; clip-path: polygon(0 0,100% 0,100% 70%,calc(100% - 8px) 100%,0 100%);
-      transition: 0.2s;
-    }
-    .lang:hover { color: #fff; border-color: var(--magenta); }
+    .nav-links { display: flex; align-items: center; gap: 20px; }
+    .nav-links a { color: #374151; text-decoration: none; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--pink); }
 
-    /* 📱 漢堡按鈕樣式 */
-    .menu-toggle {
-      display: none; background: none; border: 1px solid var(--line);
-      color: var(--magenta); font-size: 1.4rem; padding: 4px 10px;
-      cursor: pointer; border-radius: 4px; line-height: 1;
-    }
-
-    /* 電腦版：直接隱藏手機功能群 */
-    .mobile-actions { display: none !important; }
-    /* 手機版 (< 768px)：隱藏電腦版導航，顯現手機功能群 */
-    @media (max-width: 768px) {
-    /* 0. 手機版隱藏電腦導航列，顯示手機功能群 */
-    .nav-links { display: none !important; }
-    .mobile-actions { display: flex !important; align-items: center !important; gap: 10px !important; }
-
-    /* 1. 導航容器對齊主頁尺寸與呼吸留白 */
-    .nav-in {
-      padding: 0 14px !important;
-      justify-content: space-between !important;
-    }
-    .logo-img {
-      height: 32px !important;
-      width: auto !important;
-    }
-
-    /* 2. 註冊按鈕大小與字級完全複製主頁 */
     .btn-nav-reg {
-      padding: 7px 12px !important;
-      font-size: 0.8rem !important;
-      letter-spacing: 0.5px !important;
+      background: linear-gradient(120deg, var(--pink), var(--purple)) !important;
+      color: #ffffff !important;
+      padding: 9px 22px !important;
+      font-size: 0.88rem !important;
+      box-shadow: 0 0 14px rgba(217, 27, 36, 0.35) !important;
     }
 
-    /* 3. 漢堡按鈕對齊主頁 */
     .menu-toggle {
-      display: inline-flex !important;
-      padding: 6px 10px !important;
-      font-size: 0.82rem !important;
-    }
-
-    /* 4. 修正 Header 緊貼問題，給予舒適頂部間距 */
-    header {
-      padding: 24px 0 16px !important;
-    }
-}
-
-    /* 🍔 漢堡按鈕呼吸光效 */
-    .menu-toggle {
-      display: none; background: rgba(0, 255, 136, 0.08); border: 1.5px solid var(--magenta);
-      color: var(--magenta); font-family: "Chakra Petch"; font-weight: 700;
+      display: none; background: #ffffff; border: 1.5px solid #d1d5db;
+      color: #374151; font-family: "Chakra Petch", sans-serif; font-weight: 700;
       font-size: 0.85rem; padding: 5px 10px; cursor: pointer; border-radius: 4px;
       line-height: 1; align-items: center; gap: 6px;
-      box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-      animation: menuBlink 2.5s infinite;
-    }
-    @keyframes menuBlink {
-      0%, 100% { box-shadow: 0 0 8px rgba(0, 255, 136, 0.25); border-color: rgba(0, 255, 136, 0.4); }
-      50% { box-shadow: 0 0 18px rgba(0, 255, 136, 0.7); border-color: var(--magenta); }
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    /* 電腦端預設隱藏手機專用功能區 */
+    .mobile-menu {
+      display: none; position: fixed; top: var(--nav-height); left: 0; right: 0;
+      background: rgba(255, 255, 255, 0.98); border-bottom: 2px solid var(--pink);
+      padding: 20px; z-index: 998; backdrop-filter: blur(20px);
+      flex-direction: column; gap: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    .mobile-menu.active { display: flex; }
+    .mobile-menu a {
+      color: var(--text); text-decoration: none; font-size: 1.1rem;
+      font-weight: 700; font-family: "Chakra Petch"; padding: 8px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .mobile-menu a.active { color: var(--pink); }
+
     .mobile-actions { display: none; }
-
-    /* 🚀 回到頂部火箭按鈕樣式 */
-    .back-to-top {
-      position: fixed; bottom: 92px; right: 23px; width: 48px; height: 48px;
-      border-radius: 50%; background: var(--panel-solid); border: 1.5px solid var(--line);
-      color: var(--magenta); cursor: pointer !important; display: flex; align-items: center;
-      justify-content: center; z-index: 99999 !important; opacity: 0; pointer-events: none;
-      transform: translateY(16px); transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
-    }
-    .back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
-    .back-to-top:hover { border-color: var(--magenta); background: #00ff88; color: #031c10; box-shadow: 0 0 20px rgba(0,255,136,0.8); }
-    .back-to-top svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2.5; pointer-events: none; }
-
-    /* 📱 手機端排版與折疊專用樣式 */
     @media (max-width: 768px) {
       .nav-links { display: none !important; }
       .mobile-actions { display: flex !important; align-items: center !important; gap: 10px !important; }
+      .nav-in { padding: 0 14px !important; }
+      .logo-img { height: var(--logo-height-mobile); }
+      .btn-nav-reg { padding: 7px 14px !important; font-size: 0.82rem !important; }
       .menu-toggle { display: inline-flex !important; }
-      /* 手機端第 4 張以後的卡片受折疊控制 */
-      .game-card.mobile-collapsed { display: none !important; }
     }
-      /* 📱 手機抽屜菜單樣式 */
-      .mobile-menu {
-        display: none; position: fixed; top: var(--nav-height); left: 0; right: 0;
-        background: rgba(3, 28, 16, 0.98); border-bottom: 1px solid var(--line);
-        padding: 20px; z-index: 998; backdrop-filter: blur(20px);
-        flex-direction: column; gap: 16px;
-      }
-      .mobile-menu.active { display: flex; }
-      .mobile-menu a {
-        color: var(--text); text-decoration: none; font-size: 1.1rem;
-        font-weight: 700; font-family: "Chakra Petch"; padding: 8px 0;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.1);
-      }
-    .mobile-menu a.active { color: var(--magenta); }
 
-    /* 科技切角按鈕體系 */
     .btn {
       position: relative; display: inline-flex; align-items: center; justify-content: center;
       font-family: "Chakra Petch"; font-weight: 700; font-style: italic; letter-spacing: 0.5px;
@@ -261,191 +164,196 @@
       clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
       transition: 0.22s;
     }
-    .btn-nav-reg {
-      background: linear-gradient(120deg, var(--pink), var(--purple)) !important;
-      color: #ffffff !important;
-      padding: 9px 20px;
-      font-size: 0.85rem;
-      box-shadow: 0 0 14px rgba(0, 255, 136, 0.4) !important;
-    }
     .btn-primary {
       background: linear-gradient(120deg, var(--pink), var(--purple));
       color: #ffffff !important; font-weight: 900;
-      box-shadow: 0 0 22px rgba(0, 255, 136, 0.45);
+      box-shadow: 0 0 22px rgba(217, 27, 36, 0.45);
       padding: 12px 24px; font-size: 0.95rem;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(0, 255, 136, 0.85); }
-    /* 👻 幽靈透明切角按鈕 (賽博龐克微光暗底 + 極光綠框線 + 白字) */
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
     .btn-ghost {
-      background: rgba(4, 40, 24, 0.9) !important;
-      color: #FFFFFF !important;
-      border: 1.5px solid var(--magenta) !important;
-      box-shadow: 0 0 14px rgba(0, 255, 136, 0.25) !important;
-      backdrop-filter: blur(8px);
-      transition: all 0.22s ease;
+      background: #ffffff !important; color: var(--pink) !important;
+      border: 1.5px solid var(--pink) !important; padding: 11px 22px; font-size: 0.95rem;
+      box-shadow: 0 2px 8px rgba(217, 27, 36, 0.08);
     }
-    .btn-ghost:hover {
-      background: rgba(0, 255, 136, 0.18) !important;
-      color: var(--magenta) !important;
-      box-shadow: 0 0 22px rgba(0, 255, 136, 0.5) !important;
-      transform: translateY(-2px);
-    }  
+    .btn-ghost:hover { background: rgba(217, 27, 36, 0.06) !important; }
     .btn-large {
       width: 100%; max-width: 440px; padding: 16px 32px; font-size: 1.15rem; margin: 0 auto;
       animation: btnPulse 2s ease-in-out infinite;
     }
     @keyframes btnPulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 16px rgba(0, 255, 136, 0.35); }
-      50% { transform: scale(1.03); box-shadow: 0 0 32px rgba(0, 255, 136, 0.8); }
+      0%, 100% { transform: scale(1); box-shadow: 0 0 16px rgba(217, 27, 36, 0.35); }
+      50% { transform: scale(1.03); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
     }
 
     /* 頁面標題區 */
     header { padding: 32px 0 20px; text-align: center; }
     .badge {
       display: inline-flex; align-items: center; gap: 8px; font-family: "Chakra Petch";
-      font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--magenta);
+      font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--pink);
       border: 1px solid var(--line); padding: 5px 14px; border-radius: 40px;
-      background: rgba(0,255,136,0.06); margin-bottom: 8px;
+      background: rgba(217, 27, 36, 0.05); margin-bottom: 8px;
     }
-    .badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 8px var(--magenta); animation: pulse 1.6s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 8px var(--pink); }
 
     h1 {
       font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 900; font-style: italic;
-      line-height: 1.1; font-size: clamp(2.2rem, 5.5vw, 3.6rem); margin: 6px 0;
+      line-height: 1.1; font-size: clamp(2rem, 5.2vw, 3.5rem); margin: 6px 0;
     }
-    h1 .l1 { display: block; color: #fff; }
+    h1 .l1 { display: block; color: #111827; }
     h1 .l2 {
       display: block;
-      background: linear-gradient(90deg, #00ff88, #25d366, #ffc700);
+      background: linear-gradient(90deg, #d91b24, #d4a017);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .sub { max-width: 720px; margin: 10px auto 0; color: var(--text); font-size: 0.98rem; font-weight: 500; line-height: 1.5; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+    .sub { max-width: 720px; margin: 10px auto 0; color: #4b5563; font-size: 0.98rem; font-weight: 500; line-height: 1.5; }
 
     /* ⚡ 4 大權威審計指標條 */
     .metrics-bar {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
       max-width: 980px; margin: 24px auto 0;
-      background: var(--panel); border: 1px solid var(--line); padding: 14px 16px;
+      background: var(--panel-solid); border: 1px solid #e5e7eb; padding: 14px 16px;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
     }
-    .metric-item { text-align: center; border-right: 1px solid var(--line); }
+    .metric-item { text-align: center; border-right: 1px solid #e5e7eb; }
     .metric-item:last-child { border-right: none; }
     .metric-num { font-family: "Chakra Petch"; font-size: 1.45rem; font-weight: 700; font-style: italic; color: var(--gold); }
-    .metric-lbl { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; margin-top: 2px; }
+    .metric-lbl { font-size: 0.75rem; color: #4b5563; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; margin-top: 2px; }
 
-    /* 🏷️ 5 大分類篩選膠囊 (Filter Tabs) */
+    /* 🏷️️ 6 大分類篩選膠囊 (順序：全部 / 老虎機 / 鬥雞 / 真人 / 體育 / 捕魚) */
     .filter-wrapper {
       display: flex; justify-content: center; gap: 10px; margin: 28px 0 16px;
       overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
     }
+    .filter-wrapper::-webkit-scrollbar { display: none; }
     .filter-btn {
-      white-space: nowrap; background: rgba(0, 255, 136, 0.06); border: 1px solid var(--line);
-      color: var(--text); font-family: "Chakra Petch"; font-weight: 700; font-style: italic;
-      font-size: 0.85rem; padding: 8px 18px; cursor: pointer; transition: 0.2s;
-      clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+      white-space: nowrap; background: #ffffff; border: 1px solid rgba(212, 160, 23, 0.35);
+      color: #374151; font-family: "Chakra Petch"; font-weight: 700; font-style: italic;
+      font-size: 0.88rem; padding: 9px 20px; cursor: pointer; transition: 0.2s;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      word-break: keep-all;
     }
     .filter-btn:hover, .filter-btn.active {
-      background: rgba(0, 255, 136, 0.22); border-color: var(--magenta); color: var(--magenta);
-      box-shadow: 0 0 14px rgba(0, 255, 136, 0.25);
+      background: linear-gradient(120deg, var(--pink), var(--purple)); 
+      border-color: var(--pink); color: #ffffff;
+      box-shadow: 0 4px 14px rgba(217, 27, 36, 0.25);
     }
 
-    /* 6 大遊戲廠商網格 (支援分類隱藏/過濾動畫) */
+    /* 6 大遊戲卡槽網格 */
     .games-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
     .game-card {
-      position: relative; border: 1px solid var(--line); overflow: hidden;
+      position: relative; border: 1px solid #e5e7eb; overflow: hidden;
       color: var(--text); background: var(--panel-solid);
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
     .game-card.hide { display: none !important; }
-    .game-card:hover { transform: translateY(-5px); border-color: var(--magenta); box-shadow: 0 0 28px rgba(0,255,136,0.35); }
-    .game-thumb { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #02120a; }
-    .game-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
-    .game-card:hover .game-thumb img { transform: scale(1.06); }
-    .game-info { padding: 16px; display: flex; align-items: center; justify-content: space-between; background: var(--panel-solid); border-top: 1px solid var(--line); }
-    .game-info h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.12rem; font-weight: 700; font-style: italic; }
+    .game-card:hover { transform: translateY(-5px); border-color: var(--pink); box-shadow: 0 8px 24px rgba(217, 27, 36, 0.18); }
+    .game-thumb { 
+      position: relative; 
+      aspect-ratio: 16 / 9; 
+      overflow: hidden; 
+      background: #f3f4f6; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .game-thumb img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: contain; /* 👈 自相容防切邊核心 */
+      display: block; 
+      transition: transform 0.4s; 
+    }
+    .game-card:hover .game-thumb img { transform: scale(1.05); }
+    .game-info { padding: 16px; display: flex; align-items: center; justify-content: space-between; background: var(--panel-solid); border-top: 1px solid #e5e7eb; }
+    .game-info h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.12rem; font-weight: 700; font-style: italic; color: #111827; }
     .game-info .genre { color: var(--gold); font-size: 0.78rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
     .btn-inspect {
       font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 0.82rem;
-      color: var(--magenta); display: flex; align-items: center; gap: 4px;
+      color: var(--pink); display: flex; align-items: center; gap: 4px;
     }
 
-    /* 📖 SEO 實體長文指南 (手機端可折疊) */
+    /* 📖 SEO 實體長文指南 */
     .guide-section {
-      background: var(--panel); border: 1px solid var(--line); padding: 32px 28px;
+      background: var(--panel-solid); border: 1px solid #e5e7eb; padding: 32px 28px;
       margin: 20px auto 48px; max-width: 1180px;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
     }
     .guide-title {
       font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700; font-style: italic;
       font-size: 1.45rem; color: var(--gold); margin-bottom: 12px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.9);
     }
     .guide-content {
-      color: #DBFFEC; font-size: 0.95rem; line-height: 1.8;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.9); transition: max-height 0.4s ease;
+      color: #374151; font-size: 0.95rem; line-height: 1.8;
+      transition: max-height 0.4s ease;
     }
     .guide-content h4 {
-      font-family: "Chakra Petch"; color: var(--magenta); font-size: 1.05rem;
+      font-family: "Chakra Petch"; color: var(--pink); font-size: 1.05rem;
       margin: 18px 0 6px;
     }
     .guide-toggle-btn {
-      display: none; width: 100%; margin-top: 14px; background: rgba(0,255,136,0.1);
-      border: 1px solid var(--line); color: var(--magenta); font-family: "Chakra Petch";
+      display: none; width: 100%; margin-top: 14px; background: rgba(217, 27, 36, 0.05);
+      border: 1px solid var(--line); color: var(--pink); font-family: "Chakra Petch";
       font-size: 0.88rem; font-weight: 700; padding: 10px; cursor: pointer; text-align: center;
     }
 
-    /* 彈窗 (Modal 結構：頂部自帶同一張 Banner 大圖) */
+    /* 彈窗 (Modal 白底高質感) */
     .modal-overlay {
-      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.88);
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
       z-index: 1000; display: none; align-items: center; justify-content: center;
       padding: 16px;
     }
     .modal-box {
-      background: var(--panel-solid); border: 1px solid var(--magenta);
-      box-shadow: 0 0 40px rgba(0, 255, 136, 0.25);
+      background: #ffffff; border: 1.5px solid var(--pink);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
       max-width: 620px; width: 100%; max-height: 88vh; overflow-y: auto;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
       position: relative; animation: modalPop 0.22s ease-out;
     }
     @keyframes modalPop { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
     .modal-close {
-      position: absolute; top: 12px; right: 16px; font-size: 26px; background: rgba(0,0,0,0.6);
-      border: 1px solid var(--line); color: #fff; width: 34px; height: 34px;
+      position: absolute; top: 12px; right: 16px; font-size: 26px; background: #ffffff;
+      border: 1px solid #e5e7eb; color: #374151; width: 34px; height: 34px;
       border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;
     }
-    .modal-close:hover { border-color: var(--magenta); color: var(--magenta); }
-    .modal-banner { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #000; border-bottom: 1px solid var(--line); }
-    .modal-banner img { width: 100%; height: 100%; object-fit: cover; }
+    .modal-close:hover { border-color: var(--pink); color: var(--pink); }
+    .modal-banner { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #f3f4f6; border-bottom: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: center; }
+    .modal-banner img { width: 100%; height: 100%; object-fit: contain; }
     .modal-content { padding: 24px; }
-    .modal-content h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.35rem; font-weight: 700; font-style: italic; color: #fff; margin-bottom: 4px; }
-    .modal-subtitle { color: var(--gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 1px; }
-    .modal-prose { font-size: 0.94rem; color: #DBFFEC; line-height: 1.75; margin-bottom: 24px; text-shadow: 0 1px 4px rgba(0,0,0,0.9); }
-    .modal-prose h4 { font-family: "Chakra Petch"; color: var(--magenta); font-size: 1rem; margin: 16px 0 6px; }
+    .modal-content h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.35rem; font-weight: 700; font-style: italic; color: #111827; margin-bottom: 4px; }
+    .modal-subtitle { color: var(--gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.5px; }
+    .modal-prose { font-size: 0.94rem; color: #374151; line-height: 1.75; margin-bottom: 24px; }
+    .modal-prose h4 { font-family: "Chakra Petch"; color: var(--pink); font-size: 1rem; margin: 16px 0 6px; }
     .modal-prose ul { padding-left: 20px; margin-bottom: 12px; }
     .modal-prose li { margin-bottom: 4px; }
 
-    /* 頁尾轉換卡片 (與主頁一致) */
+    /* 頁尾轉換卡片 */
     .final-cta {
-      background: linear-gradient(150deg, var(--panel-solid), rgba(0,255,136,0.1));
-      border: 1px solid var(--line); padding: 48px 24px; text-align: center; margin-bottom: 60px;
+      background: linear-gradient(135deg, #ffffff, #fff5f5);
+      border: 1.5px solid rgba(217, 27, 36, 0.2); padding: 48px 24px; text-align: center; margin-bottom: 60px;
       clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
-    .final-cta h2 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: clamp(1.5rem, 5.5vw, 2.3rem); line-height: 1.25; margin-bottom: 12px; font-weight: 700; font-style: italic; }
-    .final-cta h2 em { font-style: italic; color: var(--magenta); }
-    .final-cta p { color: var(--muted); font-size: 1rem; max-width: 600px; margin: 0 auto 24px; }
+    .final-cta h2 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: clamp(1.5rem, 5.5vw, 2.3rem); line-height: 1.25; margin-bottom: 12px; font-weight: 700; font-style: italic; color: #111827; }
+    .final-cta h2 em { font-style: italic; color: var(--gold); }
+    .final-cta p { color: #4b5563; font-size: 1rem; max-width: 600px; margin: 0 auto 24px; }
 
-    footer { border-top: 1px solid var(--line); padding: 36px 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 36px 0; text-align: center; color: #4b5563; font-size: 0.85rem; background: #ffffff; }
     .f-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
-    .f-links a { color: var(--muted); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; transition: 0.2s; }
-    .f-links a:hover { color: var(--magenta); }
+    .f-links a { color: #4b5563; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; transition: 0.2s; }
+    .f-links a:hover { color: var(--pink); }
 
     .reveal { opacity: 0; transform: translateY(18px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
     .reveal.in { opacity: 1; transform: none; }
 
-    /* 📱 手機端極致優化 (< 768px) */
+    /* 📱 手機端極致排版與防擠壓修正 */
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .menu-toggle { display: block; }
@@ -457,8 +365,8 @@
       
       .metrics-bar { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .metric-item:nth-child(2) { border-right: none; }
-      .metric-item:nth-child(3) { border-top: 1px solid var(--line); padding-top: 8px; }
-      .metric-item:nth-child(4) { border-top: 1px solid var(--line); padding-top: 8px; }
+      .metric-item:nth-child(3) { border-top: 1px solid #e5e7eb; padding-top: 8px; }
+      .metric-item:nth-child(4) { border-top: 1px solid #e5e7eb; padding-top: 8px; }
       
       .filter-wrapper { justify-content: flex-start; padding-left: 4px; }
       .games-grid { grid-template-columns: 1fr; gap: 14px; }
@@ -466,7 +374,7 @@
       .guide-content.collapsed { max-height: 140px; overflow: hidden; position: relative; }
       .guide-content.collapsed::after {
         content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 70px;
-        background: linear-gradient(transparent, rgba(4, 40, 24, 0.95)); pointer-events: none;
+        background: linear-gradient(transparent, #ffffff); pointer-events: none;
       }
       .guide-toggle-btn { display: block; }
 
@@ -474,191 +382,78 @@
       .modal-content { padding: 18px; }
     }
 
-      /* 💬 懸浮社群氣泡容器 (固定在右下角) */
-      .social-bubble-wrap {
-        position: fixed;
-        bottom: 24px;
-        right: 20px;
-        z-index: 995;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-end;
-        gap: 12px;
-      }
+    /* 💬 懸浮社群氣泡容器 */
+    .social-bubble-wrap {
+      position: fixed; bottom: 24px; right: 20px; z-index: 995;
+      display: flex; flex-direction: column-reverse; align-items: flex-end; gap: 12px;
+    }
+    .social-main-btn {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #d91b24, #b30f17 75%, #4a0408 100%);
+      border: 1.5px solid #d91b24; color: #ffffff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 20px rgba(217, 27, 36, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative; animation: bubbleWiggle 3s ease-in-out infinite;
+    }
+    .social-main-btn:hover { transform: scale(1.1); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
+    .bubble-radar { position: absolute; inset: -6px; border-radius: 50%; border: 1.5px solid rgba(217, 27, 36, 0.6); animation: radarWave 2s ease-out infinite; pointer-events: none; }
+    @keyframes radarWave { 0% { transform: scale(0.9); opacity: 0.9; } 100% { transform: scale(1.45); opacity: 0; } }
+    .online-indicator { position: absolute; top: 2px; right: 2px; width: 12px; height: 12px; background: #ffc700; border: 2px solid #ffffff; border-radius: 50%; box-shadow: 0 0 8px #ffc700; z-index: 2; }
+    .social-main-btn .chat-icon { display: flex; align-items: center; justify-content: center; color: #ffffff; }
+    .social-main-btn .close-icon { display: none; font-size: 1.3rem; font-weight: 700; color: #ffffff; }
 
-      /* 常駐主氣泡（電競極光綠 + 雙層立體浮雕感） */
-      .social-main-btn {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: radial-gradient(circle at 30% 30%, #00ff88, #054a2a 75%, #021c10 100%);
-        border: 1.5px solid #00ff88;
-        color: #ffffff;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 0 20px rgba(0, 255, 136, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -3px 6px rgba(0, 0, 0, 0.6);
-        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        position: relative;
-        animation: bubbleWiggle 3s ease-in-out infinite;
-      }
+    .social-bubble-wrap.active .social-main-btn { animation: none; background: #b30f17; border-color: var(--gold); }
+    .social-bubble-wrap.active .bubble-radar { display: none; }
+    .social-bubble-wrap.active .chat-icon { display: none; }
+    .social-bubble-wrap.active .close-icon { display: block; }
+    @keyframes bubbleWiggle { 0%, 80%, 100% { transform: rotate(0deg) scale(1); } 85% { transform: rotate(-12deg) scale(1.05); } 90% { transform: rotate(10deg) scale(1.05); } 95% { transform: rotate(-6deg) scale(1.03); } }
 
-      .social-main-btn:hover {
-        transform: scale(1.1) rotate(4deg);
-        box-shadow: 0 0 32px rgba(0, 255, 136, 0.9), inset 0 2px 6px rgba(255, 255, 255, 0.6);
-      }
-
-      /* 📡 雷達光環外擴動畫 */
-      .bubble-radar {
-        position: absolute;
-        inset: -6px;
-        border-radius: 50%;
-        border: 1.5px solid rgba(0, 255, 136, 0.7);
-        animation: radarWave 2s ease-out infinite;
-        pointer-events: none;
-      }
-      @keyframes radarWave {
-        0% { transform: scale(0.9); opacity: 0.9; }
-        100% { transform: scale(1.45); opacity: 0; }
-      }
-
-      /* 🟢 24/7 在線實時金黃小燈 */
-      .online-indicator {
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        width: 12px;
-        height: 12px;
-        background: #ffc700;
-        border: 2px solid #031c10;
-        border-radius: 50%;
-        box-shadow: 0 0 8px #ffc700;
-        z-index: 2;
-      }
-
-      /* 圖標與展開狀態控制 */
-      .social-main-btn .chat-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-      }
-      .social-main-btn .close-icon {
-        display: none;
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: var(--gold);
-      }
-
-      .social-bubble-wrap.active .social-main-btn {
-        animation: none;
-        background: #052d1a;
-        border-color: var(--gold);
-        box-shadow: 0 0 20px rgba(255, 199, 0, 0.5);
-      }
-      .social-bubble-wrap.active .bubble-radar { display: none; }
-      .social-bubble-wrap.active .chat-icon { display: none; }
-      .social-bubble-wrap.active .close-icon { display: block; }
-
-      /* 3 秒輕輕晃動動畫關鍵影格 */
-      @keyframes bubbleWiggle {
-        0%, 80%, 100% { transform: rotate(0deg) scale(1); }
-        85% { transform: rotate(-12deg) scale(1.05); }
-        90% { transform: rotate(10deg) scale(1.05); }
-        95% { transform: rotate(-6deg) scale(1.03); }
-      }
-
-      /* 子項目列表 (預設隱藏) */
-      .social-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        opacity: 0;
-        transform: translateY(16px) scale(0.9);
-        pointer-events: none;
-        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-
-      /* 展開時浮現 */
-      .social-bubble-wrap.active .social-menu {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        pointer-events: auto;
-      }
-
-      /* 子項目膠囊按鈕 */
-      .social-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background: rgba(4, 40, 24, 0.92);
-        border: 1px solid var(--line);
-        color: var(--text);
-        padding: 8px 14px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-family: "Chakra Petch", sans-serif;
-        font-weight: 700;
-        font-size: 0.85rem;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-        transition: all 0.2s ease;
-        white-space: nowrap;
-      }
-
-      .social-item:hover {
-        border-color: var(--magenta);
-        color: var(--magenta);
-        transform: translateX(-4px);
-        box-shadow: 0 0 14px rgba(0, 255, 136, 0.3);
-      }
-
-      .social-item svg { stroke: var(--magenta); }
-      .social-item:hover svg { stroke: var(--gold); }
-
-      /* 手機端微調尺寸 */
-      @media (max-width: 768px) {
-        .social-bubble-wrap { bottom: 18px; right: 14px; }
-        .social-main-btn { width: 46px; height: 46px; font-size: 1.25rem; }
-        .social-item { padding: 7px 12px; font-size: 0.8rem; }
-      }
-
+    .social-menu { display: flex; flex-direction: column; gap: 10px; opacity: 0; transform: translateY(16px) scale(0.9); pointer-events: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+    .social-bubble-wrap.active .social-menu { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    .social-item {
+      display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.96); border: 1px solid rgba(217, 27, 36, 0.2);
+      color: #1f2937; padding: 8px 14px; border-radius: 30px; text-decoration: none; font-family: "Chakra Petch", sans-serif;
+      font-weight: 700; font-size: 0.85rem; backdrop-filter: blur(10px); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: all 0.2s ease; white-space: nowrap;
+    }
+    .social-item:hover { border-color: var(--pink); color: var(--pink); transform: translateX(-4px); }
+    .social-item svg { stroke: var(--pink); }
+    @media (max-width: 768px) {
+      .social-bubble-wrap { bottom: 18px; right: 14px; }
+      .social-main-btn { width: 46px; height: 46px; font-size: 1.25rem; }
+      .social-item { padding: 7px 12px; font-size: 0.8rem; }
+    }
   </style>
 </head>
 
 <body>
-  <!-- 背景視覺組件 -->
-  <div class="bg-city"></div>
   <div class="bg-overlay"></div>
   <div class="grid-bg"></div>
   <div class="scan"></div>
   <div id="cursor-glow"></div>
 
-  <!-- 【區塊 6】頂部導航欄 (具備手機漢堡抽屜選單) -->
+  <!-- 【區塊 6】頂部導航欄 (統一 Logo 檔名為 logo.png) -->
   <nav>
     <div class="nav-in">
       <a class="logo-box" href="../">
-        <img src="../logo.webp" alt="MATE369 Logo" class="logo-img" onerror="this.src='../logo.ico'">
-        <span class="logo-fallback"><span class="dot"></span><span>MATE369</span></span>
+        <img src="../logo.png" alt="AE888 Logo" class="logo-img" onerror="this.src='../logo.png'">
+        <span class="logo-fallback"><span class="dot"></span><span>AE888</span></span>
       </a>
 
       <!-- 電腦版選單 -->
       <div class="nav-links">
-        <a data-en="Home" data-zh="首頁" href="../">Home</a>
-        <a data-en="Games" data-zh="精選遊戲" class="active" href="./">Games</a>
-        <a data-en="Features" data-zh="特色優勢" href="../features/">Features</a>
-        <a data-en="Guides" data-zh="機台攻略" href="../guides/">Guides</a>
-        <a data-en="FAQ" data-zh="常見問題" href="../faq/">FAQ</a>
-        <a data-en="about" data-zh="關於我們" href="../about/">about</a>
-        <button class="lang" id="langBtn">中文</button>
-        <a class="btn btn-nav-reg track-outbound" data-en="Register" data-zh="立即註冊" href="javascript:void(0);">Register</a>
+        <a href="../">Trang Chủ</a>
+        <a class="active" href="./">Trò Chơi</a>
+        <a href="../features/">Khuyến Mãi</a>
+        <a href="../guides/">Hướng Dẫn</a>
+        <a href="../faq/">Hỏi Đáp</a>
+        <a href="../about/">Về Chúng Tôi</a>
+        <a class="btn btn-nav-reg track-outbound" href="javascript:void(0);">ĐĂNG KÝ</a>
       </div>
 
-      <!-- 手機端功能按鈕群 (間距 10px，純註冊 + 帶字呼吸漢堡) -->
+      <!-- 手機功能按鈕 -->
       <div class="mobile-actions">
-        <a class="btn btn-nav-reg track-outbound" data-en="Register" data-zh="註冊" href="javascript:void(0);">Register</a>
+        <a class="btn btn-nav-reg track-outbound" href="javascript:void(0);">ĐĂNG KÝ</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
           <span>MENU</span> <span>☰</span>
         </button>
@@ -666,19 +461,15 @@
     </div>
   </nav>
 
-  <!-- 📱 手機抽屜展開選單 -->
+  <!-- 手機抽屜展開選單 -->
   <div class="mobile-menu" id="mobileMenu">
-    <a data-en="Home" data-zh="首頁" href="../">Home</a>
-    <a data-en="Games" data-zh="精選遊戲" class="active" href="./">Games</a>
-    <a data-en="Features" data-zh="特色優勢" href="../features/">Features</a>
-    <a data-en="Guides" data-zh="機台攻略" href="../guides/">Guides</a>
-    <a data-en="FAQ" data-zh="常見問題" href="../faq/">FAQ</a>
-    <a data-en="about" data-zh="關於我們" href="../about/">about</a>
-    <div style="display:flex; justify-content:space-between; align-items:center; padding-top:10px;">
-      <span style="font-family:'Chakra Petch'; font-size:0.9rem; color:var(--muted);">Language:</span>
-      <button class="lang" id="langBtnDrawer">中文</button>
-    </div>
-    <a class="btn btn-primary track-outbound" style="width:100%; margin-top:8px;" data-en="REGISTER NOW ›" data-zh="立即註冊領彩金 ›" href="javascript:void(0);">REGISTER NOW ›</a>
+    <a href="../">Trang Chủ</a>
+    <a class="active" href="./">Trò Chơi (Game Đại Sảnh)</a>
+    <a href="../features/">Khuyến Mãi (Ưu Đãi Hot)</a>
+    <a href="../guides/">Hướng Dẫn (Kinh Nghiệm)</a>
+    <a href="../faq/">Hỏi Đáp & VIP</a>
+    <a href="../about/">Về Chúng Tôi (Bảo Mật)</a>
+    <a class="btn btn-primary track-outbound" style="width:100%; margin-top:8px;" href="javascript:void(0);">ĐĂNG KÝ NGAY ›</a>
   </div>
 
   <main class="wrap">
@@ -686,184 +477,183 @@
     <header class="reveal">
       <div class="badge">
         <span class="pulse"></span>
-        <span data-en="OFFICIAL AUDITED GAME PROVIDERS" data-zh="官方認證六大頂級廠商大廳">OFFICIAL AUDITED GAME PROVIDERS</span>
+        <span>HỆ THỐNG ĐẠI SẢNH GAME ĐỐI TÁC CHÍNH THỨC</span>
       </div>
 
       <h1>
-        <span class="l1" data-en="PREMIUM GAME PORTAL" data-zh="頂級遊戲大廳">PREMIUM GAME PORTAL</span>
-        <span class="l2" data-en="VERIFIED RTP &amp; AUDITED SLOTS" data-zh="國際認證真實出金率">VERIFIED RTP &amp; AUDITED SLOTS</span>
+        <span class="l1">ĐẠI SẢNH TRÒ CHƠI AE888</span>
+        <span class="l2">TỶ LỆ TRẢ THƯỞNG RTP CAO NHẤT 2026</span>
       </h1>
 
-      <p class="sub" data-en="Discover certified high-RTP slots, interactive live tables, and sports markets. Filter by category or tap any provider to inspect audited payout statistics."
-                     data-zh="暢玩專為澳洲玩家嚴選的頂級高 RTP 機台、真人視訊及街機遊戲。點擊類別篩選或點選任一廠商即可查看官方合規數據與熱門遊戲詳情。">
-        Discover certified high-RTP slots, interactive live tables, and sports markets. Filter by category or tap any provider to inspect audited payout statistics.
+      <p class="sub">
+        Khám phá các sảnh cược đẳng cấp quốc tế: đá gà trực tiếp Thomo SV388, nổ hũ PG Soft &amp; Pragmatic Play, casino trực tuyến sexy baccarat, cá cược thể thao SABA và bắn cá đổi thưởng.
       </p>
 
-      <!-- ⚡ 4 大權威審計指標條 -->
+      <!-- 4 大權威審計指標條 -->
       <div class="metrics-bar">
         <div class="metric-item">
           <div class="metric-num">6+</div>
-          <div class="metric-lbl" data-en="TIER-1 STUDIOS" data-zh="國際頂級授權商">TIER-1 STUDIOS</div>
+          <div class="metric-lbl">SẢNH GAME QUỐC TẾ</div>
         </div>
         <div class="metric-item">
-          <div class="metric-num">96.8%</div>
-          <div class="metric-lbl" data-en="AVERAGE RTP" data-zh="全館平均認證RTP">AVERAGE RTP</div>
+          <div class="metric-num">97.5%</div>
+          <div class="metric-lbl">RTP TRẢ THƯỞNG</div>
         </div>
         <div class="metric-item">
           <div class="metric-num">100%</div>
-          <div class="metric-lbl" data-en="HTML5 NATIVE" data-zh="全端免下載秒開">HTML5 NATIVE</div>
+          <div class="metric-lbl">CHUẨN HTML5 NATIVE</div>
         </div>
         <div class="metric-item">
           <div class="metric-num">24/7</div>
-          <div class="metric-lbl" data-en="UPTIME AUDIT" data-zh="全天候穩定連線">UPTIME AUDIT</div>
+          <div class="metric-lbl">TRUYỀN PHÁT FULL HD</div>
         </div>
       </div>
 
-      <!-- 🏷️ 5 大分類篩選膠囊 -->
+      <!-- 🏷️ 6 大分類篩選膠囊 (順序：全部 / 老虎機 / 鬥雞 / 真人 / 體育 / 捕魚) -->
       <div class="filter-wrapper">
-        <button class="filter-btn active" onclick="filterGames('all', this)" data-en="All Games" data-zh="全部遊戲">All Games</button>
-        <button class="filter-btn" onclick="filterGames('slots', this)" data-en="Pokies / Slots" data-zh="熱門老虎機">Pokies / Slots</button>
-        <button class="filter-btn" onclick="filterGames('live', this)" data-en="Live Casino" data-zh="真人視訊">Live Casino</button>
-        <button class="filter-btn" onclick="filterGames('sports', this)" data-en="Sportsbook" data-zh="體育滾球">Sportsbook</button>
-        <button class="filter-btn" onclick="filterGames('arcade', this)" data-en="Fish &amp; Arcade" data-zh="街機捕魚">Fish &amp; Arcade</button>
+        <button class="filter-btn active" onclick="filterGames('all', this)">Tất cả</button>
+        <button class="filter-btn" onclick="filterGames('slots', this)">Nổ hũ</button>
+        <button class="filter-btn" onclick="filterGames('daga', this)">Đá gà</button>
+        <button class="filter-btn" onclick="filterGames('live', this)">Casino</button>
+        <button class="filter-btn" onclick="filterGames('sports', this)">Thể thao</button>
+        <button class="filter-btn" onclick="filterGames('arcade', this)">Bắn cá</button>
       </div>
     </header>
 
-    <!-- 6 大廠商網格 (純淨 Banner，點擊觸發彈窗) -->
+    <!-- 6 大廠商網格 (支援分類過濾，圖片等比自相容防切邊) -->
     <div class="games-grid reveal" id="gamesGrid">
       
-      <!-- 1. BNG (分類: slots) -->
-      <div class="game-card" data-category="slots" onclick="openGameModal('bng')">
-        <div class="game-thumb">
-          <img src="./bng.webp" alt="BNG Slots" onerror="this.src='./bng.webp'">
-        </div>
-        <div class="game-info">
-          <div>
-            <h3>BNG SLOT</h3>
-            <div class="genre">HOLD &amp; WIN JACKPOTS</div>
-          </div>
-          <div class="btn-inspect" data-en="REVIEW &gt;" data-zh="詳細評測 &gt;">REVIEW &gt;</div>
-        </div>
-      </div>
-
-      <!-- 2. PP (分類: slots) -->
-      <div class="game-card" data-category="slots" onclick="openGameModal('pp')">
-        <div class="game-thumb">
-          <img src="./pp.webp" alt="Pragmatic Play" onerror="this.src='./pp.webp'">
-        </div>
-        <div class="game-info">
-          <div>
-            <h3>PRAGMATIC PLAY</h3>
-            <div class="genre">TUMBLE &amp; MULTIPLIERS</div>
-          </div>
-          <div class="btn-inspect" data-en="REVIEW &gt;" data-zh="詳細評測 &gt;">REVIEW &gt;</div>
-        </div>
-      </div>
-
-      <!-- 3. PG (分類: slots) -->
+      <!-- 1. PG Soft (老虎機) -->
       <div class="game-card" data-category="slots" onclick="openGameModal('pg')">
         <div class="game-thumb">
-          <img src="./pg.webp" alt="PG Soft" onerror="this.src='./pg.webp'">
+          <img src="./PG.jpg" alt="PG Soft Slots">
         </div>
         <div class="game-info">
           <div>
             <h3>PG SOFT</h3>
-            <div class="genre">MOBILE 3D COMBOS</div>
+            <div class="genre">NỔ HŨ ĐỒ HỌA 3D ĐỈNH CAO</div>
           </div>
-          <div class="btn-inspect" data-en="REVIEW &gt;" data-zh="詳細評測 &gt;">REVIEW &gt;</div>
+          <div class="btn-inspect">CHI TIẾT &gt;</div>
         </div>
       </div>
 
-      <!-- 4. SBOBET 體育 (分類: sports) -->
-      <div class="game-card" data-category="sports" onclick="openGameModal('sbo')">
+      <!-- 2. Pragmatic Play (老虎機) -->
+      <div class="game-card" data-category="slots" onclick="openGameModal('pp')">
         <div class="game-thumb">
-          <img src="./sports.webp" alt="SBOBET Sports" onerror="this.src='./sports.webp'">
+          <img src="./PP.jpg" alt="Pragmatic Play Slots">
         </div>
         <div class="game-info">
           <div>
-            <h3>SBO SPORT</h3>
-            <div class="genre">AFL, NRL &amp; RACING</div>
+            <h3>PRAGMATIC PLAY</h3>
+            <div class="genre">GATES OF OLYMPUS &amp; JACKPOT</div>
           </div>
-          <div class="btn-inspect" data-en="MARKETS &gt;" data-zh="盤口詳情 &gt;">MARKETS &gt;</div>
+          <div class="btn-inspect">CHI TIẾT &gt;</div>
         </div>
       </div>
 
-      <!-- 5. MT 真人 (分類: live) -->
-      <div class="game-card" data-category="live" onclick="openGameModal('mt')">
+      <!-- 3. Đá Gà SV388 (鬥雞) -->
+      <div class="game-card" data-category="daga" onclick="openGameModal('daga')">
         <div class="game-thumb">
-          <img src="./casino.webp" alt="MT Casino" onerror="this.src='./casino.webp'">
+          <img src="./DAGA.jpg" alt="Đá Gà SV388 Thomo Live">
         </div>
         <div class="game-info">
           <div>
-            <h3>MT LIVE CASINO</h3>
-            <div class="genre">4K SPEED BACCARAT</div>
+            <h3>ĐÁ GÀ SV388</h3>
+            <div class="genre">THOMO CPC7 &amp; CPC9 ĐỘC QUYỀN</div>
           </div>
-          <div class="btn-inspect" data-en="TABLES &gt;" data-zh="桌台詳情 &gt;">TABLES &gt;</div>
+          <div class="btn-inspect">XEM BỒ GÀ &gt;</div>
         </div>
       </div>
 
-      <!-- 6. 街機捕魚 (分類: arcade) -->
+      <!-- 4. Casino Live (真人視訊) -->
+      <div class="game-card" data-category="live" onclick="openGameModal('casino')">
+        <div class="game-thumb">
+          <img src="./CASINO.jpg" alt="AE888 Casino Live Sexy Baccarat">
+        </div>
+        <div class="game-info">
+          <div>
+            <h3>CASINO LIVE</h3>
+            <div class="genre">SEXY BACCARAT &amp; ROULETTE 4K</div>
+          </div>
+          <div class="btn-inspect">VÀO BÀN &gt;</div>
+        </div>
+      </div>
+
+      <!-- 5. Thể Thao (體育滾球) -->
+      <div class="game-card" data-category="sports" onclick="openGameModal('sports')">
+        <div class="game-thumb">
+          <img src="./SPORTS.jpg" alt="Cá Cược Thể Thao AE888">
+        </div>
+        <div class="game-info">
+          <div>
+            <h3>THỂ THAO SABA</h3>
+            <div class="genre">KÈO NGOẠI HẠNG ANH &amp; CÚP C1</div>
+          </div>
+          <div class="btn-inspect">BẢNG KÈO &gt;</div>
+        </div>
+      </div>
+
+      <!-- 6. Bắn Cá (街機捕魚) -->
       <div class="game-card" data-category="arcade" onclick="openGameModal('fish')">
         <div class="game-thumb">
-          <img src="./FS.webp" alt="Fishing Arcade" onerror="this.src='./FS.webp'">
+          <img src="./FISH.jpg" alt="Bắn Cá Đổi Thưởng Fish Hunter">
         </div>
         <div class="game-info">
           <div>
-            <h3>FISHING ARCADE</h3>
-            <div class="genre">1000X MULTIPLIER BOSS</div>
+            <h3>BẮN CÁ ĐỔI THƯỞNG</h3>
+            <div class="genre">SĂN BOSS ĐẠI DƯƠNG X1000</div>
           </div>
-          <div class="btn-inspect" data-en="ARCADE &gt;" data-zh="街機詳情 &gt;">ARCADE &gt;</div>
+          <div class="btn-inspect">SĂN NGAY &gt;</div>
         </div>
       </div>
 
     </div>
 
-    <!-- 📱 手機端超過 3 組自動觸發「查看更多」開關 (電腦端自動隱藏) -->
+    <!-- 手機端查看更多開關 -->
     <div style="text-align:center; margin: -20px auto 40px;" class="reveal">
       <button class="btn btn-ghost" id="moreGamesBtn" onclick="toggleMoreGames()" style="display:none; padding:12px 30px; font-size:0.95rem; width:100%; max-width:320px;">
-        <span data-en="VIEW MORE STUDIOS ▾" data-zh="查看更多遊戲場館 ▾">VIEW MORE STUDIOS ▾</span>
+        <span>XEM THÊM SẢNH CƯỢC ▾</span>
       </button>
     </div>
 
-    <!-- 📖 SEO 實體長文指南專區 (澳洲在地理性博弈與機台挑選指南) -->
+    <!-- 📖 SEO 實體長文指南專區 (純正越南博彩評測長文) -->
     <section class="guide-section reveal">
-      <div class="guide-title" data-en="AUSTRALIAN ONLINE POKIES &amp; CASINO PROVIDER GUIDE" data-zh="澳洲真錢線上老虎機與官方遊戲廠商選台指南">
-        AUSTRALIAN ONLINE POKIES &amp; CASINO PROVIDER GUIDE
+      <div class="guide-title">
+        HƯỚNG DẪN LỰA CHỌN SẢNH CƯỢC &amp; CHIẾN THUẬT QUẢN LÝ VỐN TẠI AE888
       </div>
       <div class="guide-content collapsed" id="guideContent">
-        <h4 data-en="Understanding Audited RTP &amp; Volatility Metrics" data-zh="認識官方認證返還率 (RTP) 與波動度指數">Understanding Audited RTP &amp; Volatility Metrics</h4>
-        <p data-en="When spinning online pokies in Australia, Return to Player (RTP) is the statistical heartbeat of your session. A certified RTP of 96% or above guarantees an equitable house margin governed strictly by Random Number Generators (RNG). Studios like Pragmatic Play and PG Soft calibrate optimal math models to support extended play sessions while maintaining explosive potential on bonus features."
-           data-zh="在澳洲暢玩線上老虎機時，玩家返還率（RTP）是衡量機台公平性的核心指標。達到 96% 以上的高 RTP 機台，能確保極低的莊家優勢，並由經第三方實驗室審計的隨機亂數演算法（RNG）精準計算。Pragmatic Play 與 PG Soft 等頂級大廠均採用高規格數學模型，兼顧耐玩性與高額獎勵乘數。">
-          When spinning online pokies in Australia, Return to Player (RTP) is the statistical heartbeat of your session. A certified RTP of 96% or above guarantees an equitable house margin governed strictly by Random Number Generators (RNG). Studios like Pragmatic Play and PG Soft calibrate optimal math models to support extended play sessions while maintaining explosive potential on bonus features.
+        <h4>Chiến Thuật Cá Cược Đá Gà Thomo Trực Tiếp SV388</h4>
+        <p>
+          Đá gà Thomo trực tiếp là linh hồn giải trí tại <strong>AE888</strong>. Người chơi được kết nối trực tiếp với các bồ gà danh tiếng hàng đầu Campuchia như CPC7 và CPC9. Khi tham gia đặt cược giữa cửa Meron (gà nhà cái) và Wala (gà khách), việc phân tích cựa dao, vóc dáng chiến kê và lịch sử đối đầu đóng vai trò then chốt giúp tối ưu tỷ lệ thắng.
         </p>
 
-        <h4 data-en="Mobile-Optimized HTML5 Architecture" data-zh="專為行動端最佳化的原生 HTML5 引擎">Mobile-Optimized HTML5 Architecture</h4>
-        <p data-en="Gone are the days of clumsy standalone application downloads. Our curated studios utilize pure HTML5 protocols, ensuring ultra-low bandwidth consumption, zero latency, and seamless touchscreen compatibility across Telstra, Optus, and Vodafone 4G/5G networks throughout Sydney, Melbourne, and Brisbane."
-           data-zh="告別過去繁瑣下載安裝包的時代。本專區所有合作大廠皆採用純原生 HTML5 協議開發，具備超低流量消耗、極速連線響應與自適應觸控回饋，完美支援澳洲各大電信 4G/5G 網路環境，隨時隨地開啟即玩。">
-          Gone are the days of clumsy standalone application downloads. Our curated studios utilize pure HTML5 protocols, ensuring ultra-low bandwidth consumption, zero latency, and seamless touchscreen compatibility across Telstra, Optus, and Vodafone 4G/5G networks throughout Sydney, Melbourne, and Brisbane.
+        <h4>Nổ Hũ Slots &amp; Bí Quyết Bắt Nhịp Tỷ Lệ RTP Cao</h4>
+        <p>
+          Các sảnh nổ hũ tại AE888 hợp tác cùng <strong>PG Soft</strong> và <strong>Pragmatic Play</strong> mang đến hàng ngàn tựa game slot đạt chỉ số RTP trung bình từ 96.5% đến 97.8%. Áp dụng chiến thuật phân bổ vốn theo từng chu kỳ quay giúp người chơi dễ dàng kích hoạt các vòng quay miễn phí (Free Spins) và nhân cấp số nhân nổ hũ jackpot cực lớn.
+        </p>
+
+        <h4>Nền Tảng HTML5 Mượt Mà, Không Giật Lag</h4>
+        <p>
+          Toàn bộ hệ thống trò chơi đều được tối ưu hóa trên nền tảng HTML5 tiên tiến, truyền phát Full HD sắc nét, bảo đảm tốc độ phản hồi tính bằng mili-giây trên tất cả các thiết bị di động kết nối mạng 4G/5G Viettel, VinaPhone, MobiFone và FPT.
         </p>
       </div>
-      <button class="guide-toggle-btn" id="guideToggleBtn" onclick="toggleGuide()" data-en="▼ Read Full Provider Guide" data-zh="▼ 展開閱讀完整廠商指南">▼ Read Full Provider Guide</button>
+      <button class="guide-toggle-btn" id="guideToggleBtn" onclick="toggleGuide()">▼ Đọc Đầy Đủ Hướng Dẫn Sảnh Cược</button>
     </section>
 
     <!-- 頁尾轉換大卡片 -->
     <div class="final-cta reveal">
-      <h2 data-en="READY TO SPIN<br><em>WITH YOUR $70 BONUS?</em>" data-zh="準備好暢玩各大廠商<br><em>領取 $70 彩金了嗎？</em>">
-        READY TO SPIN<br><em>WITH YOUR $70 BONUS?</em>
-      </h2>
-      <p data-en="Deposit $20 and play with $70 across all verified slot providers and live tables with zero turnaround friction."
-         data-zh="首存 $20 立即送 $50，總計 $70 起步資金任選全館大廠機台，支援澳洲本土即時出款。">
-        Deposit $20 and play with $70 across all verified slot providers and live tables with zero turnaround friction.
+      <h2>SẴN SÀNG THAM GIA<br><em>ĐẠI SẢNH GAME ĐẲNG CẤP?</em></h2>
+      <p>
+        Đăng ký tài khoản ngay hôm nay để nhận ưu đãi nạp đầu 120% và trải nghiệm các sảnh cược đỉnh cao nhất Châu Á!
       </p>
-      <a class="btn btn-primary btn-large track-outbound" data-href="" data-en="CLAIM $70 &amp; PLAY NOW ›" data-zh="立即領取 $70 開玩 ›" href="javascript:void(0);">
-        CLAIM $70 &amp; PLAY NOW ›
+      <a class="btn btn-primary btn-large track-outbound" data-href="" href="javascript:void(0);">
+        ĐĂNG KÝ VÀ NHẬN THƯỞNG NGAY ›
       </a>
     </div>
   </main>
 
-  <!-- 🚀 回到頂端火箭按鈕 (最高層級穿透 + 行內直通) -->
   <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top" title="Back to Top"
-          onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.documentElement.scrollTop=0; document.body.scrollTop=0;">
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
     <svg viewBox="0 0 24 24"><path d="M18 15 L12 9 L6 15"/><path d="M12 9 L12 21"/></svg>
   </button>
 
@@ -871,77 +661,62 @@
   <footer>
     <div class="wrap">
       <div class="f-links">
-        <a href="../" data-en="Home" data-zh="首頁">Home</a>
-        <a href="./" data-en="Games" data-zh="精選遊戲">Games</a>
-        <a href="../#features" data-en="Features" data-zh="特色優勢">Features</a>
-        <a href="../#faq" data-en="FAQ" data-zh="常見問答">FAQ</a>
+        <a href="../">Trang Chủ</a>
+        <a href="./">Trò Chơi</a>
+        <a href="../features/">Khuyến Mãi</a>
+        <a href="../guides/">Hướng Dẫn</a>
+        <a href="../faq/">Hỏi Đáp</a>
       </div>
-      <div style="max-width: 820px; margin: 18px auto; line-height: 1.6; font-size: 0.85rem; color: var(--muted);"
-           data-en="Explore certified gaming titles and official provider specifications. All games are governed by audited Random Number Generators (RNG) for fair play."
-           data-zh="探索官方認證遊戲大廠與詳細規格。所有遊戲均受國際審計隨機亂數演算法（RNG）規範，確保極致公平。">
-        Explore certified gaming titles and official provider specifications.
+      <div style="max-width: 820px; margin: 18px auto; line-height: 1.6; font-size: 0.85rem; color: #4b5563;">
+        Khám phá hệ thống đại sảnh trò chơi hợp pháp tại AE888. Tất cả các trò chơi đều được giám sát bởi các tổ chức kiểm định quốc tế uy tín, đảm bảo tính công bằng và ngẫu nhiên tuyệt đối.
       </div>
-      <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4);"
-           data-en="© 2026 MATE369 · Australia Online Casino Platform · Play Responsibly · 18+ Only"
-           data-zh="© 2026 MATE369 · 澳洲線上娛樂平台 · 請理性娛樂 · 僅限 18 歲以上成年人參與">
-        © 2026 MATE369 · Australia Online Casino Platform · Play Responsibly · 18+ Only
+      <div style="font-size: 0.8rem; color: #6b7280;">
+        © 2026 AE888 · Nền Tảng Cá Cược Trực Tuyến Hàng Đầu Châu Á · Chơi Có Trách Nhiệm · 18+ Only
       </div>
     </div>
   </footer>  
-      <!-- 💬 懸浮社群氣泡模組 (支援展開 2~3 顆 + 3 秒輕微晃動) -->
-    <div class="social-bubble-wrap" id="socialBubbleWrap">
-      <!-- 展開的子按鈕選單 (由下往上冒出) -->
-      <div class="social-menu" id="socialMenu">
-        <!-- 子項目 1: 官方 Telegram -->
-        <a class="social-item track-outbound" data-href="https://t.me/mate369_official" href="javascript:void(0);" title="Telegram">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21.5 2L2 9.5l7 3 2.5 7.5 3-4 5.5 3.5L21.5 2z"/>
-          </svg>
-          <span class="social-text">Telegram</span>
-        </a>
 
-        <!-- 子項目 2: 推特 -->
-        <a class="social-item track-outbound" data-href="https://x.com/Mate369_ofcl" href="javascript:void(0);" title="X">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          </svg>
-          <span class="social-text">X</span>
-        </a>
+  <!-- 💬 懸浮社群氣泡模組 -->
+  <div class="social-bubble-wrap" id="socialBubbleWrap">
+    <div class="social-menu" id="socialMenu">
+      <a class="social-item track-outbound" data-href="https://t.me/ae888cskhchinhthuc" href="javascript:void(0);" title="Telegram">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21.5 2L2 9.5l7 3 2.5 7.5 3-4 5.5 3.5L21.5 2z"/>
+        </svg>
+        <span class="social-text">Telegram Hỗ Trợ</span>
+      </a>
 
-        <!-- 子項目 3: WhatsApp  -->
-        <a class="social-item track-outbound" data-href="https://wa.me/61469363369" href="javascript:void(0);" title="WhatsApp">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-          </svg>
-          <span class="social-text">WhatsApp</span>
-        </a>
-      </div>
+      <a class="social-item track-outbound" data-href="https://t.me/cskhttae888" href="javascript:void(0);" title="Telegram">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21.5 2L2 9.5l7 3 2.5 7.5 3-4 5.5 3.5L21.5 2z"/>
+        </svg>
+        <span class="social-text">Telegram Hỗ Trợ</span>
+      </a>
 
-    <!-- 常駐主氣泡 (帶 3 秒微晃動畫) -->
+      <a class="social-item track-outbound" data-href="https://ae888hotro.net/trang-chu/" href="javascript:void(0);" title="QA">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span class="social-text">QA</span>
+      </a>
+    </div>
+
     <button class="social-main-btn" id="socialMainBtn" aria-label="Toggle Social Menu">
-    <!-- 雷達發光擴散光環 -->
-    <span class="bubble-radar"></span>
+      <span class="bubble-radar"></span>
+      <span class="online-indicator"></span>
+      <span class="main-icon chat-icon">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          <circle cx="9" cy="10" r="1" fill="currentColor"></circle>
+          <circle cx="12" cy="10" r="1" fill="currentColor"></circle>
+          <circle cx="15" cy="10" r="1" fill="currentColor"></circle>
+        </svg>
+      </span>
+      <span class="main-icon close-icon">✕</span>
+    </button>
+  </div>
 
-    <!-- 24/7 在線小綠燈 -->
-    <span class="online-indicator"></span>
-
-    <!-- 高清客服對話 SVG (展開前) -->
-    <span class="main-icon chat-icon">
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        <circle cx="9" cy="10" r="1" fill="currentColor"></circle>
-        <circle cx="12" cy="10" r="1" fill="currentColor"></circle>
-        <circle cx="15" cy="10" r="1" fill="currentColor"></circle>
-      </svg>
-    </span>
-
-    <!-- 關閉 ✕ 符號 (展開後) -->
-    <span class="main-icon close-icon">✕</span>
-  </button>
-   </div>
-  
-
-  <!-- 彈窗 (Modal 結構：頂部自帶同一張 Banner 大圖) -->
+  <!-- 彈窗 (Modal 結構) -->
   <div class="modal-overlay" id="gameModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeGameModal()">&times;</button>
@@ -952,222 +727,118 @@
         <h3 id="modalTitle"></h3>
         <div class="modal-subtitle" id="modalSubtitle"></div>
         <div class="modal-prose" id="modalProse"></div>
-        <a class="btn btn-primary btn-large track-outbound" style="width:100%; display:block;" data-href="" data-en="PLAY THIS PROVIDER NOW ›" data-zh="立即進入此廠商開玩 ›" href="javascript:void(0);">
-          PLAY THIS PROVIDER NOW ›
+        <a class="btn btn-primary btn-large track-outbound" style="width:100%; display:block;" data-href="" href="javascript:void(0);">
+          VÀO SẢNH CHƠI NGAY ›
         </a>
       </div>
     </div>
   </div>
 
-  <!-- ============================================================================
-       【區塊 16】核心動態引擎
-       ============================================================================ -->
+  <!-- 核心動態引擎 -->
   <script>
     // -------------------------------------------------------------
-    // 1. 廠商完整中英 SEO 文案與 Banner 關聯資料庫
+    // 1. 廠商純越南文評測資料庫 (彈窗內容在地化)
     // -------------------------------------------------------------
     const providerDatabase = {
-      bng: {
-        banner: "./bng.webp",
-        fallback: "./bng.webp",
-        en: {
-          title: "BNG (3 Oaks Gaming) Official Pokies Review",
-          subtitle: "Certified Hold & Win Engine | Progressive 5,000x Jackpots",
-          prose: `
-            <p><strong>3 Oaks (formerly Booongo)</strong> has cemented its standing as Australia's favorite developer for medium-to-high volatility jackpot pokies. Their signature <strong>Hold and Win</strong> engine locks bonus coins onto reels with respins reset to 3 upon every successful drop.</p>
-            <h4>Key Specifications:</h4>
-            <ul>
-              <li><strong>Certified Return to Player (RTP):</strong> 95.8% – 96.6% audited by eCOGRA.</li>
-              <li><strong>Top Recommended Titles:</strong> Magic Apple, Sun of Egypt 3, Hit the Gold.</li>
-              <li><strong>Jackpot Tiers:</strong> Mini, Minor, Major, and the 5,000x Grand Jackpot.</li>
-            </ul>
-            <p>Optimized for instantaneous touch responsiveness across all iOS Safari and Android Chrome setups.</p>
-          `
-        },
-        zh: {
-          title: "BNG (3 Oaks Gaming) 官方老虎機評測",
-          subtitle: "官方專利 Hold & Win 機制 | 最高 5,000 倍累積彩池",
-          prose: `
-            <p><strong>3 Oaks (原 BNG)</strong> 是澳洲線上拉霸市場中最受讚譽的高爆發廠商。其專利 <strong>Hold and Win</strong> 玩法透過金幣連環鎖定重轉機制，讓玩家在每一次免費旋轉中皆能向 Mini、Minor、Major 與高達 5,000 倍的 Grand 巨額彩金發起衝擊。</p>
-            <h4>核心技術規格：</h4>
-            <ul>
-              <li><strong>官方認證返還率 (RTP)：</strong> 95.8% – 96.6%，經 eCOGRA 國際實驗室嚴格審計。</li>
-              <li><strong>熱門推薦機台：</strong> 魔法蘋果 (Magic Apple)、埃及之日 3 (Sun of Egypt 3)、淘金熱 (Hit the Gold)。</li>
-              <li><strong>行動端最佳化：</strong> 輕量化 HTML5 引擎架構，秒開即玩零卡頓。</li>
-            </ul>
-          `
-        }
+      pg: {
+        banner: "./PG.jpg",
+        title: "Sảnh Nổ Hũ PG Soft - Đồ Họa 3D Đỉnh Cao Dọc Màn Hình",
+        subtitle: "Tỷ Lệ Hoàn Trả RTP 97.4% | Cơ Chế Combo Đa Tầng Cực Lớn",
+        prose: `
+          <p><strong>PG Soft (Pocket Games Soft)</strong> là nhà phát hành game nổ hũ tiên phong tối ưu hóa 100% cho trải nghiệm trên điện thoại thông minh. Thiết kế màn hình dọc tiện lợi kết hợp hiệu ứng âm thanh sống động mang lại cảm giác giải trí bùng nổ.</p>
+          <h4>Thông Số &amp; Điểm Nổi Bật:</h4>
+          <ul>
+            <li><strong>Chỉ số RTP chứng nhận:</strong> 96.7% – 97.4% đạt chuẩn kiểm định quốc tế.</li>
+            <li><strong>Top trò chơi hot nhất:</strong> Mahjong Ways 2 (Đường Mạt Chược 2), Fortune Tiger, Dragon Hatch.</li>
+            <li><strong>Tính năng độc quyền:</strong> Nhân cấp số nhân không giới hạn trong vòng quay miễn phí.</li>
+          </ul>
+        `
       },
       pp: {
-        banner: "./pp.webp",
-        fallback: "./pp.webp",
-        en: {
-          title: "Pragmatic Play - World Leader in Tumbling Slots",
-          subtitle: "Pay-Anywhere Cascades | 1,000x Random Multiplier Bombs",
-          prose: `
-            <p><strong>Pragmatic Play</strong> delivers an adrenaline-fueled casino experience renowned for patented tumble mechanics and massive volatility. Payouts trigger anywhere on the grid without standard paylines, allowing cascading chain reactions from a single wager.</p>
-            <h4>Key Specifications:</h4>
-            <ul>
-              <li><strong>Certified Return to Player (RTP):</strong> 96.50% – 96.71%.</li>
-              <li><strong>Top Recommended Titles:</strong> Gates of Olympus, Sweet Bonanza, Sugar Rush 1000.</li>
-              <li><strong>Multiplier Cap:</strong> Stacking multiplier bombs scaling up to 15,000x total stake.</li>
-            </ul>
-          `
-        },
-        zh: {
-          title: "Pragmatic Play (PP 電子) - 全球頂級掉落消行旗艦",
-          subtitle: "全盤隨處支付機制 | 上千倍隨機乘數炸彈",
-          prose: `
-            <p><strong>Pragmatic Play</strong> 堪稱全球老虎機界的標竿。打破傳統賠付線限制，只要畫面上出現足夠相同圖案即可連鎖消除爆分，搭配隨機降落的金色乘數球，澳洲玩家每一次旋轉都有機會翻出驚人派彩。</p>
-            <h4>核心技術規格：</h4>
-            <ul>
-              <li><strong>官方認證返還率 (RTP)：</strong> 96.50% – 96.71% 頂級高出金配置。</li>
-              <li><strong>熱門推薦機台：</strong> 奧林匹斯之門 (Gates of Olympus)、甜心蜜糖 (Sweet Bonanza)、糖果狂潮 1000。</li>
-              <li><strong>極限爆發力：</strong> 免費旋轉模式內倍數無限累積，最高倍率突破 15,000 倍。</li>
-            </ul>
-          `
-        }
+        banner: "./PP.jpg",
+        title: "Pragmatic Play - Ông Vua Slots Nổ Hũ Toàn Cầu",
+        subtitle: "Cơ Chế Tumble Nổ Liên Hoàn | Nhân Thưởng Ngẫu Nhiên Lên Đến 5,000x",
+        prose: `
+          <p><strong>Pragmatic Play</strong> nổi tiếng toàn thế giới với cơ chế trả thưởng mọi vị trí (Pay Anywhere). Không bị giới hạn bởi các dòng cược truyền thống, các biểu tượng chiến thắng sẽ nổ tung và nhường chỗ cho các biểu tượng mới rơi xuống tạo chuỗi thắng liên tiếp.</p>
+          <h4>Thông Số &amp; Điểm Nổi Bật:</h4>
+          <ul>
+            <li><strong>Chỉ số RTP chứng nhận:</strong> 96.50% – 96.71%.</li>
+            <li><strong>Top trò chơi kinh điển:</strong> Gates of Olympus (Cổng Olympus), Sweet Bonanza, Starlight Princess.</li>
+            <li><strong>Tính năng bom số nhân:</strong> Hệ số nhân tích lũy lên tới hàng ngàn lần tiền cược ban đầu.</li>
+          </ul>
+        `
       },
-      pg: {
-        banner: "./pg.webp",
-        fallback: "./pg.webp",
-        en: {
-          title: "PG Soft - Mobile-First 3D Storyline Pokies",
-          subtitle: "Vertical Layout Mastery | Cascading Multiplier Reel Chains",
-          prose: `
-            <p><strong>PG Soft</strong> pioneered the mobile-first video slot revolution. Designed explicitly for one-handed vertical orientation on smartphones, titles feature cinematic 3D anime narratives and tactile combo feedback.</p>
-            <h4>Key Specifications:</h4>
-            <ul>
-              <li><strong>Certified Return to Player (RTP):</strong> Exceptional 96.7% – 97.4% spectrum.</li>
-              <li><strong>Top Recommended Titles:</strong> Mahjong Ways 2, Fortune Tiger, Dragon Hatch.</li>
-              <li><strong>Mobile Optimization:</strong> Sub-second response times with minimal battery and data draw.</li>
-            </ul>
-          `
-        },
-        zh: {
-          title: "PG Soft (電子) - 專為手機量身打造的直式娛樂霸主",
-          subtitle: "極致單手操作體驗 | 3D 電影級動態連擊機制",
-          prose: `
-            <p><strong>PG Soft</strong> 徹底革新了手遊老虎機體驗。所有機台皆針對智慧型手機直式螢幕開發，結合精緻 3D 動畫與階梯式倍數消除連鎖，單手滑動即可感受節奏緊湊的暴擊快感。</p>
-            <h4>核心技術規格：</h4>
-            <ul>
-              <li><strong>官方認證返還率 (RTP)：</strong> 高達 96.7% – 97.4%，出獎體感極度順暢。</li>
-              <li><strong>熱門推薦機台：</strong> 麻將胡了 2 (Mahjong Ways 2)、虎虎生威 (Fortune Tiger)、橫行霸道。</li>
-              <li><strong>傳輸最佳化：</strong> 極致輕量化代碼，針對澳洲各大行動網路特別微調。</li>
-            </ul>
-          `
-        }
+      daga: {
+        banner: "./DAGA.jpg",
+        title: "Đá Gà Thomo SV388 - Trường Gà Trực Tiếp CPC7 &amp; CPC9",
+        subtitle: "Độc Quyền Bản Quyền Phát Sóng | Đầy Đủ Kèo Meron, Wala, BDD",
+        prose: `
+          <p><strong>Sảnh Đá Gà SV388</strong> tại AE888 là điểm hẹn số 1 của cộng đồng đam mê chiến kê. Truyền phát trực tiếp từ các bồ gà Thomo danh tiếng nhất Campuchia với chất lượng Full HD, đường truyền siêu mượt không độ trễ.</p>
+          <h4>Thông Số &amp; Điểm Nổi Bật:</h4>
+          <ul>
+            <li><strong>Bồ gà hợp tác chính thức:</strong> CPC1, CPC2, CPC7 và CPC9 danh giá.</li>
+            <li><strong>Hình thức thi đấu:</strong> Đá gà cựa dao, đá gà cựa tròn với hàng trăm trận so tài mỗi ngày.</li>
+            <li><strong>Minh bạch tuyệt đối:</strong> Trọng tài quốc tế điều hành, trả thưởng tức thì sau mỗi hiệp đấu.</li>
+          </ul>
+        `
       },
-      sbo: {
-        banner: "./sports.webp",
-        fallback: "./sports.webp",
-        en: {
-          title: "SBOBET Sportsbook - Official Australian Betting Lines",
-          subtitle: "Global Bookmaker | High-Liquidity In-Play Odds & Racing",
-          prose: `
-            <p><strong>SBOBET</strong> has represented global excellence in sports betting for over twenty years. Delivering Asian Handicap precision and sub-second in-play pricing across Australian favorites including AFL, NRL, and metropolitan horse racing.</p>
-            <h4>Key Specifications:</h4>
-            <ul>
-              <li><strong>Sporting Markets:</strong> Comprehensive AFL, NRL, Cricket, NBA, EPL, and Thoroughbred Racing.</li>
-              <li><strong>Settlement Speed:</strong> Immediate slip reconciliation upon official referee whistle.</li>
-              <li><strong>Low Bookmaker Margins:</strong> Consistently superior odds versus typical local TAB pricing.</li>
-            </ul>
-          `
-        },
-        zh: {
-          title: "SBOBET 體育盤口 - 享譽全球的國際體育博彩權威",
-          subtitle: "高流動性即時滾球盤 | 澳洲本土與國際賽事全面涵蓋",
-          prose: `
-            <p><strong>SBOBET (利記)</strong> 擁有超過二十年國際聲譽，為澳洲運彩愛好者提供最深度、最具競爭力的亞洲盤與滾球水位。每週即時開出數千場澳洲 AFL、板球與賽馬盤口。</p>
-            <h4>核心技術規格：</h4>
-            <ul>
-              <li><strong>完整賽事涵蓋：</strong> 澳式足球 (AFL)、國家橄欖球聯賽 (NRL)、板球、NBA、英超與澳洲賽馬。</li>
-              <li><strong>極速派彩：</strong> 賽事實時結束後數秒內自動結算劃帳。</li>
-              <li><strong>超低抽水率：</strong> 國際級精算團隊操盤，提供優於同行的真實返水賠率。</li>
-            </ul>
-          `
-        }
+      casino: {
+        banner: "./CASINO.jpg",
+        title: "Casino Trực Tuyến - Sexy Baccarat &amp; Bàn Cược Đẳng Cấp 4K",
+        subtitle: "Dealer Nóng Bỏng Chuẩn Quốc Tế | Công Nghệ Nhận Diện Bài Quang Học",
+        prose: `
+          <p><strong>AE888 Casino Live</strong> tái hiện không gian sang trọng của các sòng bài Las Vegas và Macau ngay trên màn hình của bạn. Dealer chuyên nghiệp chia bài theo thời gian thực cùng hệ thống camera giám sát đa góc quay 4K.</p>
+          <h4>Thông Số &amp; Điểm Nổi Bật:</h4>
+          <ul>
+            <li><strong>Sảnh cược đa dạng:</strong> Sexy Gaming, Dream Gaming (DG), Evolution Gaming (EVO).</li>
+            <li><strong>Bộ môn phong phú:</strong> Baccarat tốc độ, Baccarat mở bài, Rồng Hổ, Roulette, Tài Xỉu Sicbo.</li>
+            <li><strong>Bảng hiển thị cầu chuẩn xác:</strong> Cập nhật cầu bệt, cầu nghiêng thời gian thực hỗ trợ soi cầu chuẩn xác.</li>
+          </ul>
+        `
       },
-      mt: {
-        banner: "./casino.webp",
-        fallback: "./casino.webp",
-        en: {
-          title: "MT Live Gaming - Luxury 4K Interactive Studio",
-          subtitle: "Zero-Latency Ultra HD Streams | Professional Bilingual Dealers",
-          prose: `
-            <p><strong>MT Live</strong> replicates the VIP atmosphere of Crown Melbourne directly to your device. Featuring proprietary optical card-recognition technology and 4K cameras, every shuffle and card squeeze is certified fully transparent.</p>
-            <h4>Key Specifications:</h4>
-            <ul>
-              <li><strong>Table Variety:</strong> Speed Baccarat, Squeeze Baccarat, Dragon Tiger, and Roulette.</li>
-              <li><strong>Integrity:</strong> Real-time shoe bead plate tracking and live interactive audio.</li>
-              <li><strong>Flexible Limits:</strong> Built for casual AUD punters through to high-roller VIP suites.</li>
-            </ul>
-          `
-        },
-        zh: {
-          title: "MT 真人視訊 - 沉浸式 4K 奢華真人娛樂大廳",
-          subtitle: "零延遲超高清串流 | 專業雙語荷官與防窺咪牌系統",
-          prose: `
-            <p><strong>MT Live</strong> 將宛如墨爾本皇冠賭場的奢華氛圍完美復刻至螢幕前。採用最新光學掃描發牌設備與 4K 多角度攝影機，確保每一局撲克發放與開牌過程皆達到最高誠信標準。</p>
-            <h4>核心技術規格：</h4>
-            <ul>
-              <li><strong>豐富桌台陣容：</strong> 極速百家樂、自主咪牌百家樂、龍虎鬥、歐式輪盤與骰寶。</li>
-              <li><strong>極致透明公平：</strong> 具備完整大路/珠盤即時路紙走勢圖與荷官語音互動。</li>
-              <li><strong>彈性投注限額：</strong> 兼顧小額娛樂休閒玩家與 VIP 頂級尊榮高額限額。</li>
-            </ul>
-          `
-        }
+      sports: {
+        banner: "./SPORTS.jpg",
+        title: "Cá Cược Thể Thao SABA - Đỉnh Cao Kèo Bóng Đá Trực Tuyến",
+        subtitle: "Hàng Ngàn Kèo Trận Mỗi Ngày | Tỷ Lệ Kèo Châu Á &amp; Kèo Tài Xỉu Cạnh Tranh",
+        prose: `
+          <p><strong>Sảnh Thể Thao SABA</strong> cung cấp hệ thống kèo cược đầy đủ cho tất cả các giải đấu thể thao lớn trên toàn cầu. Trực tiếp bóng đá với bảng tỷ lệ cập nhật từng giây theo diễn biến trận đấu.</p>
+          <h4>Thông Số &amp; Điểm Nổi Bật:</h4>
+          <ul>
+            <li><strong>Giải đấu tâm điểm:</strong> Ngoại Hạng Anh, Cúp C1 Châu Âu (Champions League), La Liga, World Cup.</li>
+            <li><strong>Đa dạng loại kèo:</strong> Kèo Châu Á (Handicap), Kèo Châu Âu (1X2), Tài Xỉu (O/U), Kèo Phạt Góc, Thẻ Phạt.</li>
+            <li><strong>Thanh toán siêu tốc:</strong> Tiền thắng cược được cộng vào tài khoản ngay khi trọng tài thổi còi mãn cuộc.</li>
+          </ul>
+        `
       },
       fish: {
-        banner: "./FS.webp",
-        fallback: "./FS.webp",
-        en: {
-          title: "Fish Hunter Hall - Precision Skill-Based Arcade Action",
-          subtitle: "Multiplayer Co-Op Battles | Lock-On Cannons & 1,000x Bosses",
-          prose: `
-            <p>Step away from traditional reels and test your precision in the <strong>Fish Hunter Arcade Hall</strong>. Featuring shared multiplayer ocean arenas, players utilize specialized weaponry, lightning grids, and freeze bombs to take down colossal underwater beasts.</p>
-            <h4>Key Specifications:</h4>
-            <ul>
-              <li><strong>High-Multiplier Bosses:</strong> Golden Krakens and Dragons delivering bounties up to 1,000x.</li>
-              <li><strong>Tactical Arsenal:</strong> Upgradeable power cannons, target-lock beams, and screen-clearing nukes.</li>
-              <li><strong>Social Multiplayer:</strong> Compete or cooperate with up to four punters in the same room.</li>
-            </ul>
-          `
-        },
-        zh: {
-          title: "專屬街機捕魚大廳 - 技術型多人同屏爆金射擊",
-          subtitle: "多人即時競技海域 | 鎖定瞄準重砲與千倍深海巨獸",
-          prose: `
-            <p>告別單調的單線旋轉，體驗極度刺激的<strong>街機捕魚競技場</strong>！在多人同屏共享的浩瀚海域中，玩家可自訂砲台威力，靈活運用雷射光束、冰凍鎖定及全屏核彈，精準擊落各類珍稀深海巨獸。</p>
-            <h4>核心技術規格：</h4>
-            <ul>
-              <li><strong>千倍神話巨獸：</strong> 黃金巨龍、遠古海怪擊殺最高直爆 1,000 倍以上金幣。</li>
-              <li><strong>豐富科技軍火庫：</strong> 支援智慧自動鎖定、電磁爆破與急速連射模式。</li>
-              <li><strong>即時同屏競技：</strong> 支援四名玩家同場博弈，技術操控與爆分爽感兼備。</li>
-            </ul>
-          `
-        }
+        banner: "./FISH.jpg",
+        title: "Bắn Cá Đổi Thưởng Fish Hunter - Săn Boss Đại Dương X1000",
+        subtitle: "Đồ Họa 3D Đại Dương Sắc Nét | Kho Vũ Khí Laser &amp; Bom Băng Đa Dạng",
+        prose: `
+          <p><strong>Bắn Cá Đổi Thưởng</strong> tại AE888 mang lại những phút giây thư giãn kịch tính. Người chơi được trang bị các loại pháo nâng cấp, lưới điện và đạn đặc biệt để chinh phục những loài sinh vật huyền bí dưới đáy biển sâu.</p>
+          <h4>Thông Số &amp; Điểm Nổi Bật:</h4>
+          <ul>
+            <li><strong>Hệ số nhân Boss khổng lồ:</strong> Rồng Vàng, Thần Tài, Bạch Tuộc Khổng Lồ nhân thưởng lên đến 1,000 lần.</li>
+            <li><strong>Phòng chơi phong phú:</strong> Chia cấp độ từ tân thủ đến đại gia phù hợp với mọi mức vốn.</li>
+            <li><strong>Đấu trường nhiều người:</strong> Hỗ trợ tranh tài đồng thời cùng 4 xạ thủ trong cùng một bàn đấu.</li>
+          </ul>
+        `
       }
     };
 
     // -------------------------------------------------------------
-    // 2. 彈窗控制邏輯 (確保帶入同一張 Banner 圖檔)
+    // 2. 彈窗控制邏輯
     // -------------------------------------------------------------
-    let currentLang = 'en';
-
     function openGameModal(key) {
       const item = providerDatabase[key];
       if (!item) return;
 
-      const data = item[currentLang] || item.en;
       const modalImg = document.getElementById('modalImg');
-      
       modalImg.src = item.banner;
-      modalImg.onerror = function() { this.src = item.fallback; };
 
-      document.getElementById('modalTitle').textContent = data.title;
-      document.getElementById('modalSubtitle').textContent = data.subtitle;
-      document.getElementById('modalProse').innerHTML = data.prose;
+      document.getElementById('modalTitle').textContent = item.title;
+      document.getElementById('modalSubtitle').textContent = item.subtitle;
+      document.getElementById('modalProse').innerHTML = item.prose;
 
       document.getElementById('gameModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
@@ -1183,7 +854,7 @@
     });
 
     // -------------------------------------------------------------
-    // 3. 📱 手機端超過 3 張卡片自動折疊與展開運算
+    // 3. 手機端卡片折疊控制
     // -------------------------------------------------------------
     let isGamesExpanded = false;
 
@@ -1205,14 +876,10 @@
           if (index >= 3) card.classList.add('mobile-collapsed');
           else card.classList.remove('mobile-collapsed');
         });
-        if (btn) {
-          btn.innerHTML = (currentLang === 'en') ? '<span>VIEW MORE STUDIOS ▾</span>' : '<span>查看更多遊戲場館 ▾</span>';
-        }
+        if (btn) btn.innerHTML = '<span>XEM THÊM SẢNH CƯỢC ▾</span>';
       } else {
         visibleCards.forEach(card => card.classList.remove('mobile-collapsed'));
-        if (btn) {
-          btn.innerHTML = (currentLang === 'en') ? '<span>COLLAPSE STUDIOS ▴</span>' : '<span>收合場館清單 ▴</span>';
-        }
+        if (btn) btn.innerHTML = '<span>THU GỌN SẢNH CƯỢC ▴</span>';
       }
     }
 
@@ -1222,7 +889,7 @@
     }
 
     // -------------------------------------------------------------
-    // 4. 🏷️ 5 大分類即時過濾 (聯動手機折疊)
+    // 4. 分類即時篩選 (順序：全部 / 老虎機 / 鬥雞 / 真人 / 體育 / 捕魚)
     // -------------------------------------------------------------
     function filterGames(category, btnElement) {
       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
@@ -1237,27 +904,25 @@
         }
       });
 
-      isGamesExpanded = false; // 切換分類時重置為收合狀態
+      isGamesExpanded = false;
       updateMobileGamesCollapse();
     }
 
     // -------------------------------------------------------------
-    // 5. 手機端 SEO 長文指南展開/收合
+    // 5. 手機端長文展開/收合
     // -------------------------------------------------------------
     function toggleGuide() {
       const content = document.getElementById('guideContent');
       const btn = document.getElementById('guideToggleBtn');
       const isCollapsed = content.classList.toggle('collapsed');
       
-      if (isCollapsed) {
-        btn.textContent = (currentLang === 'en') ? '▼ Read Full Provider Guide' : '▼ 展開閱讀完整廠商指南';
-      } else {
-        btn.textContent = (currentLang === 'en') ? '▲ Collapse Provider Guide' : '▲ 收合廠商指南';
-      }
+      btn.textContent = isCollapsed 
+        ? '▼ Đọc Đầy Đủ Hướng Dẫn Sảnh Cược' 
+        : '▲ Thu Gọn Hướng Dẫn Sảnh Cược';
     }
 
     // -------------------------------------------------------------
-    // 6. 📱 手機版抽屜選單展開/收合控制 (防止 MENU 文字被沖掉)
+    // 6. 手機版抽屜選單控制
     // -------------------------------------------------------------
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -1267,14 +932,14 @@
       const isOpen = mobileMenu.classList.toggle('active');
       if (menuToggle) {
         menuToggle.innerHTML = isOpen 
-          ? '<span>CLOSE</span> <span>✕</span>' 
+          ? '<span>ĐÓNG</span> <span>✕</span>' 
           : '<span>MENU</span> <span>☰</span>';
       }
     }
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
 
     // -------------------------------------------------------------
-    // 7. 🚀 回到頂端火箭按鈕監聽 (滾動 350px 浮現)
+    // 7. 回到頂部按鈕
     // -------------------------------------------------------------
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
@@ -1286,46 +951,10 @@
     }
 
     // -------------------------------------------------------------
-    // 8. ✨ 雙語即時切換引擎 (初始化對齊：當前英文時按鈕顯示「中文」)
-    // -------------------------------------------------------------
-    function applyLanguage(targetLang) {
-      currentLang = targetLang;
-      const label = (targetLang === 'en') ? '中文' : 'EN';
-      
-      const pcBtn = document.getElementById('langBtn');
-      const drawerBtn = document.getElementById('langBtnDrawer');
-      const topBtn = document.getElementById('langBtnTop');
-      if (pcBtn) pcBtn.textContent = label;
-      if (drawerBtn) drawerBtn.textContent = label;
-      if (topBtn) topBtn.textContent = label;
-
-      document.querySelectorAll('[data-en]').forEach(function(el) {
-        const text = (targetLang === 'en') ? el.getAttribute('data-en') : el.getAttribute('data-zh');
-        if (text !== null) {
-          el.innerHTML = text;
-        }
-      });
-      document.documentElement.lang = (targetLang === 'en') ? 'en-AU' : 'zh';
-      updateMobileGamesCollapse();
-    }
-
-    function switchLanguage() {
-      const nextLang = (document.documentElement.lang === 'zh') ? 'en' : 'zh';
-      applyLanguage(nextLang);
-    }
-
-    const pcLangBtn = document.getElementById('langBtn');
-    const drawerLangBtn = document.getElementById('langBtnDrawer');
-    const topLangBtn = document.getElementById('langBtnTop');
-    if (pcLangBtn) pcLangBtn.addEventListener('click', switchLanguage);
-    if (drawerLangBtn) drawerLangBtn.addEventListener('click', switchLanguage);
-    if (topLangBtn) topLangBtn.addEventListener('click', switchLanguage);
-
-    // -------------------------------------------------------------
-    // 9. 🎯 動態跳轉引擎 (支援個別按鈕自訂 data-href 網址 + 參數無損繼承)
+    // 8. 跳轉引擎
     // -------------------------------------------------------------
     function getFinalTargetUrl(customUrl) {
-      const defaultRegisterUrl = "https://www.mate369.com/Register?p=JC";
+      const defaultRegisterUrl = "https://ae888uytin.com/";
       const targetBase = (customUrl && customUrl.trim() !== "") ? customUrl.trim() : defaultRegisterUrl;
       
       const targetObj = new URL(targetBase, window.location.origin);
@@ -1360,7 +989,7 @@
     });
 
     // -------------------------------------------------------------
-    // 10. ✨ 滑鼠動態跟隨光斑
+    // 9. 滑鼠光斑
     // -------------------------------------------------------------
     (function() {
       const glow = document.getElementById('cursor-glow');
@@ -1373,7 +1002,7 @@
     })();
 
     // -------------------------------------------------------------
-    // 11. 滾動淡入 IntersectionObserver
+    // 10. 滾動淡入 IntersectionObserver
     // -------------------------------------------------------------
     (function() {
       if (!('IntersectionObserver' in window)) return;
@@ -1392,7 +1021,7 @@
     })();
 
     // -------------------------------------------------------------
-    // 12. 💬 懸浮社群氣泡點擊開關與全域點擊收合控制
+    // 11. 懸浮社群氣泡開關
     // -------------------------------------------------------------
     (function() { 
       const wrap = document.getElementById('socialBubbleWrap'); 
@@ -1411,14 +1040,8 @@
       });
     })();
 
-    // -------------------------------------------------------------
-    // 13. 頁面載入自初始化
-    // -------------------------------------------------------------
-    (function initPage() {
-      const defaultLang = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
-      applyLanguage(defaultLang);
-      window.addEventListener('resize', updateMobileGamesCollapse);
-    })();
+    window.addEventListener('resize', updateMobileGamesCollapse);
+    document.addEventListener('DOMContentLoaded', updateMobileGamesCollapse);
   </script>
 </body>
 </html>
