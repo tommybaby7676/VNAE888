@@ -27,7 +27,7 @@
   <meta name="description" content="AE888 - Nhà cái cá cược trực tuyến hàng đầu Châu Á. Trực tiếp đá gà Thomo CPC7, CPC9, casino online, thể thao SABA, nạp rút siêu tốc không bị chặn 2026.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   
-  <link rel="icon" href="logo.ico" type="image/x-icon">
+  <link rel="icon" href="AElogo.ico" type="image/x-icon">
 
   <!-- 字體引入 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,19 +36,20 @@
 
   <style>
     :root {
-      /* 品牌主色調：深墨綠搭配亮金與極光綠，完美呼應 AE888 金紅品牌圖樣 */
-      --bg: #031c10;
-      --panel: rgba(4, 40, 24, 0.85);
-      --panel-solid: #052d1a;
-      --pink: #106539;
-      --magenta: #00ff88;
-      --violet: #56FF4D;
-      --purple: #2FFF6D;
-      --gold: #ffc700;
-      --text: #FFFFFF;
-      --muted: #BFFFD7;
-      --line: rgba(0, 255, 136, 0.22);
-      
+      /* 🎨 AE888 專屬配色盤 (白底 + 旗艦紅 + 帝王金) */
+      --bg: #f9fafb;                        /* 網頁主底色：柔和素白灰 */
+      --panel: rgba(255, 255, 255, 0.92);   /* 卡片背景：微透純白 */
+      --panel-solid: #ffffff;               /* 實心純白底 */
+
+      --pink: #d91b24;                      /* AE888 品牌經典大紅 */
+      --purple: #b30f17;                    /* 深紅色 (漸層用) */
+      --magenta: #e02424;                   /* 醒目亮紅 */
+      --gold: #d4a017;                      /* 帝王金 (呼應 Logo 金色) */
+
+      --text: #111827;                      /* 主文字：深鐵灰黑 */
+      --muted: #4b5563;                     /* 次要文字：質感中灰 */
+      --line: rgba(217, 27, 36, 0.14);      /* 邊框線：極淺紅金色微光線條 */
+
       --nav-height: 64px;
       --logo-height-pc: 40px;
       --logo-height-mobile: 30px;
@@ -65,30 +66,37 @@
       padding-top: var(--nav-height);
     }
 
+    /* 🏙️ 1. 停用原始城市圖 */
     .bg-city {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: url('view.webp') center top / cover no-repeat fixed;
-      background-color: var(--bg);
-      opacity: 0.85;
-    }
-    .bg-overlay {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: linear-gradient(180deg, rgba(3,28,16,0.2) 0%, rgba(3,28,16,0.55) 60%, rgba(3,28,16,0.85) 100%);
-    }
-    .grid-bg {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: linear-gradient(rgba(0,255,136,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,136,0.05) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .scan {
-      position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.25;
-      background: repeating-linear-gradient(0deg, rgba(0,0,0,0.25) 0 1px, transparent 1px 3px);
+      display: none !important;
     }
 
+    /* 🌅 2. 質感漸層遮罩：上方帶有極淡的紅金色高光，向下漸變回白底 */
+    .bg-overlay {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background: radial-gradient(circle at 50% -10%, rgba(217, 27, 36, 0.08) 0%, rgba(212, 160, 23, 0.04) 45%, transparent 80%);
+    }
+
+    /* 📐 3. 科技網格線：改為極淺的淡紅金/淺灰網格，素白底上呈現微光科技感 */
+    .grid-bg {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: 
+        linear-gradient(rgba(217, 27, 36, 0.04) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(217, 27, 36, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    /* 📺 4. 質感細微掃描線：調降透明度，保留細緻的層次感 */
+    .scan {
+      position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.12;
+      background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0 1px, transparent 1px 3px);
+    }
+
+    /* ✨ 5. 滑鼠專屬光暈：改為 AE888 的「暖紅 + 亮金」漸層光暈，滑動時自帶氛圍燈 */
     #cursor-glow {
-      position: fixed; width: 450px; height: 450px; border-radius: 50%;
+      position: fixed; width: 420px; height: 420px; border-radius: 50%;
       pointer-events: none; z-index: 1;
-      background: radial-gradient(circle, rgba(0,255,136,0.15), rgba(255,27,141,0.08), transparent 65%);
+      background: radial-gradient(circle, rgba(217, 27, 36, 0.12) 0%, rgba(212, 160, 23, 0.08) 40%, transparent 70%);
       transform: translate(-50%, -50%);
       transition: opacity 0.3s;
     }
@@ -415,17 +423,17 @@
 </head>
 
 <body>
-  <div class="bg-city"></div>
+  <!-- 遮罩與質感特效層 (不放 bg-city 城市圖) -->
   <div class="bg-overlay"></div>
   <div class="grid-bg"></div>
   <div class="scan"></div>
   <div id="cursor-glow"></div>
-
+ 
   <!-- 頂部導航 (直接載入你的 10003.png 官方 Logo) -->
   <nav>
     <div class="nav-in">
       <a class="logo-box" href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-        <img src="10003.png" alt="AE888 Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="logo.webp" alt="AE888 Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <span class="logo-fallback"><span class="dot"></span><span>AE888</span></span>
       </a>
 
@@ -467,15 +475,18 @@
         <div class="carousel-track" id="carouselTrack">
           <!-- Banner 1: 柬埔寨 Thomo 鬥雞專場 (10008.webp) -->
           <div class="carousel-slide">
-            <img src="10008.webp" alt="Trực Tiếp Đá Gà CPC7 và CPC9">
+            <img src="A1.webp" alt="Trực Tiếp Đá Gà CPC7 và CPC9">
           </div>
           <!-- Banner 2: 英超賽事體育盤口 (10004.webp) -->
           <div class="carousel-slide">
-            <img src="10004.webp" alt="Đại Chiến Ngoại Hạng Anh">
+            <img src="A2.webp" alt="Đại Chiến Ngoại Hạng Anh">
           </div>
           <!-- Banner 3: USDT 虛擬幣充提出金特惠 (10005.webp) -->
           <div class="carousel-slide">
-            <img src="10005.webp" alt="Nạp Rút USDT Siêu Ưu Đãi">
+            <img src="A3.webp" alt="Nạp Rút USDT Siêu Ưu Đãi">
+          </div>
+          <div class="carousel-slide">
+            <img src="A4.webp" alt="Đại Chiến Ngoại Hạng Anh">
           </div>
         </div>
         <div class="carousel-dots" id="carouselDots"></div>
@@ -554,7 +565,7 @@
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
             <!-- 你可以把 10001.webp 作為鬥雞縮圖 -->
-            <img src="10001.webp" alt="Đá Gà SV388 Thomo">
+            <img src="B1.webp" alt="Đá Gà SV388 Thomo">
           </div>
           <div class="game-body">
             <div class="info"><h3>ĐÁ GÀ SV388</h3><div class="genre">THOMO CPC7 & CPC9</div></div>
@@ -565,7 +576,7 @@
         <!-- 2. 真人視訊百家樂 -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
-            <img src="./games/casino.webp" alt="Casino Trực Tuyến Sexy Baccarat">
+            <img src="B2.webp" alt="Casino Trực Tuyến Sexy Baccarat">
           </div>
           <div class="game-body">
             <div class="info"><h3>CASINO ONLINE</h3><div class="genre">SEXY BACCARAT / DG / EVO</div></div>
@@ -576,7 +587,7 @@
         <!-- 3. 老虎機爆罐 (PG / JILI) -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
-            <img src="./games/pg.webp" alt="Nổ Hũ Slot Game">
+            <img src="B3.webp" alt="Nổ Hũ Slot Game">
           </div>
           <div class="game-body">
             <div class="info"><h3>NỔ HŨ - SLOTS</h3><div class="genre">PG SOFT & JILI JACKPOT</div></div>
@@ -587,7 +598,7 @@
         <!-- 4. 體育滾球 (SABA / SBOBET) -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
-            <img src="./games/sports.webp" alt="Cá Cược Thể Thao SABA">
+            <img src="B4.webp" alt="Cá Cược Thể Thao SABA">
           </div>
           <div class="game-body">
             <div class="info"><h3>THỂ THAO SABA</h3><div class="genre">NGOẠI HẠNG ANH & C1</div></div>
@@ -598,7 +609,7 @@
         <!-- 5. 捕魚換現金 -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
-            <img src="./games/FS.webp" alt="Bắn Cá Đổi Thưởng">
+            <img src="B5.webp" alt="Bắn Cá Đổi Thưởng">
           </div>
           <div class="game-body">
             <div class="info"><h3>BẮN CÁ ĐỔI THƯỞNG</h3><div class="genre">JDB & CQ9 1000X BOSS</div></div>
@@ -790,7 +801,7 @@
   <script>
     // 預設跳轉網址（換成你們的 Cloudflare 跳轉短鏈或大廳註冊線）
     function getFinalTargetUrl(customUrl) {
-      const defaultRegisterUrl = "https://ae888uytin.com/"; // 可換成你們實際的註冊跳轉網址
+      const defaultRegisterUrl = "https://www.ae888.com/"; // 可換成你們實際的註冊跳轉網址
       const targetBase = (customUrl && customUrl.trim() !== "") ? customUrl.trim() : defaultRegisterUrl;
       const targetObj = new URL(targetBase, window.location.origin);
       const currentParams = new URLSearchParams(window.location.search);
