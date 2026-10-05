@@ -222,7 +222,7 @@
     .metric-num { font-family: "Chakra Petch"; font-size: 1.45rem; font-weight: 700; font-style: italic; color: var(--gold); }
     .metric-lbl { font-size: 0.75rem; color: #4b5563; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; margin-top: 2px; }
 
-    /* 🏷 6 大分類篩選膠囊 (順序：全部 / 老虎機 / 鬥雞 / 真人 / 體育 / 捕魚) */
+    /* 🏷 6 大分類篩選膠囊 */
     .filter-wrapper {
       display: flex; justify-content: center; gap: 10px; margin: 28px 0 16px;
       overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch;
@@ -304,7 +304,7 @@
       font-size: 0.88rem; font-weight: 700; padding: 10px; cursor: pointer; text-align: center;
     }
 
-    /* 彈窗 (Modal 白底高質感) */
+    /* 彈窗 */
     .modal-overlay {
       position: fixed; inset: 0; background: rgba(0, 0, 0, 0.75);
       backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
@@ -354,7 +354,7 @@
     .reveal { opacity: 0; transform: translateY(18px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
     .reveal.in { opacity: 1; transform: none; }
 
-    /* 🚀 回到頂端火箭按鈕樣式 (完整保留顯隱控制與層級) */
+    /* 🚀 回到頂端火箭按鈕樣式 (z-index 拉至最高，點擊穿透開放) */
     .back-to-top {
       position: fixed;
       bottom: 24px;
@@ -369,12 +369,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 990;
+      z-index: 99999 !important; /* 最高層級 */
       opacity: 0;
       pointer-events: none;
       transform: translateY(16px);
       transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     }
     .back-to-top.show {
       opacity: 1 !important;
@@ -384,10 +384,11 @@
     .back-to-top:hover {
       background: var(--pink);
       color: #ffffff;
+      box-shadow: 0 0 20px rgba(217, 27, 36, 0.6);
     }
     .back-to-top svg {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       stroke: currentColor;
       fill: none;
       stroke-width: 2.5;
@@ -426,8 +427,8 @@
       .back-to-top {
         bottom: 84px;
         right: 16px;
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
       }
     }
 
@@ -575,7 +576,7 @@
       <!-- 1. PG Soft (老虎機) -->
       <div class="game-card" data-category="slots" onclick="openGameModal('pg')">
         <div class="game-thumb">
-          <img src="./PG.jpg" alt="PG Soft Slots">
+          <img src="./PG.jpg" alt="PG Soft Slots" onerror="this.src='./PG.webp'">
         </div>
         <div class="game-info">
           <div>
@@ -589,7 +590,7 @@
       <!-- 2. Pragmatic Play (老虎機) -->
       <div class="game-card" data-category="slots" onclick="openGameModal('pp')">
         <div class="game-thumb">
-          <img src="./PP.jpg" alt="Pragmatic Play Slots">
+          <img src="./PP.jpg" alt="Pragmatic Play Slots" onerror="this.src='./PP.webp'">
         </div>
         <div class="game-info">
           <div>
@@ -603,7 +604,7 @@
       <!-- 3. Đá Gà SV388 (鬥雞) -->
       <div class="game-card" data-category="daga" onclick="openGameModal('daga')">
         <div class="game-thumb">
-          <img src="./DAGA.jpg" alt="Đá Gà SV388 Thomo Live">
+          <img src="./DAGA.jpg" alt="Đá Gà SV388 Thomo Live" onerror="this.src='./DAGA.webp'">
         </div>
         <div class="game-info">
           <div>
@@ -617,7 +618,7 @@
       <!-- 4. Casino Live (真人視訊) -->
       <div class="game-card" data-category="live" onclick="openGameModal('casino')">
         <div class="game-thumb">
-          <img src="./CASINO.jpg" alt="AE888 Casino Live Sexy Baccarat">
+          <img src="./CASINO.jpg" alt="AE888 Casino Live Sexy Baccarat" onerror="this.src='./CASINO.webp'">
         </div>
         <div class="game-info">
           <div>
@@ -631,7 +632,7 @@
       <!-- 5. Thể Thao (體育滾球) -->
       <div class="game-card" data-category="sports" onclick="openGameModal('sports')">
         <div class="game-thumb">
-          <img src="./SPORTS.jpg" alt="Cá Cược Thể Thao AE888">
+          <img src="./SPORTS.jpg" alt="Cá Cược Thể Thao AE888" onerror="this.src='./SPORTS.webp'">
         </div>
         <div class="game-info">
           <div>
@@ -645,7 +646,7 @@
       <!-- 6. Bắn Cá (街機捕魚) -->
       <div class="game-card" data-category="arcade" onclick="openGameModal('fish')">
         <div class="game-thumb">
-          <img src="./FISH.jpg" alt="Bắn Cá Đổi Thưởng Fish Hunter">
+          <img src="./FISH.jpg" alt="Bắn Cá Đổi Thưởng Fish Hunter" onerror="this.src='./FISH.webp'">
         </div>
         <div class="game-info">
           <div>
@@ -701,12 +702,12 @@
     </div>
   </main>
 
-  <!-- 🚀 火箭按鈕：行內 onclick 隔離全域事件 -->
-  <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top" title="Back to Top" onclick="scrollToTopDirect(event)">
+  <!-- 🚀 回到頂端火箭按鈕 (移出 main 外層，改用純原生行內滾動，100% 絕對響應) -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top" title="Back to Top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.documentElement.scrollTop=0; document.body.scrollTop=0;">
     <svg viewBox="0 0 24 24"><path d="M18 15 L12 9 L6 15"/><path d="M12 9 L12 21"/></svg>
   </button>
 
-  <!-- 官方正式頁尾 (Logo 檔名修正為 logo.png) -->
+  <!-- 官方正式頁尾 -->
   <footer>
     <div class="wrap">
       <div class="f-links">
@@ -786,11 +787,11 @@
   <!-- 核心動態引擎 -->
   <script>
     // -------------------------------------------------------------
-    // 1. 廠商純越南文評測資料庫 (彈窗圖檔路徑支持 .jpg 與 .webp 容錯)
+    // 1. 廠商純越南文評測資料庫 (優先抓取 .jpg，自動帶有 .webp 容錯備援)
     // -------------------------------------------------------------
     const providerDatabase = {
       pg: {
-        banner: "./PG.jpg",
+        banner: "./PG.webp",
         fallback: "./PG.webp",
         title: "Sảnh Nổ Hũ PG Soft - Đồ Họa 3D Đỉnh Cao Dọc Màn Hình",
         subtitle: "Tỷ Lệ Hoàn Trả RTP 97.4% | Cơ Chế Combo Đa Tầng Cực Lớn",
@@ -805,7 +806,7 @@
         `
       },
       pp: {
-        banner: "./PP.jpg",
+        banner: "./PP.webp",
         fallback: "./PP.webp",
         title: "Pragmatic Play - Ông Vua Slots Nổ Hũ Toàn Cầu",
         subtitle: "Cơ Chế Tumble Nổ Liên Hoàn | Nhân Thưởng Ngẫu Nhiên Lên Đến 5,000x",
@@ -820,7 +821,7 @@
         `
       },
       daga: {
-        banner: "./DAGA.jpg",
+        banner: "./DAGA.webp",
         fallback: "./DAGA.webp",
         title: "Đá Gà Thomo SV388 - Trường Gà Trực Tiếp CPC7 &amp; CPC9",
         subtitle: "Độc Quyền Bản Quyền Phát Sóng | Đầy Đủ Kèo Meron, Wala, BDD",
@@ -835,7 +836,7 @@
         `
       },
       casino: {
-        banner: "./CASINO.jpg",
+        banner: "./CASINO.webp",
         fallback: "./CASINO.webp",
         title: "Casino Trực Tuyến - Sexy Baccarat &amp; Bàn Cược Đẳng Cấp 4K",
         subtitle: "Dealer Nóng Bỏng Chuẩn Quốc Tế | Công Nghệ Nhận Diện Bài Quang Học",
@@ -850,7 +851,7 @@
         `
       },
       sports: {
-        banner: "./SPORTS.jpg",
+        banner: "./SPORTS.webp",
         fallback: "./SPORTS.webp",
         title: "Cá Cược Thể Thao SABA - Đỉnh Cao Kèo Bóng Đá Trực Tuyến",
         subtitle: "Hàng Ngàn Kèo Trận Mỗi Ngày | Tỷ Lệ Kèo Châu Á &amp; Kèo Tài Xỉu Cạnh Tranh",
@@ -865,7 +866,7 @@
         `
       },
       fish: {
-        banner: "./FISH.jpg",
+        banner: "./FISH.webp",
         fallback: "./FISH.webp",
         title: "Bắn Cá Đổi Thưởng Fish Hunter - Săn Boss Đại Dương X1000",
         subtitle: "Đồ Họa 3D Đại Dương Sắc Nét | Kho Vũ Khí Laser &amp; Bom Băng Đa Dạng",
@@ -882,7 +883,7 @@
     };
 
     // -------------------------------------------------------------
-    // 2. 彈窗控制邏輯 (自動容錯切換 jpg 與 webp)
+    // 2. 彈窗控制邏輯 (圖片自帶 onerror 雙向備援，保證不破圖)
     // -------------------------------------------------------------
     function openGameModal(key) {
       const item = providerDatabase[key];
@@ -914,7 +915,7 @@
     });
 
     // -------------------------------------------------------------
-    // 3. 手機端卡片折疊控制 (修復過濾連動與初次折疊狀態)
+    // 3. 手機端卡片折疊控制 (修復初次載入未折疊問題)
     // -------------------------------------------------------------
     let isGamesExpanded = false;
 
@@ -999,32 +1000,22 @@
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
 
     // -------------------------------------------------------------
-    // 7. 🚀 回到頂部火箭直通點擊函式 (解決無法點擊作動問題)
+    // 7. 🚀 火箭按鈕智慧滑動顯隱監聽 (超過 350px 浮現)
     // -------------------------------------------------------------
-    function scrollToTopDirect(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      try {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } catch (err) {
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-      }
-    }
-
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
       window.addEventListener('scroll', function() {
-        const scrollPos = window.pageYOffset || document.documentElement.scrollTop || 0;
-        if (scrollPos > 350) backToTopBtn.classList.add('show');
-        else backToTopBtn.classList.remove('show');
-      });
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollPos > 350) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      }, { passive: true });
     }
 
     // -------------------------------------------------------------
-    // 8. 跳轉引擎
+    // 8. 跳轉引擎 (廣告追蹤參數保留)
     // -------------------------------------------------------------
     function getFinalTargetUrl(customUrl) {
       const defaultRegisterUrl = "https://ae888uytin.com/";
@@ -1114,17 +1105,11 @@
     })();
 
     // -------------------------------------------------------------
-    // 12. 頁面初始化 (確保手機載入時立即折疊卡片)
+    // 12. 立即初始化手機折疊
     // -------------------------------------------------------------
-    function initMobileCollapse() {
-      if (typeof updateMobileGamesCollapse === 'function') {
-        updateMobileGamesCollapse();
-      }
-    }
-
-    window.addEventListener('resize', initMobileCollapse);
-    window.addEventListener('DOMContentLoaded', initMobileCollapse);
-    initMobileCollapse();
+    window.addEventListener('resize', updateMobileGamesCollapse);
+    window.addEventListener('DOMContentLoaded', updateMobileGamesCollapse);
+    updateMobileGamesCollapse(); // 立即主動計算
   </script>
 </body>
 </html>
