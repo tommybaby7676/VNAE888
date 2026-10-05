@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 首頁 (Homepage) -->
+  <url>
+    <loc>https://tommybaby7676.github.io/VNAE888/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 遊戲大廳 (Trò Chơi / Game Hall) -->
+  <url>
+    <loc>https://tommybaby7676.github.io/VNAE888/games/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 優惠活動 (Khuyến Mãi / Promotions) -->
+  <url>
+    <loc>https://tommybaby7676.github.io/VNAE888/features/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 新手指南 / 玩彩經驗 (Hướng Dẫn / Guides) -->
+  <url>
+    <loc>https://tommybaby7676.github.io/VNAE888/guides/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 常見問答 & VIP (Hỏi Đáp & VIP / FAQ) -->
+  <url>
+    <loc>https://tommybaby7676.github.io/VNAE888/faq/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 關於我們與牌照安全 (Về Chúng Tôi / About Us) -->
+  <url>
+    <loc>https://tommybaby7676.github.io/VNAE888/about/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
