@@ -36,19 +36,19 @@
 
   <style>
     :root {
-      /* 🎨 AE888 專屬配色盤 (白底 + 旗艦紅 + 帝王金) */
-      --bg: #f9fafb;                        /* 網頁主底色：柔和素白灰 */
-      --panel: rgba(255, 255, 255, 0.92);   /* 卡片背景：微透純白 */
+      /* 🎨 AE888 官方專屬配色盤 (白底 + 旗艦紅 + 帝王金) */
+      --bg: #f8f9fa;                        /* 網頁主底色：柔和純淨淺灰白 */
+      --panel: rgba(255, 255, 255, 0.95);   /* 卡片背景：純白微透 */
       --panel-solid: #ffffff;               /* 實心純白底 */
 
       --pink: #d91b24;                      /* AE888 品牌經典大紅 */
       --purple: #b30f17;                    /* 深紅色 (漸層用) */
-      --magenta: #e02424;                   /* 醒目亮紅 */
+      --magenta: #d91b24;                   /* 醒目正紅 */
       --gold: #d4a017;                      /* 帝王金 (呼應 Logo 金色) */
 
-      --text: #111827;                      /* 主文字：深鐵灰黑 */
-      --muted: #4b5563;                     /* 次要文字：質感中灰 */
-      --line: rgba(217, 27, 36, 0.14);      /* 邊框線：極淺紅金色微光線條 */
+      --text: #1f2937;                      /* 主文字：深鐵灰黑 (清晰耐讀) */
+      --muted: #4b5563;                     /* 次要說明文字：質感中灰 */
+      --line: rgba(217, 27, 36, 0.15);      /* 邊框線：極淺紅金色微光線條 */
 
       --nav-height: 64px;
       --logo-height-pc: 40px;
@@ -66,18 +66,18 @@
       padding-top: var(--nav-height);
     }
 
-    /* 🏙️ 1. 停用原始城市圖 */
+    
     .bg-city {
       display: none !important;
     }
 
-    /* 🌅 2. 質感漸層遮罩：上方帶有極淡的紅金色高光，向下漸變回白底 */
+    /* 2. 質感漸層遮罩：上方帶有極淡的紅金色高光，向下漸變回白底 */
     .bg-overlay {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: radial-gradient(circle at 50% -10%, rgba(217, 27, 36, 0.08) 0%, rgba(212, 160, 23, 0.04) 45%, transparent 80%);
+      background: radial-gradient(circle at 50% -10%, rgba(217, 27, 36, 0.06) 0%, rgba(212, 160, 23, 0.03) 45%, transparent 80%);
     }
 
-    /* 📐 3. 科技網格線：改為極淺的淡紅金/淺灰網格，素白底上呈現微光科技感 */
+    /* 3. 科技網格線：淡紅金極淺網格 */
     .grid-bg {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background-image: 
@@ -86,17 +86,17 @@
       background-size: 36px 36px;
     }
 
-    /* 📺 4. 質感細微掃描線：調降透明度，保留細緻的層次感 */
+    /* 4. 質感細微掃描線 */
     .scan {
-      position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.12;
+      position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.08;
       background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0 1px, transparent 1px 3px);
     }
 
-    /* ✨ 5. 滑鼠專屬光暈：改為 AE888 的「暖紅 + 亮金」漸層光暈，滑動時自帶氛圍燈 */
+    /* 5. 滑鼠專屬光暈 */
     #cursor-glow {
       position: fixed; width: 420px; height: 420px; border-radius: 50%;
       pointer-events: none; z-index: 1;
-      background: radial-gradient(circle, rgba(217, 27, 36, 0.12) 0%, rgba(212, 160, 23, 0.08) 40%, transparent 70%);
+      background: radial-gradient(circle, rgba(217, 27, 36, 0.10) 0%, rgba(212, 160, 23, 0.06) 40%, transparent 70%);
       transform: translate(-50%, -50%);
       transition: opacity 0.3s;
     }
@@ -106,7 +106,8 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height);
       z-index: 999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      background: rgba(3, 28, 16, 0.90); border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94); border-bottom: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
     }
     .nav-in {
       max-width: 1180px; height: 100%; margin: 0 auto; padding: 0 20px;
@@ -114,40 +115,41 @@
     }
     .logo-box { display: flex; align-items: center; cursor: pointer; text-decoration: none; }
     .logo-img { height: var(--logo-height-pc); width: auto; max-width: 220px; object-fit: contain; display: block; }
-    .logo-fallback { display: none; align-items: center; gap: 8px; font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.25rem; color: #fff; }
-    .logo-fallback .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 12px var(--magenta); }
+    .logo-fallback { display: none; align-items: center; gap: 8px; font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.25rem; color: #111827; }
+    .logo-fallback .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 12px var(--pink); }
 
     .nav-links { display: flex; align-items: center; gap: 20px; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
-    .nav-links a:hover { color: #fff; }
+    .nav-links a { color: #374151; text-decoration: none; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
+    .nav-links a:hover { color: var(--pink); }
 
     .btn-nav-reg {
       background: linear-gradient(120deg, var(--pink), var(--purple)) !important;
       color: #ffffff !important;
       padding: 9px 22px !important;
       font-size: 0.88rem !important;
-      box-shadow: 0 0 14px rgba(0, 255, 136, 0.4) !important;
+      box-shadow: 0 0 14px rgba(217, 27, 36, 0.35) !important;
     }
 
     .menu-toggle {
-      display: none; background: rgba(0, 255, 136, 0.08); border: 1.5px solid var(--magenta);
-      color: var(--magenta); font-family: "Chakra Petch"; font-weight: 700;
+      display: none; background: rgba(217, 27, 36, 0.08); border: 1.5px solid var(--pink);
+      color: var(--pink); font-family: "Chakra Petch"; font-weight: 700;
       font-size: 0.85rem; padding: 5px 10px; cursor: pointer; border-radius: 4px;
       line-height: 1; align-items: center; gap: 6px;
-      box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+      box-shadow: 0 0 10px rgba(217, 27, 36, 0.2);
     }
 
     .mobile-menu {
       display: none; position: fixed; top: var(--nav-height); left: 0; right: 0;
-      background: rgba(3, 28, 16, 0.98); border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.98); border-bottom: 2px solid var(--pink);
       padding: 20px; z-index: 998; backdrop-filter: blur(20px);
       flex-direction: column; gap: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
     .mobile-menu.active { display: flex; }
     .mobile-menu a {
       color: var(--text); text-decoration: none; font-size: 1.1rem;
       font-weight: 700; font-family: "Chakra Petch"; padding: 8px 0;
-      border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .mobile-actions { display: none; }
@@ -171,37 +173,38 @@
        background: linear-gradient(120deg, var(--pink), var(--purple));
        color: #ffffff !important;
        font-weight: 900;
-       box-shadow: 0 0 22px rgba(0, 255, 136, 0.45);
+       box-shadow: 0 0 22px rgba(217, 27, 36, 0.45);
        padding: 12px 24px;
        font-size: 0.95rem;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(0, 255, 136, 0.85); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
     .btn-ghost {
-      background: rgba(0,255,136,0.08); color: #fff;
-      border: 1px solid var(--magenta); padding: 11px 22px; font-size: 0.95rem;
+      background: rgba(255, 255, 255, 0.9); color: var(--pink) !important;
+      border: 1.5px solid var(--pink); padding: 11px 22px; font-size: 0.95rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
-    .btn-ghost:hover { background: rgba(0,255,136,0.2); }
+    .btn-ghost:hover { background: rgba(217, 27, 36, 0.08); }
     .btn-large {
       width: 100%; max-width: 440px; padding: 16px 32px; font-size: 1.15rem; margin: 0 auto;
       animation: btnPulse 2s ease-in-out infinite;
     }
     @keyframes btnPulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 16px rgba(0, 255, 136, 0.35); }
-      50% { transform: scale(1.03); box-shadow: 0 0 32px rgba(0, 255, 136, 0.8); }
+      0%, 100% { transform: scale(1); box-shadow: 0 0 16px rgba(217, 27, 36, 0.35); }
+      50% { transform: scale(1.03); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
     }
 
-    /* 🎠 核心：等比自相容輪播容器（圖片有多寬多高就撐多開，絕不裁切） */
+    /*  核心：等比自相容輪播容器 */
     .carousel-container {
       position: relative;
       width: 100%;
       max-width: 1020px;
       margin: 16px auto 14px;
-      border: 1.5px solid var(--line);
+      border: 1.5px solid rgba(217, 27, 36, 0.2);
       border-radius: 8px;
-      background: #021a0f;
+      background: #ffffff;
       overflow: hidden;
       touch-action: pan-y;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
     .carousel-track {
       display: flex;
@@ -224,7 +227,7 @@
     }
     .carousel-slide img {
       width: 100%;
-      height: auto;           /* 👈 自然按原始寬高比撐開，絕無黑邊、絕不裁切任何文字 */
+      height: auto;
       display: block;
       pointer-events: none;
     }
@@ -237,41 +240,42 @@
       gap: 6px;
       z-index: 5;
     }
-    .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; transition: 0.2s; }
-    .carousel-dot.active { background: var(--gold); box-shadow: 0 0 8px var(--gold); width: 22px; border-radius: 4px; }
+    .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.2); cursor: pointer; transition: 0.2s; }
+    .carousel-dot.active { background: var(--pink); box-shadow: 0 0 8px rgba(217, 27, 36, 0.5); width: 22px; border-radius: 4px; }
 
     header { padding: 10px 0 24px; text-align: center; }
     .badge {
       display: inline-flex; align-items: center; gap: 8px; font-family: "Chakra Petch";
-      font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--magenta);
+      font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--pink);
       border: 1px solid var(--line); padding: 5px 14px; border-radius: 40px;
-      background: rgba(0,255,136,0.06); margin-bottom: 8px;
+      background: rgba(217, 27, 36, 0.05); margin-bottom: 8px;
     }
-    .badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 8px var(--magenta); }
+    .badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 8px var(--pink); }
 
     h1 {
       font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 900; font-style: italic;
       line-height: 1.1; font-size: clamp(2rem, 5.2vw, 3.5rem); margin: 6px 0;
     }
-    h1 .l1 { display: block; color: #fff; }
+    h1 .l1 { display: block; color: #111827; }
     h1 .l2 {
       display: block;
-      background: linear-gradient(90deg, #ffc700, #00ff88, #ff8c44);
+      background: linear-gradient(90deg, #d91b24, #d4a017);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .sub { max-width: 720px; margin: 8px auto 0; color: #DBFFEC; font-size: 1rem; font-weight: 500; line-height: 1.5; }
+    .sub { max-width: 720px; margin: 8px auto 0; color: #4b5563; font-size: 1rem; font-weight: 500; line-height: 1.5; }
     .cta-row { display: flex; gap: 14px; justify-content: center; align-items: center; margin-top: 18px; width: 100%; }
 
     .marquee-container {
       margin: 22px auto 0; max-width: 1020px; overflow: hidden;
-      border: 1px solid var(--line); background: rgba(0, 255, 136, 0.04);
+      border: 1px solid var(--line); background: #ffffff;
       padding: 9px 0; position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
     .marquee-inner { display: flex; width: max-content; }
     .marquee-group {
       display: flex; gap: 30px; align-items: center; white-space: nowrap;
       animation: marqueeRun 24s linear infinite;
-      font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 0.85rem; color: var(--magenta);
+      font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 0.85rem; color: #374151;
       padding-right: 30px;
     }
     .marquee-group i { color: var(--gold); font-style: normal; }
@@ -281,44 +285,46 @@
     .stat { padding: 14px 28px; border-right: 1px solid var(--line); text-align: center; }
     .stat:last-child { border-right: none; }
     .stat .n { font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.6rem; color: var(--gold); line-height: 1; }
-    .stat .t { color: var(--muted); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-top: 4px; }
+    .stat .t { color: #4b5563; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-top: 4px; }
 
     .toc {
-      max-width: 1020px; margin: 18px auto 0; background: var(--panel);
+      max-width: 1020px; margin: 18px auto 0; background: var(--panel-solid);
       border: 1px solid var(--line); padding: 16px 18px;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
     }
-    .toc-title { font-family: "Chakra Petch"; font-weight: 700; font-size: 0.88rem; letter-spacing: 1.5px; color: var(--magenta); margin-bottom: 12px; }
+    .toc-title { font-family: "Chakra Petch"; font-weight: 700; font-size: 0.88rem; letter-spacing: 1.5px; color: var(--pink); margin-bottom: 12px; }
     .toc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
     .toc-grid a {
       display: flex; align-items: center; justify-content: center; gap: 6px;
       text-decoration: none; font-family: "Chakra Petch"; font-weight: 700; font-size: 0.82rem;
-      color: #fff; background: rgba(0,255,136,0.08); border: 1px solid var(--line);
+      color: #374151; background: #f9fafb; border: 1px solid #e5e7eb;
       padding: 10px 8px; transition: 0.2s;
     }
-    .toc-grid a:hover { border-color: var(--magenta); color: var(--magenta); background: rgba(0,255,136,0.18); transform: translateY(-2px); }
+    .toc-grid a:hover { border-color: var(--pink); color: var(--pink); background: rgba(217, 27, 36, 0.05); transform: translateY(-2px); }
 
     section { padding: 24px 0; position: relative; scroll-margin-top: calc(var(--nav-height) + 8px); }
-    .eyebrow { font-family: "Chakra Petch"; font-weight: 600; font-size: 0.8rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--magenta); margin-bottom: 8px; }
-    h2 { font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700; font-style: italic; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; }
+    .eyebrow { font-family: "Chakra Petch"; font-weight: 600; font-size: 0.8rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--pink); margin-bottom: 8px; }
+    h2 { font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700; font-style: italic; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; color: #111827; }
     h2 em { font-style: italic; color: var(--gold); }
     .sec-head { margin-bottom: 24px; max-width: 680px; }
     #about .sec-head { max-width: 960px; }
 
-    /* 遊戲卡槽（自相容設定） */
+    /* 遊戲卡槽 */
     .games { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .game {
-      position: relative; border: 1px solid var(--line); overflow: hidden;
+      position: relative; border: 1px solid #e5e7eb; overflow: hidden;
       text-decoration: none; color: var(--text); background: var(--panel-solid);
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
       transition: 0.25s; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
-    .game:hover { transform: translateY(-4px); border-color: var(--magenta); box-shadow: 0 0 24px rgba(0,255,136,0.3); }
+    .game:hover { transform: translateY(-4px); border-color: var(--pink); box-shadow: 0 8px 24px rgba(217, 27, 36, 0.18); }
     .cover {
       position: relative;
       aspect-ratio: 16 / 9;
       overflow: hidden;
-      background: #02120a;
+      background: #f3f4f6;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -326,39 +332,41 @@
     .cover img {
       width: 100%;
       height: 100%;
-      object-fit: contain;  /* 👈 自相容關鍵：不切掉任何邊角，維持原寸與完整比例 */
+      object-fit: contain;
       display: block;
       transition: transform 0.3s;
     }
     .game:hover .cover img { transform: scale(1.05); }
-    .cover .glyph { display: none; width: 100%; height: 100%; font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 2.5rem; color: #fff; align-items: center; justify-content: center; }
+    .cover .glyph { display: none; width: 100%; height: 100%; font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 2.5rem; color: #111827; align-items: center; justify-content: center; }
     .game-body { padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; background: var(--panel-solid); }
-    .game-body h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.05rem; }
+    .game-body h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.05rem; color: #111827; }
     .game-body .genre { color: var(--gold); font-size: 0.78rem; text-transform: uppercase; font-weight: 700; margin-top: 2px; }
-    .play { font-family: "Chakra Petch"; font-weight: 700; font-size: 0.82rem; color: var(--magenta); }
+    .play { font-family: "Chakra Petch"; font-weight: 700; font-size: 0.82rem; color: var(--pink); }
 
     .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .feat {
       display: grid; grid-template-columns: 44px 1fr; gap: 10px 14px; align-items: center;
-      color: var(--text); background: var(--panel); border: 1px solid var(--line); padding: 20px 18px;
+      color: var(--text); background: var(--panel-solid); border: 1px solid #e5e7eb; padding: 20px 18px;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
       transition: 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
-    .feat:hover { border-color: var(--magenta); }
+    .feat:hover { border-color: var(--gold); }
     .feat-svg { width: 42px; height: 42px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .feat h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700; font-size: 1.02rem; }
+    .feat h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700; font-size: 1.02rem; color: #111827; }
     .feat p { color: var(--muted); font-size: 0.88rem; line-height: 1.5; grid-column: 1 / -1; }
 
     .infotable {
-      max-width: 860px; border: 1px solid var(--line); background: var(--panel);
+      max-width: 860px; border: 1px solid #e5e7eb; background: var(--panel-solid);
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
     }
-    .inforow { display: grid; grid-template-columns: 220px 1fr; border-bottom: 1px solid var(--line); }
+    .inforow { display: grid; grid-template-columns: 220px 1fr; border-bottom: 1px solid #e5e7eb; }
     .inforow:last-child { border-bottom: none; }
     .infolabel {
       padding: 14px 18px; font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700;
-      font-size: 0.84rem; letter-spacing: 1px; text-transform: uppercase; color: var(--magenta);
-      border-right: 1px solid var(--line); display: flex; align-items: center;
+      font-size: 0.84rem; letter-spacing: 1px; text-transform: uppercase; color: var(--pink);
+      border-right: 1px solid #e5e7eb; display: flex; align-items: center;
     }
     .infoval { padding: 14px 18px; color: var(--text); font-size: 0.95rem; display: flex; align-items: center; }
 
@@ -366,52 +374,76 @@
     .prose h3 {
       font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700; font-size: 1.25rem;
       color: var(--gold); margin: 28px 0 10px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
     .prose p {
-      color: #DBFFEC; line-height: 1.8; margin-bottom: 16px; font-size: 0.96rem;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+      color: #374151; line-height: 1.8; margin-bottom: 16px; font-size: 0.96rem;
     }
 
     .faq-list { display: grid; gap: 12px; }
     .faq-item {
-      display: block; color: var(--text); background: var(--panel); border: 1px solid var(--line);
+      display: block; color: var(--text); background: var(--panel-solid); border: 1px solid #e5e7eb;
       padding: 18px 20px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
       transition: 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
-    .faq-item:hover { border-color: var(--magenta); }
-    .faq-item h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.05rem; margin-bottom: 6px; color: #fff; }
+    .faq-item:hover { border-color: var(--pink); }
+    .faq-item h3 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.05rem; margin-bottom: 6px; color: #111827; }
     .faq-item p { color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
 
     .final-cta {
-      background: linear-gradient(150deg, var(--panel-solid), rgba(255,199,0,0.12));
-      border: 1px solid var(--line); padding: 48px 24px; text-align: center;
+      background: linear-gradient(135deg, #ffffff, #fff5f5);
+      border: 1.5px solid rgba(217, 27, 36, 0.2); padding: 48px 24px; text-align: center;
       clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
-    .final-cta h2 { font-size: clamp(1.5rem, 5.5vw, 2.3rem); line-height: 1.25; margin-bottom: 12px; }
+    .final-cta h2 { font-size: clamp(1.5rem, 5.5vw, 2.3rem); line-height: 1.25; margin-bottom: 12px; color: #111827; }
     .final-cta p { color: var(--muted); font-size: 1rem; max-width: 600px; margin: 0 auto 24px; }
 
-    footer { border-top: 1px solid var(--line); padding: 36px 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 36px 0; text-align: center; color: var(--muted); font-size: 0.85rem; background: #ffffff; }
     .f-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
     .f-links a { color: var(--muted); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; transition: 0.2s; }
-    .f-links a:hover { color: var(--magenta); }
+    .f-links a:hover { color: var(--pink); }
 
     .back-to-top {
       position: fixed; bottom: 24px; right: 20px; width: 48px; height: 48px;
-      border-radius: 50%; background: var(--panel-solid); border: 1.5px solid var(--line);
-      color: var(--magenta); cursor: pointer !important; display: flex; align-items: center;
+      border-radius: 50%; background: #ffffff; border: 1.5px solid var(--pink);
+      color: var(--pink); cursor: pointer !important; display: flex; align-items: center;
       justify-content: center; z-index: 99999 !important; opacity: 0; pointer-events: none;
       transform: translateY(16px); transition: all 0.28s;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
     .back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
-    .back-to-top:hover { border-color: var(--magenta); background: #00ff88; color: #031c10; }
+    .back-to-top:hover { background: var(--pink); color: #ffffff; }
     .back-to-top svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2.5; }
 
+    /*手機端極致排版防擠壓修正 */
     @media (max-width: 768px) {
       .cta-row { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
       .cta-row .btn { width: 100% !important; padding: 11px 4px !important; font-size: 0.8rem !important; }
-      .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 14px; }
+      
+      /*核心：數據區擠壓斷行問題 */
+      .stats {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px !important;
+        padding: 12px 4px !important;
+        margin-top: 14px;
+      }
+      .stat {
+        padding: 6px 2px !important;
+      }
+      .stat .n {
+        font-size: 1.25rem !important;
+        white-space: nowrap !important;
+      }
+      .stat .t {
+        font-size: 0.68rem !important;
+        letter-spacing: 0px !important;
+        line-height: 1.25 !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
+      }
+
       .toc-grid { grid-template-columns: repeat(2, 1fr) !important; }
       .games { grid-template-columns: 1fr; gap: 12px; }
       .feat-grid { grid-template-columns: 1fr; gap: 10px; }
@@ -423,21 +455,20 @@
 </head>
 
 <body>
-  <!-- 遮罩與質感特效層 (不放 bg-city 城市圖) -->
   <div class="bg-overlay"></div>
   <div class="grid-bg"></div>
   <div class="scan"></div>
   <div id="cursor-glow"></div>
  
-  <!-- 頂部導航 (直接載入你的 10003.png 官方 Logo) -->
+  <!-- 頂部導航 -->
   <nav>
     <div class="nav-in">
       <a class="logo-box" href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-        <img src="logo.webp" alt="AE888 Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="10003.png" alt="AE888 Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <span class="logo-fallback"><span class="dot"></span><span>AE888</span></span>
       </a>
 
-      <!-- 電腦導航 (純越南文，移除多餘語言切換) -->
+      <!-- 電腦導航 -->
       <div class="nav-links">
         <a href="./games/">Trò Chơi</a>
         <a href="./features/">Khuyến Mãi</a>
@@ -467,21 +498,21 @@
     <a class="btn btn-primary track-outbound" style="width:100%; margin-top:8px;" href="javascript:void(0);">ĐĂNG KÝ NGAY ›</a>
   </div>
 
-  <!-- 首頁主視覺 (直接掛上你的 10008, 10004, 10005 官方大圖) -->
+  <!-- 首頁主視覺 -->
   <header>
     <div class="wrap">
       
       <div class="carousel-container" id="heroCarousel">
         <div class="carousel-track" id="carouselTrack">
-          <!-- Banner 1: 柬埔寨 Thomo 鬥雞專場 (10008.webp) -->
+          <!-- Banner 1: 柬埔寨 Thomo 鬥雞專場 -->
           <div class="carousel-slide">
             <img src="A1.webp" alt="Trực Tiếp Đá Gà CPC7 và CPC9">
           </div>
-          <!-- Banner 2: 英超賽事體育盤口 (10004.webp) -->
+          <!-- Banner 2: 英超賽事體育盤口 -->
           <div class="carousel-slide">
             <img src="A2.webp" alt="Đại Chiến Ngoại Hạng Anh">
           </div>
-          <!-- Banner 3: USDT 虛擬幣充提出金特惠 (10005.webp) -->
+          <!-- Banner 3: USDT 虛擬幣充提出金特惠 -->
           <div class="carousel-slide">
             <img src="A3.webp" alt="Nạp Rút USDT Siêu Ưu Đãi">
           </div>
@@ -526,11 +557,20 @@
         </div>
       </div>
 
-      <!-- 數據統計列 -->
+      <!-- 數據統計列 (已修復手機端文字長度與斷行) -->
       <div class="stats">
-        <div class="stat"><div class="n">SV388</div><div class="t">ĐÁ GÀ THOMO</div></div>
-        <div class="stat"><div class="n">2 Phút</div><div class="t">NẠP RÚT TIỀN</div></div>
-        <div class="stat"><div class="n">24/7</div><div class="t">HỖ TRỢ TRỰC TUYẾN</div></div>
+        <div class="stat">
+          <div class="n">SV388</div>
+          <div class="t">ĐÁ GÀ THOMO</div>
+        </div>
+        <div class="stat">
+          <div class="n">2 Phút</div>
+          <div class="t">NẠP &amp; RÚT</div>
+        </div>
+        <div class="stat">
+          <div class="n">24/7</div>
+          <div class="t">HỖ TRỢ 24/7</div>
+        </div>
       </div>
 
       <!-- 快速導航 -->
@@ -551,20 +591,19 @@
     </div>
   </header>
 
-  <!-- 熱門遊戲大類（換裝為越南 6 大主力遊戲） -->
+  <!-- 熱門遊戲大類 -->
   <section id="games">
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">DANH MỤC TRÒ CHƠI</div>
         <h2>SẢNH CƯỢC <em>HÀNG ĐẦU</em> TẠI AE888</h2>
-        <p style="color:#DBFFEC;">Trải nghiệm các bộ môn cá cược đỉnh cao với tỷ lệ trả thưởng cao nhất thị trường Việt Nam.</p>
+        <p style="color:#4b5563;">Trải nghiệm các bộ môn cá cược đỉnh cao với tỷ lệ trả thưởng cao nhất thị trường Việt Nam.</p>
       </div>
 
       <div class="games">
-        <!-- 1. 鬥雞 SV388 (主打) -->
+        <!-- 1. 鬥雞 SV388 -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
-            <!-- 你可以把 10001.webp 作為鬥雞縮圖 -->
             <img src="B1.webp" alt="Đá Gà SV388 Thomo">
           </div>
           <div class="game-body">
@@ -584,7 +623,7 @@
           </div>
         </a>
 
-        <!-- 3. 老虎機爆罐 (PG / JILI) -->
+        <!-- 3. 老虎機爆罐 -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
             <img src="B3.webp" alt="Nổ Hũ Slot Game">
@@ -595,7 +634,7 @@
           </div>
         </a>
 
-        <!-- 4. 體育滾球 (SABA / SBOBET) -->
+        <!-- 4. 體育滾球 -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
             <img src="B4.webp" alt="Cá Cược Thể Thao SABA">
@@ -702,7 +741,7 @@
     </div>
   </section>
 
-  <!-- SEO 品牌長文（核心吃詞區） -->
+  <!-- SEO （核心吃詞區） -->
   <section id="about">
     <div class="wrap">
       <div class="sec-head">
@@ -788,10 +827,10 @@
         <a href="./faq/">Đặc Quyền VIP</a>
         <a href="./about/">Điều Khoản Dịch Vụ</a>
       </div>
-      <div style="max-width: 820px; margin: 18px auto; line-height: 1.6; font-size: 0.85rem; color: var(--muted);">
+      <div style="max-width: 820px; margin: 18px auto; line-height: 1.6; font-size: 0.85rem; color: #4b5563;">
         AE888 cung cấp các dịch vụ giải trí cá cược trực tuyến hợp pháp bao gồm đá gà Thomo, thể thao, casino trực tuyến, xổ số và nổ hũ. Chúng tôi cam kết mang đến sân chơi công bằng, minh bạch và an toàn cho cộng đồng cược thủ.
       </div>
-      <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4);">
+      <div style="font-size: 0.8rem; color: #6b7280;">
         © 2026 AE888 · Nền Tảng Cá Cược Trực Tuyến Hàng Đầu Châu Á · Chơi Có Trách Nhiệm · 18+ Only
       </div>
     </div>
@@ -799,9 +838,8 @@
 
   <!-- 輪播與點擊跳轉腳本 -->
   <script>
-    // 預設跳轉網址（換成你們的 Cloudflare 跳轉短鏈或大廳註冊線）
     function getFinalTargetUrl(customUrl) {
-      const defaultRegisterUrl = "https://www.ae888.com/"; // 可換成你們實際的註冊跳轉網址
+      const defaultRegisterUrl = "https://ae888uytin.com/";
       const targetBase = (customUrl && customUrl.trim() !== "") ? customUrl.trim() : defaultRegisterUrl;
       const targetObj = new URL(targetBase, window.location.origin);
       const currentParams = new URLSearchParams(window.location.search);
@@ -811,7 +849,6 @@
       return targetObj.toString();
     }
 
-    // 手機漢堡選單控制
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     function toggleMenu() {
@@ -823,7 +860,6 @@
     }
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
 
-    // 點擊攔截跳轉
     document.addEventListener('click', function(e) {
       const target = e.target.closest('.track-outbound');
       if (!target) return;
@@ -836,7 +872,6 @@
       setTimeout(function() { window.location.href = destination; }, 150);
     });
 
-    // 滑鼠光斑
     (function() {
       const glow = document.getElementById('cursor-glow');
       if (window.matchMedia('(hover: none)').matches || !glow) return;
@@ -846,7 +881,6 @@
       });
     })();
 
-    // 輪播 Banner 控制
     (function() {
       const track = document.getElementById('carouselTrack');
       const container = document.getElementById('heroCarousel');
@@ -886,7 +920,6 @@
       container.addEventListener('mouseleave', () => timer = setInterval(nextSlide, 4000));
     })();
 
-    // 回到頂部按鈕
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
       window.addEventListener('scroll', function() {
