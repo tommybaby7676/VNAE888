@@ -1,28 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="vi">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-  <!-- 
-  ================================================================================
-  ❓ 【分頁專用】操作手冊、實名提款圖解、VIP 凍結表格與 FAQ (CHEAT SHEET 小抄)
-  ================================================================================
-  📌 日常換皮與圖片上傳指南：
-     Step 1. 【區塊 1】ACTIVE_PIXEL_ID     : 換成對應的 Meta 像素 ID
-     Step 2. 【區塊 2】SEO 標題與品牌詞     : 全域搜尋「MATE369」替換成新品牌名
-     Step 3. 【區塊 7】圖片清單 (直接上傳到 faq/ 資料夾內！)：
-             - 0101.webp         : 介面手機示意圖 (直向長圖)
-             - 0202.webp         : 實名與存提款步驟長圖
-             - VIPall.webp       : 電腦端完整 VIP 大橫圖 (寬屏大圖)
-             - VIP01.webp        : 手機端 VIP 左側固定凍結欄 (VIP Level 欄)
-             - VIP02.webp        : 手機端 VIP 右側滑動數據欄 (各遊戲返水比例)
-             - logo_*.webp       : 原廠與金流 Logo (放入 faq/ 資料夾)
-     Step 4. 【區塊 16】defaultRegisterUrl : 換成包網註冊直出線
-  ================================================================================
-  -->
-
-  <!-- 【區塊 1】META 像素追蹤 -->
+  <!-- 像素追蹤 -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -40,41 +22,36 @@
     }
   </script>
 
-  <!-- 【區塊 2】SEO 結構與分頁標題 -->
-  <title>MATE369 | Official Player Guides, Verification &amp; FAQ Center</title>
-  <meta name="description" content="Official MATE369 guide: lobby interface walkthrough, PayID bank verification steps, 12-tier VIP rollover rebate table, and player support.">
+  <!-- SEO 標題與標籤 -->
+  <title>AE888 | Trung Tâm Hỗ Trợ &amp; Hướng Dẫn Thao Tác Chi Tiết 2026</title>
+  <meta name="description" content="Trung tâm hỗ trợ chính thức AE888: Hướng dẫn đăng ký tài khoản, nạp tiền, rút tiền, liên kết ngân hàng qua hình ảnh trực quan chi tiết từng bước.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  
-  <meta name="geo.region" content="AU">
-  <meta name="geo.placename" content="Australia">
-  <meta name="geo.position" content="-25.2744;133.7751">
-  <meta name="ICBM" content="-25.2744,133.7751">
 
-  <link rel="icon" href="../logo.ico" type="image/x-icon">
+  <link rel="icon" href="../AElogo.ico" type="image/x-icon">
 
-  <!-- 【區塊 3】Google 科技電競字體引入 -->
+  <!-- 字體引入 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700;1,900&family=Noto+Sans+SC:wght@400;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- 【區塊 4】CSS 視覺體系 (100% 繼承母版) -->
   <style>
     :root {
-      --bg: #031c10;
-      --panel: rgba(4, 40, 24, 0.85);
-      --panel-solid: #052d1a;
-      --pink: #106539;
-      --magenta: #00ff88;
-      --violet: #56FF4D;
-      --purple: #2FFF6D;
-      --gold: #ffc700;
-      --text: #FFFFFF;
-      --muted: #BFFFD7;
-      --line: rgba(0, 255, 136, 0.22);
+      --bg: #f8f9fa;                        
+      --panel: rgba(255, 255, 255, 0.95);   
+      --panel-solid: #ffffff;               
+
+      --pink: #d91b24;                      
+      --purple: #b30f17;                    
+      --magenta: #d91b24;                   
+      --gold: #d4a017;                      
+
+      --text: #1f2937;                      
+      --muted: #4b5563;                     
+      --line: rgba(217, 27, 36, 0.15);      
       
       --nav-height: 64px;
-      --logo-height-pc: 42px;
-      --logo-height-mobile: 32px;
+      --logo-height-pc: 40px;
+      --logo-height-mobile: 30px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -88,42 +65,41 @@
       padding-top: var(--nav-height);
     }
 
-    /* 🏙️ 主頁同款龐克背景 */
-    .bg-city {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: url('../view.webp') center top / cover no-repeat fixed;
-      background-color: var(--bg);
-      opacity: 0.85;
-    }
+    .bg-city { display: none !important; }
+
     .bg-overlay {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: linear-gradient(180deg, rgba(3,28,16,0.2) 0%, rgba(3,28,16,0.55) 60%, rgba(3,28,16,0.85) 100%);
+      background: radial-gradient(circle at 50% -10%, rgba(217, 27, 36, 0.06) 0%, rgba(212, 160, 23, 0.03) 45%, transparent 80%);
     }
+
     .grid-bg {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: linear-gradient(rgba(0,255,136,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,136,0.05) 1px, transparent 1px);
-      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(rgba(217, 27, 36, 0.04) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(217, 27, 36, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
     }
+
     .scan {
-      position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.25;
-      background: repeating-linear-gradient(0deg, rgba(0,0,0,0.25) 0 1px, transparent 1px 3px);
+      position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.08;
+      background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0 1px, transparent 1px 3px);
     }
 
     #cursor-glow {
-      position: fixed; width: 450px; height: 450px; border-radius: 50%;
+      position: fixed; width: 420px; height: 420px; border-radius: 50%;
       pointer-events: none; z-index: 1;
-      background: radial-gradient(circle, rgba(0,255,136,0.15), rgba(255,27,141,0.08), transparent 65%);
+      background: radial-gradient(circle, rgba(217, 27, 36, 0.10) 0%, rgba(212, 160, 23, 0.06) 40%, transparent 70%);
       transform: translate(-50%, -50%);
       transition: opacity 0.3s;
     }
 
-    .wrap { position: relative; z-index: 3; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+    .wrap { position: relative; z-index: 3; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
-    /* 📌 導航欄 */
     nav {
       position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height);
       z-index: 999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      background: rgba(3, 28, 16, 0.90); border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94); border-bottom: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
     }
     .nav-in {
       max-width: 1180px; height: 100%; margin: 0 auto; padding: 0 20px;
@@ -131,43 +107,54 @@
     }
     .logo-box { display: flex; align-items: center; text-decoration: none; cursor: pointer; }
     .logo-img { height: var(--logo-height-pc); width: auto; max-width: 220px; object-fit: contain; display: block; }
-    .logo-fallback { display: none; align-items: center; gap: 8px; font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.25rem; color: #fff; }
-    .logo-fallback .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 12px var(--magenta); }
+    .logo-fallback { display: none; align-items: center; gap: 8px; font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.25rem; color: #111827; }
+    .logo-fallback .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 12px var(--pink); }
 
-    .nav-links { display: flex; align-items: center; gap: 18px; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--magenta); }
-    .lang {
-      cursor: pointer; border: 1px solid var(--line); padding: 5px 12px;
-      color: var(--muted); font-family: "Chakra Petch"; font-weight: 700; font-size: 0.8rem;
-      background: transparent; clip-path: polygon(0 0,100% 0,100% 70%,calc(100% - 8px) 100%,0 100%);
-      transition: 0.2s;
+    .nav-links { display: flex; align-items: center; gap: 20px; }
+    .nav-links a { color: #374151; text-decoration: none; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--pink); }
+
+    .btn-nav-reg {
+      background: linear-gradient(120deg, var(--pink), var(--purple)) !important;
+      color: #ffffff !important;
+      padding: 9px 22px !important;
+      font-size: 0.88rem !important;
+      box-shadow: 0 0 14px rgba(217, 27, 36, 0.35) !important;
     }
-    .lang:hover { color: #fff; border-color: var(--magenta); }
 
     .menu-toggle {
-      display: none; background: none; border: 1px solid var(--line);
-      color: var(--magenta); font-size: 1.4rem; padding: 4px 10px;
-      cursor: pointer; border-radius: 4px; line-height: 1;
+      display: none; background: #ffffff; border: 1.5px solid #d1d5db;
+      color: #374151; font-family: "Chakra Petch", sans-serif; font-weight: 700;
+      font-size: 0.85rem; padding: 5px 10px; cursor: pointer; border-radius: 4px;
+      line-height: 1; align-items: center; gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-
-    .mobile-actions { display: none !important; }
 
     .mobile-menu {
       display: none; position: fixed; top: var(--nav-height); left: 0; right: 0;
-      background: rgba(3, 28, 16, 0.98); border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.98); border-bottom: 2px solid var(--pink);
       padding: 20px; z-index: 998; backdrop-filter: blur(20px);
       flex-direction: column; gap: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
     .mobile-menu.active { display: flex; }
     .mobile-menu a {
       color: var(--text); text-decoration: none; font-size: 1.1rem;
       font-weight: 700; font-family: "Chakra Petch"; padding: 8px 0;
-      border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
-    .mobile-menu a.active { color: var(--magenta); }
+    .mobile-menu a.active { color: var(--pink); }
 
-    /* 科技切角按鈕體系 */
+    .mobile-actions { display: none; }
+    @media (max-width: 768px) {
+      .nav-links { display: none !important; }
+      .mobile-actions { display: flex !important; align-items: center !important; gap: 10px !important; }
+      .nav-in { padding: 0 14px !important; }
+      .logo-img { height: var(--logo-height-mobile); }
+      .btn-nav-reg { padding: 7px 14px !important; font-size: 0.82rem !important; }
+      .menu-toggle { display: inline-flex !important; }
+    }
+
     .btn {
       position: relative; display: inline-flex; align-items: center; justify-content: center;
       font-family: "Chakra Petch"; font-weight: 700; font-style: italic; letter-spacing: 0.5px;
@@ -175,372 +162,274 @@
       clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
       transition: 0.22s;
     }
-    .btn-nav-reg {
-      background: linear-gradient(120deg, var(--pink), var(--purple)) !important;
-      color: #ffffff !important; padding: 9px 20px !important; font-size: 0.85rem !important;
-      box-shadow: 0 0 14px rgba(0, 255, 136, 0.4) !important;
-    }
     .btn-primary {
       background: linear-gradient(120deg, var(--pink), var(--purple));
       color: #ffffff !important; font-weight: 900;
-      box-shadow: 0 0 22px rgba(0, 255, 136, 0.45);
+      box-shadow: 0 0 22px rgba(217, 27, 36, 0.45);
       padding: 12px 24px; font-size: 0.95rem;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(0, 255, 136, 0.85); }
-    .btn-large {
-      width: 100%; max-width: 440px; padding: 16px 32px; font-size: 1.15rem; margin: 0 auto;
-      animation: btnPulse 2s ease-in-out infinite;
-    }
-    @keyframes btnPulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 16px rgba(0, 255, 136, 0.35); }
-      50% { transform: scale(1.03); box-shadow: 0 0 32px rgba(0, 255, 136, 0.8); }
-    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
 
-    /* 標題區 */
     header { padding: 32px 0 24px; text-align: center; }
     .badge {
       display: inline-flex; align-items: center; gap: 8px; font-family: "Chakra Petch";
-      font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--magenta);
+      font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--pink);
       border: 1px solid var(--line); padding: 5px 14px; border-radius: 40px;
-      background: rgba(0,255,136,0.06); margin-bottom: 8px;
+      background: rgba(217, 27, 36, 0.05); margin-bottom: 8px;
     }
-    .badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--magenta); box-shadow: 0 0 8px var(--magenta); animation: pulse 1.6s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 8px var(--pink); }
 
     h1 {
       font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 900; font-style: italic;
-      line-height: 1.1; font-size: clamp(2.2rem, 5.5vw, 3.6rem); margin: 6px 0;
+      line-height: 1.1; font-size: clamp(2rem, 5.2vw, 3.2rem); margin: 6px 0;
     }
-    h1 .l1 { display: block; color: #fff; }
+    h1 .l1 { display: block; color: #111827; }
     h1 .l2 {
       display: block;
-      background: linear-gradient(90deg, #00ff88, #25d366, #ffc700);
+      background: linear-gradient(90deg, #d91b24, #d4a017);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .sub { max-width: 760px; margin: 10px auto 0; color: var(--text); font-size: 0.98rem; font-weight: 500; line-height: 1.5; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+    .sub { max-width: 760px; margin: 10px auto 0; color: #4b5563; font-size: 0.98rem; font-weight: 500; line-height: 1.55; }
 
-    /* ==========================================================================
-       🎮 【區塊 7】雙排 TAB 按鈕樣式 (無 Emoji，純向量 SVG)
-       ========================================================================== */
-    .tabs-container {
-      max-width: 820px; margin: 26px auto 30px; display: flex; flex-direction: column; gap: 10px;
+    /* 🏷️ 分類選單膠囊 */
+    .cat-tabs {
+      display: flex; justify-content: center; gap: 10px; margin: 24px 0 32px; flex-wrap: wrap;
     }
-    .tab-row-full { width: 100%; }
-    .tab-row-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
-    .tab-btn {
-      width: 100%; background: var(--panel); border: 1.5px solid var(--line); color: var(--muted);
-      font-family: "Chakra Petch"; font-weight: 700; font-size: 0.98rem; padding: 12px 18px;
-      cursor: pointer; transition: all 0.22s ease;
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    .cat-btn {
+      background: #ffffff; border: 1px solid rgba(212, 160, 23, 0.35); color: #374151;
+      font-family: "Chakra Petch"; font-weight: 700; font-size: 0.9rem; padding: 10px 20px;
+      cursor: pointer; transition: all 0.22s ease; border-radius: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
     }
-    .tab-btn svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; transition: 0.2s; }
-    .tab-btn:hover { border-color: var(--magenta); color: #fff; transform: translateY(-2px); }
-    .tab-btn.active {
-      background: linear-gradient(135deg, var(--panel-solid), rgba(0,255,136,0.22));
-      border-color: var(--magenta); color: #fff;
-      box-shadow: 0 0 18px rgba(0,255,136,0.35);
-    }
-    .tab-btn.active svg { stroke: var(--magenta); filter: drop-shadow(0 0 6px var(--magenta)); }
-
-    /* TAB 內容卡槽 */
-    .tab-content { display: none; }
-    .tab-content.active { display: block; animation: tabFade 0.32s ease-in-out; }
-    @keyframes tabFade {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
+    .cat-btn:hover, .cat-btn.active {
+      background: linear-gradient(120deg, var(--pink), var(--purple));
+      border-color: var(--pink); color: #ffffff; box-shadow: 0 4px 14px rgba(217, 27, 36, 0.25);
     }
 
-    .guide-box {
-      background: var(--panel); border: 1px solid var(--line); padding: 32px 28px;
-      margin-bottom: 45px;
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
-    }
-
-    /* 💻 電腦端：Tab 1 與 Tab 2 左右並排佈局 (左圖、右字) */
-    .desktop-split-layout {
-      display: grid;
-      grid-template-columns: 460px 1fr;
-      gap: 36px;
-      align-items: center;
-    }
-
-    /* 📱 3-1. 介面導引圖 (直向手機比例) */
-    .phone-mockup-wrap {
-      width: 100%; max-width: 440px; margin: 0 auto; text-align: center;
-    }
-    .phone-mockup {
-      width: 100%; border-radius: 28px; border: 2px solid rgba(0,255,136,0.35);
-      background: #021a0f; box-shadow: 0 12px 35px rgba(0,0,0,0.85), 0 0 20px rgba(0,255,136,0.2);
-      overflow: hidden; display: block;
-    }
-
-    /* 💳 3-2. 存提款長條流程圖 */
-    .process-mockup-wrap {
-      width: 100%; max-width: 460px; margin: 0 auto; text-align: center;
-    }
-    .process-mockup {
-      width: 100%; border-radius: 12px; border: 1.5px solid var(--line);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8); display: block; background: #021a0f;
-    }
-
-    /* 👑 VIP 表格響應式視窗 (電腦端居中大圖，手機端原生高畫質橫向滑動) */
-    .vip-table-scroll-wrap {
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      border: 1.5px solid var(--line);
-      border-radius: 8px;
-      background: #021a0f;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.8);
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    .vip-responsive-table {
-      width: 100%;
-      max-width: 1040px;
-      height: auto;
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    /* 💡 手機端滑動提示條 (電腦端自動隱藏) */
-    .vip-scroll-tip {
-      display: none;
-      text-align: center;
-      font-family: "Chakra Petch";
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-      animation: tipBlink 2s infinite;
-    }
-    @keyframes tipBlink { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
-
-    /* 文字清單樣式 */
-    .points-list { display: grid; gap: 14px; width: 100%; }
-    .point-item {
-      background: rgba(4, 40, 24, 0.6); border: 1px solid var(--line);
-      padding: 16px 20px; border-radius: 4px; display: flex; align-items: flex-start; gap: 14px;
-    }
-    .point-badge {
-      width: 26px; height: 26px; border-radius: 50%; background: var(--magenta);
-      color: #031c10; font-family: "Chakra Petch"; font-weight: 900; font-size: 0.85rem;
-      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
-      box-shadow: 0 0 10px var(--magenta); margin-top: 2px;
-    }
-    .point-text { color: #DBFFEC; font-size: 0.94rem; line-height: 1.6; }
-    .point-text strong { color: #fff; font-size: 0.98rem; }
-
-    /* ==========================================================================
-       🎡 【區塊 5】原廠 Logo 跑馬燈 (一排無縫循環平滑滾動，全尺寸自動相容)
-       ========================================================================== */
-    .marquee-section {
-      margin: 10px auto 45px;
-      overflow: hidden;
-      position: relative;
-      padding: 10px 0;
-    }
-    .marquee-title {
-      text-align: center;
-      font-family: "Chakra Petch";
-      font-size: 0.82rem;
-      letter-spacing: 2px;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .marquee-track-wrap {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
-    }
-    .marquee-track {
-      display: flex;
-      gap: 18px;
-      width: max-content;
-      animation: marqueeScroll 24s linear infinite;
-    }
-    .marquee-track:hover {
-      animation-play-state: paused;
-    }
-    @keyframes marqueeScroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    /* 🎡 原廠 Logo 卡槽與等比自平衡容器 */
-    .partner-logo-card {
-      background: rgba(4, 40, 24, 0.75);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      height: 52px;
-      width: 135px; /* 給予固定寬度，讓所有卡槽排列整齊 */
-      padding: 6px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
-      flex-shrink: 0;
-      transition: 0.2s;
-    }
-    .partner-logo-card:hover {
-      border-color: var(--magenta);
-      box-shadow: 0 0 16px rgba(0,255,136,0.3);
-    }
-    /* Logo 圖片統一縮放比例：不管原圖長寬為何，都完美居中且視覺大小一致 */
-    .partner-logo-img {
-      width: 100%;
-      height: 100%;
-      max-height: 34px;
-      max-width: 105px;
-      object-fit: contain; /* 等比縮放，不切圖不變形 */
-      display: block;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-    }
-    /* 文字型備援 Logo (圖片尚未就緒時自動呈現) */
-    .partner-logo-txt {
-      font-family: "Chakra Petch";
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
-      color: #fff;
-    }
-    .partner-logo-txt.gold { color: var(--gold); }
-    .partner-logo-txt.green { color: var(--magenta); }
-
-    /* ❓ 常見問答手風琴 */
-    .sec-head { text-align: center; margin-bottom: 24px; }
-    .eyebrow { font-family: "Chakra Petch"; font-weight: 600; font-size: 0.8rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--magenta); margin-bottom: 8px; }
-    h2 { font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700; font-style: italic; font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.15; margin-bottom: 12px; }
-    h2 em { font-style: italic; color: var(--magenta); }
-
-    .faq-wrapper { max-width: 960px; margin: 0 auto 50px; display: grid; gap: 14px; }
+    /* 📂 手風琴折疊容器 (Accordion) */
+    .faq-container { display: flex; flex-direction: column; gap: 14px; margin-bottom: 50px; }
+    .faq-group { display: flex; flex-direction: column; gap: 12px; }
+    
     .faq-card {
-      background: var(--panel); border: 1px solid var(--line);
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
-      transition: all 0.22s ease;
+      background: var(--panel-solid);
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      transition: border-color 0.2s;
     }
-    .faq-card:hover { border-color: var(--magenta); }
-    .faq-question {
-      padding: 18px 22px; cursor: pointer; display: flex; align-items: center; justify-content: space-between;
-      user-select: none;
-    }
-    .faq-question h3 {
-      font-family: "Chakra Petch", "Noto Sans SC"; font-size: 1.08rem; font-weight: 700;
-      color: #fff; line-height: 1.4;
-    }
-    .faq-icon {
-      font-family: "Chakra Petch"; font-size: 1.3rem; font-weight: 700; color: var(--magenta);
-      transition: transform 0.25s ease;
-    }
-    .faq-card.open .faq-icon { transform: rotate(45deg); color: var(--gold); }
-    .faq-answer {
-      max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
-      padding: 0 22px; border-top: 1px solid transparent;
-    }
-    .faq-card.open .faq-answer {
-      max-height: 500px; padding: 14px 22px 20px; border-top: 1px solid rgba(0, 255, 136, 0.1);
-      transition: max-height 0.35s ease-in-out;
-    }
-    .faq-answer p { color: #DBFFEC; font-size: 0.94rem; line-height: 1.7; text-shadow: 0 1px 4px rgba(0,0,0,0.9); }
+    .faq-card:hover { border-color: rgba(217, 27, 36, 0.4); }
 
-    /* 💬 24/7 客服支援引導卡 */
-    .support-card {
-      background: var(--panel-solid); border: 1px solid var(--line); padding: 30px;
-      margin: 0 auto 50px; max-width: 960px; text-align: center;
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+    .faq-header {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      background: #ffffff;
+      transition: background 0.2s;
     }
-    .support-card h3 { font-family: "Chakra Petch"; font-size: 1.3rem; color: var(--gold); margin-bottom: 8px; }
-    .support-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
+    .faq-header:hover { background: #fffcfc; }
+    .faq-title-wrap { display: flex; align-items: center; gap: 12px; }
+    .faq-icon-tag {
+      font-family: "Chakra Petch";
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--pink);
+      background: rgba(217, 27, 36, 0.08);
+      border: 1px solid rgba(217, 27, 36, 0.2);
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .faq-title {
+      font-family: "Chakra Petch", "Noto Sans SC";
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #111827;
+      margin: 0;
+    }
+    .faq-arrow {
+      width: 20px; height: 20px; stroke: var(--pink); fill: none; stroke-width: 2.5;
+      transition: transform 0.25s ease; flex-shrink: 0;
+    }
+    .faq-card.active .faq-arrow { transform: rotate(180deg); }
+
+    /* 折疊展開內容 */
+    .faq-body {
+      display: none;
+      padding: 18px 20px;
+      border-top: 1px solid #f3f4f6;
+      background: #fafafa;
+    }
+    .faq-card.active .faq-body { display: block; animation: accordionDown 0.25s ease; }
+    @keyframes accordionDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* 🖼️ 教學長圖容器 (不裁切、完全展開、等比縮放) */
+    .guide-img-wrap {
+      width: 100%;
+      margin: 10px auto;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .guide-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* 🏛️ 牌照機構與合作大廠信任跑馬燈 */
+    .trust-section {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 24px 20px;
+      margin-bottom: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      text-align: center;
+    }
+    .trust-title {
+      font-family: "Chakra Petch";
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--pink);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .marquee-wrapper { overflow: hidden; width: 100%; display: flex; position: relative; }
+    .marquee-track {
+      display: flex; gap: 40px; align-items: center; white-space: nowrap;
+      animation: marqueeRun 22s linear infinite; flex-shrink: 0;
+    }
+    .marquee-track span {
+      font-family: "Chakra Petch";
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #4b5563;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .marquee-track span i { color: var(--gold); font-style: normal; }
+    @keyframes marqueeRun { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
 
     /* 頁尾轉換大卡片 */
     .final-cta {
-      background: linear-gradient(150deg, var(--panel-solid), rgba(0,255,136,0.1));
-      border: 1px solid var(--line); padding: 48px 24px; text-align: center; margin-bottom: 60px;
+      background: linear-gradient(135deg, #ffffff, #fff5f5);
+      border: 1.5px solid rgba(217, 27, 36, 0.2); padding: 48px 24px; text-align: center; margin-bottom: 60px;
       clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
-    .final-cta h2 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: clamp(1.5rem, 5.5vw, 2.3rem); line-height: 1.25; margin-bottom: 12px; font-weight: 700; font-style: italic; }
-    .final-cta h2 em { font-style: italic; color: var(--magenta); }
-    .final-cta p { color: var(--muted); font-size: 1rem; max-width: 600px; margin: 0 auto 24px; }
+    .final-cta h2 { font-family: "Chakra Petch", "Noto Sans SC"; font-size: clamp(1.5rem, 5.5vw, 2.3rem); line-height: 1.25; margin-bottom: 12px; font-weight: 700; font-style: italic; color: #111827; }
+    .final-cta h2 em { font-style: italic; color: var(--gold); }
+    .final-cta p { color: #4b5563; font-size: 1rem; max-width: 600px; margin: 0 auto 24px; }
 
-    footer { border-top: 1px solid var(--line); padding: 36px 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 36px 0; text-align: center; color: #4b5563; font-size: 0.85rem; background: #ffffff; }
     .f-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
-    .f-links a { color: var(--muted); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; transition: 0.2s; }
-    .f-links a:hover { color: var(--magenta); }
+    .f-links a { color: #4b5563; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; transition: 0.2s; }
+    .f-links a:hover { color: var(--pink); }
 
-    .reveal { opacity: 0; transform: translateY(18px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-    .reveal.in { opacity: 1; transform: none; }
+    /* 🚀 回到頂端火箭按鈕 */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1.5px solid var(--pink);
+      color: var(--pink);
+      cursor: pointer !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999 !important;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(16px);
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .back-to-top.show {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+    .back-to-top:hover {
+      background: var(--pink);
+      color: #ffffff;
+    }
+    .back-to-top svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+      pointer-events: none;
+    }
 
-    /* 📱 手機端極致優化 (< 768px) */
     @media (max-width: 768px) {
       .nav-links { display: none !important; }
       .mobile-actions { display: flex !important; }
       .menu-toggle { display: block !important; }
       .logo-img { height: var(--logo-height-mobile); }
       #cursor-glow { display: none; }
-      header { padding: 20px 0 14px; }
+      
+      header { padding: 24px 0 16px !important; }
       h1 { font-size: 2.1rem; }
       .sub { font-size: 0.92rem; }
-      
-      .tab-btn { font-size: 0.85rem; padding: 10px 8px; }
-      .tab-btn svg { width: 16px; height: 16px; }
-      
-      /* 手機端還原為：上圖、下字 */
-      .desktop-split-layout {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      .guide-box { padding: 20px 16px; }
 
-      /* 📱 手機端 VIP 表格：顯現滑動提示，設定自然展開寬度 */
-      .vip-scroll-tip { display: block; }
-      .vip-responsive-table {
-        /* 手機端強制展開為 720px，確保每一個等級格子與字體都不會被擠壓變形 */
-        width: 720px;
-        max-width: none;
-      }
+      .faq-header { padding: 14px 16px; }
+      .faq-title { font-size: 0.95rem; }
+      .faq-body { padding: 14px 12px; }
 
-      .faq-question { padding: 14px 16px; }
-      .faq-question h3 { font-size: 0.96rem; }
-      .faq-answer p { font-size: 0.88rem; }
+      .back-to-top { bottom: 84px; right: 16px; width: 42px; height: 42px; }
     }
 
-    /* 💬 懸浮社群氣泡模組 (定稿旗艦版樣式) */
     .social-bubble-wrap {
       position: fixed; bottom: 24px; right: 20px; z-index: 995;
       display: flex; flex-direction: column-reverse; align-items: flex-end; gap: 12px;
     }
     .social-main-btn {
       width: 56px; height: 56px; border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #00ff88, #054a2a 75%, #021c10 100%);
-      border: 1.5px solid #00ff88; color: #ffffff; cursor: pointer;
+      background: radial-gradient(circle at 30% 30%, #d91b24, #b30f17 75%, #4a0408 100%);
+      border: 1.5px solid #d91b24; color: #ffffff; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 20px rgba(0, 255, 136, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -3px 6px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 20px rgba(217, 27, 36, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.4);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative; animation: bubbleWiggle 3s ease-in-out infinite;
     }
-    .social-main-btn:hover { transform: scale(1.1) rotate(4deg); box-shadow: 0 0 32px rgba(0, 255, 136, 0.9); }
-    .bubble-radar { position: absolute; inset: -6px; border-radius: 50%; border: 1.5px solid rgba(0, 255, 136, 0.7); animation: radarWave 2s ease-out infinite; pointer-events: none; }
+    .social-main-btn:hover { transform: scale(1.1); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
+    .bubble-radar { position: absolute; inset: -6px; border-radius: 50%; border: 1.5px solid rgba(217, 27, 36, 0.6); animation: radarWave 2s ease-out infinite; pointer-events: none; }
     @keyframes radarWave { 0% { transform: scale(0.9); opacity: 0.9; } 100% { transform: scale(1.45); opacity: 0; } }
-    .online-indicator { position: absolute; top: 2px; right: 2px; width: 12px; height: 12px; background: #ffc700; border: 2px solid #031c10; border-radius: 50%; box-shadow: 0 0 8px #ffc700; z-index: 2; }
-    .social-main-btn .chat-icon { display: flex; align-items: center; justify-content: center; color: #ffffff; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); }
-    .social-main-btn .close-icon { display: none; font-size: 1.3rem; font-weight: 700; color: var(--gold); }
-    .social-bubble-wrap.active .social-main-btn { animation: none; background: #052d1a; border-color: var(--gold); box-shadow: 0 0 20px rgba(255, 199, 0, 0.5); }
+    .online-indicator { position: absolute; top: 2px; right: 2px; width: 12px; height: 12px; background: #ffc700; border: 2px solid #ffffff; border-radius: 50%; box-shadow: 0 0 8px #ffc700; z-index: 2; }
+    .social-main-btn .chat-icon { display: flex; align-items: center; justify-content: center; color: #ffffff; }
+    .social-main-btn .close-icon { display: none; font-size: 1.3rem; font-weight: 700; color: #ffffff; }
+
+    .social-bubble-wrap.active .social-main-btn { animation: none; background: #b30f17; border-color: var(--gold); }
     .social-bubble-wrap.active .bubble-radar { display: none; }
     .social-bubble-wrap.active .chat-icon { display: none; }
     .social-bubble-wrap.active .close-icon { display: block; }
     @keyframes bubbleWiggle { 0%, 80%, 100% { transform: rotate(0deg) scale(1); } 85% { transform: rotate(-12deg) scale(1.05); } 90% { transform: rotate(10deg) scale(1.05); } 95% { transform: rotate(-6deg) scale(1.03); } }
+
     .social-menu { display: flex; flex-direction: column; gap: 10px; opacity: 0; transform: translateY(16px) scale(0.9); pointer-events: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
     .social-bubble-wrap.active .social-menu { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
-    .social-item { display: flex; align-items: center; gap: 10px; background: rgba(4, 40, 24, 0.92); border: 1px solid var(--line); color: var(--text); padding: 8px 14px; border-radius: 30px; text-decoration: none; font-family: "Chakra Petch", sans-serif; font-weight: 700; font-size: 0.85rem; backdrop-filter: blur(10px); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4); transition: all 0.2s ease; white-space: nowrap; }
-    .social-item:hover { border-color: var(--magenta); color: var(--magenta); transform: translateX(-4px); box-shadow: 0 0 14px rgba(0, 255, 136, 0.3); }
-    .social-item svg { stroke: var(--magenta); }
-    .social-item:hover svg { stroke: var(--gold); }
+    .social-item {
+      display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.96); border: 1px solid rgba(217, 27, 36, 0.2);
+      color: #1f2937; padding: 8px 14px; border-radius: 30px; text-decoration: none; font-family: "Chakra Petch", sans-serif;
+      font-weight: 700; font-size: 0.85rem; backdrop-filter: blur(10px); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: all 0.2s ease; white-space: nowrap;
+    }
+    .social-item:hover { border-color: var(--pink); color: var(--pink); transform: translateX(-4px); }
+    .social-item svg { stroke: var(--pink); }
     @media (max-width: 768px) {
       .social-bubble-wrap { bottom: 18px; right: 14px; }
       .social-main-btn { width: 46px; height: 46px; font-size: 1.25rem; }
@@ -550,486 +439,306 @@
 </head>
 
 <body>
-  <!-- 背景視覺組件 -->
-  <div class="bg-city"></div>
   <div class="bg-overlay"></div>
   <div class="grid-bg"></div>
   <div class="scan"></div>
   <div id="cursor-glow"></div>
 
-  <!-- 【區塊 6】頂部導航欄 (統一雙向閉環) -->
+  <!-- 【區塊 6】頂部導航欄 (統一 Logo 檔名為 logo.png) -->
   <nav>
     <div class="nav-in">
       <a class="logo-box" href="../">
-        <img src="../logo.webp" alt="MATE369 Logo" class="logo-img" onerror="this.src='../logo.ico'">
-        <span class="logo-fallback"><span class="dot"></span><span>MATE369</span></span>
+        <img src="../logo.png" alt="AE888 Logo" class="logo-img" onerror="this.src='../logo.png'">
+        <span class="logo-fallback"><span class="dot"></span><span>AE888</span></span>
       </a>
 
-      <!-- 電腦版選單 -->
       <div class="nav-links">
-        <a data-en="Home" data-zh="首頁" href="../">Home</a>
-        <a data-en="Games" data-zh="精選遊戲" href="../games/">Games</a>
-        <a data-en="Features" data-zh="特色優勢" href="../features/">Features</a>
-        <a data-en="Guides" data-zh="機台攻略" href="../guides/">Guides</a>
-        <a data-en="FAQ" data-zh="常見問題" class="active" href="./">FAQ</a>
-        <a data-en="About" data-zh="關於我們" href="../about/">About</a>
-        <button class="lang" id="langBtn">EN</button>
-        <a class="btn btn-nav-reg track-outbound" data-en="Register" data-zh="立即註冊" href="javascript:void(0);">Register</a>
+        <a href="../">Trang Chủ</a>
+        <a href="../games/">Trò Chơi</a>
+        <a href="../features/">Khuyến Mãi</a>
+        <a href="../guides/">Hướng Dẫn</a>
+        <a class="active" href="./">Hỏi Đáp</a>
+        <a href="../about/">Về Chúng Tôi</a>
+        <a class="btn btn-nav-reg track-outbound" href="javascript:void(0);">ĐĂNG KÝ</a>
       </div>
 
-      <!-- 手機端功能按鈕群 (語言 + 立即註冊 + 漢堡) -->
-      <div class="mobile-actions" style="display:flex; align-items:center; gap:8px;">
-        <button class="lang" id="langBtnTop" style="padding:4px 8px; font-size:0.75rem;">EN</button>
-        <a class="btn btn-nav-reg track-outbound" data-en="Register" data-zh="立即註冊" href="javascript:void(0);" style="padding:6px 10px !important; font-size:0.78rem !important;">Register</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+      <div class="mobile-actions">
+        <a class="btn btn-nav-reg track-outbound" href="javascript:void(0);">ĐĂNG KÝ</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span>MENU</span> <span>☰</span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- 📱 手機抽屜展開選單 -->
+  <!-- 手機抽屜展開選單 -->
   <div class="mobile-menu" id="mobileMenu">
-    <a data-en="Home" data-zh="首頁" href="../">Home</a>
-    <a data-en="Games" data-zh="精選遊戲" href="../games/">Games</a>
-    <a data-en="Features" data-zh="特色優勢" href="../features/">Features</a>
-    <a data-en="Guides" data-zh="機台攻略" href="../guides/">Guides</a>
-    <a data-en="FAQ" data-zh="常見問題" class="active" href="./">FAQ</a>
-    <a data-en="About" data-zh="關於我們" href="../about/">About</a>
-    <div style="display:flex; justify-content:space-between; align-items:center; padding-top:10px;">
-      <span style="font-family:'Chakra Petch'; font-size:0.9rem; color:var(--muted);">Language:</span>
-      <button class="lang" id="langBtnDrawer">EN</button>
-    </div>
-    <a class="btn btn-primary track-outbound" style="width:100%; margin-top:8px;" data-en="REGISTER NOW ›" data-zh="立即註冊領彩金 ›" href="javascript:void(0);">REGISTER NOW ›</a>
+    <a href="../">Trang Chủ</a>
+    <a href="../games/">Trò Chơi (Game Đại Sảnh)</a>
+    <a href="../features/">Khuyến Mãi (Ưu Đãi Hot)</a>
+    <a href="../guides/">Hướng Dẫn (Kinh Nghiệm)</a>
+    <a class="active" href="./">Hỏi Đáp & VIP</a>
+    <a href="../about/">Về Chúng Tôi (Bảo Mật)</a>
+    <a class="btn btn-primary track-outbound" style="width:100%; margin-top:8px;" href="javascript:void(0);">ĐĂNG KÝ NGAY ›</a>
   </div>
 
   <main class="wrap">
     <!-- 標題區 -->
-    <header class="reveal">
+    <header>
       <div class="badge">
         <span class="pulse"></span>
-        <span data-en="OFFICIAL HELP CENTER &amp; WALKTHROUGHS" data-zh="官方玩家指南與操作知識庫">OFFICIAL HELP CENTER &amp; WALKTHROUGHS</span>
+        <span>TRUNG TÂM HƯỚNG DẪN THAO TÁC AE888</span>
       </div>
 
       <h1>
-        <span class="l1" data-en="PLAYER GUIDES" data-zh="平台新手指南">PLAYER GUIDES</span>
-        <span class="l2" data-en="&amp; FREQUENTLY ASKED QUESTIONS" data-zh="與常見問題答疑">&amp; FREQUENTLY ASKED QUESTIONS</span>
+        <span class="l1">HỎI ĐÁP &amp; HƯỚNG DẪN</span>
+        <span class="l2">HÌNH ẢNH TRỰC QUAN TỪNG BƯỚC</span>
       </h1>
 
-      <p class="sub" data-en="Master platform features in minutes: lobby walkthrough, PayID bank verification steps, 12-tier VIP rollover rebates, and certified fair play."
-                     data-zh="數分鐘快速掌握平台精髓：遊戲大廳介面指引、PayID 與銀行卡實名認證步驟、12 級 VIP 晉升返水表與國際合規政策。">
-        Master platform features in minutes: lobby walkthrough, PayID bank verification steps, 12-tier VIP rollover rebates, and certified fair play.
+      <p class="sub">
+        Lựa chọn chuyên mục bên dưới và bấm vào thao tác bạn cần hỗ trợ để xem ảnh chụp màn hình hướng dẫn chi tiết (hỗ trợ cả phiên bản Điện Thoại và Máy Tính).
       </p>
     </header>
 
-    <!-- 
-    ==========================================================================
-    🎮 【區塊 7】全新雙排 TAB 切換按鈕結構 (純向量 SVG，預設英中文同步)
-    ==========================================================================
-    -->
-    <section class="reveal">
-      <div class="tabs-container">
-        <!-- 第一排：大廳與介面功能導引 (佔滿整行) -->
-        <div class="tab-row-full">
-          <button class="tab-btn active" onclick="switchGuideTab('tab-interface', this)" data-en="LOBBY &amp; INTERFACE WALKTHROUGH" data-zh="大廳與介面功能導引">
-            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-            <span class="tab-text">LOBBY &amp; INTERFACE WALKTHROUGH</span>
-          </button>
+    <!-- 🏷️ 分類切換膠囊 (對應你的 4 個資料夾) -->
+    <div class="cat-tabs">
+      <button class="cat-btn active" onclick="switchCategory('all', this)">Tất Cả Thao Tác</button>
+      <button class="cat-btn" onclick="switchCategory('register', this)">Đăng Ký Tài Khoản</button>
+      <button class="cat-btn" onclick="switchCategory('deposit', this)">Hướng Dẫn Nạp Tiền</button>
+      <button class="cat-btn" onclick="switchCategory('withdraw', this)">Hướng Dẫn Rút Tiền</button>
+      <button class="cat-btn" onclick="switchCategory('bank', this)">Liên Kết Ngân Hàng</button>
+    </div>
+
+    <!-- 📂 手風琴折疊區域 (點擊展開操作說明長圖) -->
+    <div class="faq-container" id="faqContainer">
+
+      <!-- ================= 1. 建立帳戶 (Đăng Ký) ================= -->
+      <div class="faq-card" data-cat="register">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Đăng Ký</span>
+            <h3 class="faq-title">1. Hướng dẫn đăng ký tài khoản trên Điện Thoại (Mobile)</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
-
-        <!-- 第二排：兩顆平分寬度 (存提款教學 + VIP 晉升規則) -->
-        <div class="tab-row-split">
-          <button class="tab-btn" onclick="switchGuideTab('tab-payid', this)" data-en="BANK CARD &amp; ID VERIFY" data-zh="綁定銀行卡與實名教學">
-            <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-            <span class="tab-text">BANK CARD &amp; ID VERIFY</span>
-          </button>
-          
-          <button class="tab-btn" onclick="switchGuideTab('tab-vip', this)" data-en="12-TIER VIP RULES" data-zh="12 級 VIP 晉升規則">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"/></svg>
-            <span class="tab-text">12-TIER VIP RULES</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- ====================================================================
-           📱 3-1. 介面功能導引 (電腦端：左圖、右字；手機端：上圖、下字)
-           ==================================================================== -->
-      <div class="tab-content active" id="tab-interface">
-        <div class="guide-box">
-          <div class="desktop-split-layout">
-            <!-- 🖼️ 左邊：手機模型示意圖 (直向長圖 0101.webp) -->
-            <div class="phone-mockup-wrap">
-              <img class="phone-mockup" src="./0101.webp" alt="Lobby Interface Walkthrough" onerror="this.src='https://via.placeholder.com/440x880/042818/00ff88?text=Place+0101.webp+Here';">
-            </div>
-
-            <!-- 📝 右邊：點位解說清單 -->
-            <div class="points-list">
-              <div class="point-item">
-                <span class="point-badge">1</span>
-                <div class="point-text" data-en="<strong>Personal Center:</strong> Tap avatar to access account settings, security passwords, message center, and deposit records."
-                                        data-zh="<strong>個人中心：</strong>點擊左上角頭像可檢視玩家暱稱、修改密碼、站內信箱以及查看充值交易明細。">
-                  <strong>Personal Center:</strong> Tap avatar to access account settings, security passwords, message center, and deposit records.
-                </div>
-              </div>
-              <div class="point-item">
-                <span class="point-badge">2</span>
-                <div class="point-text" data-en="<strong>VIP Level Display:</strong> Shows your current tier status and turnover progress toward your next milestone."
-                                        data-zh="<strong>VIP 等級指示：</strong>顯示當前會員等級與有效流水進度，點擊可直接查詢各等級專屬返水特權。">
-                  <strong>VIP Level Display:</strong> Shows your current tier status and turnover progress toward your next milestone.
-                </div>
-              </div>
-              <div class="point-item">
-                <span class="point-badge">3</span>
-                <div class="point-text" data-en="<strong>Wallet Balance:</strong> Live Australian Dollars (AUD) balance. Tap to trigger fast PayID deposit or withdrawal."
-                                        data-zh="<strong>錢包即時餘額：</strong>原生澳幣（AUD）即時結算餘額，點擊可快速觸發 PayID 充值或申請提款。">
-                  <strong>Wallet Balance:</strong> Live Australian Dollars (AUD) balance. Tap to trigger fast PayID deposit or withdrawal.
-                </div>
-              </div>
-              <div class="point-item">
-                <span class="point-badge">7</span>
-                <div class="point-text" data-en="<strong>Provider Tabs:</strong> Filter certified titles instantly: Slots (Pokies), Live Dealer, Arcade, and Table Games."
-                                        data-zh="<strong>大廳分類篩選：</strong>支援全部、拉霸機台、真人視訊、棋牌、街機捕魚，點擊愛心可將遊戲加入「最愛」。">
-                  <strong>Provider Tabs:</strong> Filter certified titles instantly: Slots (Pokies), Live Dealer, Arcade, and Table Games.
-                </div>
-              </div>
-              <div class="point-item">
-                <span class="point-badge">9</span>
-                <div class="point-text" data-en="<strong>Hot Jackpot Titles:</strong> Real-time high-volatility jackpot and Megaways titles currently delivering the highest multipliers."
-                                        data-zh="<strong>近期爆獎專區：</strong>即時更新近期全澳爆出最高倍數的熱門機台，跟隨大獎趨勢輕鬆暢玩。">
-                  <strong>Hot Jackpot Titles:</strong> Real-time high-volatility jackpot and Megaways titles currently delivering the highest multipliers.
-                </div>
-              </div>
-            </div>
+        <div class="faq-body">
+          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
+            Thao tác đăng ký tài khoản chính chủ qua giao diện di động. Vui lòng chuẩn bị số điện thoại và điền đúng họ tên thật để thuận tiện cho việc rút tiền sau này:
+          </p>
+          <div class="guide-img-wrap">
+            <!-- 🖼️ 讀取你下載的說明圖 (範例 10001.jpg 手機版) -->
+            <img class="guide-img" src="./10001.jpg" alt="Hướng dẫn đăng ký tài khoản AE888 trên điện thoại">
           </div>
         </div>
       </div>
 
-      <!-- ====================================================================
-           💳 3-2. 存提款教學 (電腦端：左圖、右字；手機端：上圖、下字)
-           ==================================================================== -->
-      <div class="tab-content" id="tab-payid">
-        <div class="guide-box">
-          <div class="desktop-split-layout">
-            <!-- 🖼️ 左邊：實名綁定長圖 0202.webp -->
-            <div class="process-mockup-wrap">
-              <img class="process-mockup" src="./0202.webp" alt="Bank Card &amp; ID Verification Steps" onerror="this.src='https://via.placeholder.com/620x960/042818/00ff88?text=Place+0202.webp+Here';">
-            </div>
-
-            <!-- 📝 右邊：4 步驟詳細說明 -->
-            <div class="points-list">
-              <div class="point-item">
-                <span class="point-badge">1</span>
-                <div class="point-text" data-en="<strong>Step 1 - Tap 'My' Account:</strong> Open the bottom navigation and tap the 'My' profile icon to enter personal center."
-                                        data-zh="<strong>步驟 1 - 點選「我的」：</strong>在首頁或大廳底部導航列點擊右下角「我的（My）」，進入個人會員中心。">
-                  <strong>Step 1 - Tap 'My' Account:</strong> Open the bottom navigation and tap the 'My' profile icon to enter personal center.
-                </div>
-              </div>
-              <div class="point-item">
-                <span class="point-badge">2</span>
-                <div class="point-text" data-en="<strong>Step 2 - Tap 'Withdraw':</strong> Select the 'Withdraw' card under Center Wallet to initiate security binding."
-                                        data-zh="<strong>步驟 2 - 點擊「提款（Withdraw）」：</strong>在中心錢包下方點擊提款圖示，系統將自動啟動安全防護綁定程序。">
-                  <strong>Step 2 - Tap 'Withdraw':</strong> Select the 'Withdraw' card under Center Wallet to initiate security binding.
-                </div>
-              </div>
-              <div class="point-item">
-                <span class="point-badge">3</span>
-                <div class="point-text" data-en="<strong>Step 3 - Enter Real Name:</strong> Enter your legal full name matching your Australian bank account."
-                                        data-zh="<strong>步驟 3 - 輸入真實姓名：</strong>彈出實名確認提示時，輸入與您澳洲本地銀行帳戶完全一致的法定真實英文姓名。">
-                  <strong>Step 3 - Enter Real Name:</strong> Enter your legal full name matching your Australian bank account.
-                </div>
-              </div>
-              <div class="point-item">
-                <span class="point-badge">4</span>
-                <div class="point-text" data-en="<strong>Step 4 - Complete ID &amp; Bank Details:</strong> Fill in your ID details and Australian bank account to enable automated payouts."
-                                        data-zh="<strong>步驟 4 - 填寫證件號碼與銀行卡：</strong>在個人資訊頁面填妥 ID 證號與銀行帳號，提交後即完成安全認證，隨時享受 PayID 秒級極速出金。">
-                  <strong>Step 4 - Complete ID &amp; Bank Details:</strong> Fill in your ID details and Australian bank account to enable automated payouts.
-                </div>
-              </div>
-            </div>
+      <div class="faq-card" data-cat="register">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Đăng Ký</span>
+            <h3 class="faq-title">2. Hướng dẫn đăng ký tài khoản trên Máy Tính (PC / Laptop)</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
+            Thao tác đăng ký tài khoản chi tiết trên trình duyệt máy tính. Điền đầy đủ tên đăng nhập, mật khẩu và xác nhận điều khoản:
+          </p>
+          <div class="guide-img-wrap">
+            <!-- 🖼️ 讀取你下載的說明圖 (範例 10002.jpg 電腦版) -->
+            <img class="guide-img" src="./10002.jpg" alt="Hướng dẫn đăng ký tài khoản AE888 trên máy tính">
           </div>
         </div>
       </div>
 
-      <!-- ====================================================================
-           👑 3-3. 12 級 VIP 晉升規則 (單圖原生高畫質滾動視窗，永不變形)
-           ==================================================================== -->
-      <div class="tab-content" id="tab-vip">
-        <div class="guide-box">
-          
-          <!-- 💡 手機端滑動提示標籤 -->
-          <div class="vip-scroll-tip" data-en="← SWIPE TO VIEW ALL TIERS →" data-zh="← 左右滑動檢視完整等級福利 →">
-            ← 左右滑動檢視完整等級福利 →
+      <!-- ================= 2. 存款說明 (Nạp Tiền) ================= -->
+      <div class="faq-card" data-cat="deposit">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Nạp Tiền</span>
+            <h3 class="faq-title">3. Hướng dẫn nạp tiền chuyển khoản ngân hàng 24/7</h3>
           </div>
-
-          <!-- 🖼️ 完整 VIP 表格視窗 (電腦大橫圖，手機可左右滑動且字體絕不變形) -->
-          <div class="vip-table-scroll-wrap">
-            <img class="vip-responsive-table" src="./VIPall.webp" alt="12-Tier VIP Rollover Rebate Full Table" onerror="this.src='https://via.placeholder.com/1040x600/042818/00ff88?text=Place+VIPall.webp+Here';">
-          </div>
-
-          <!-- 表格下方的 VIP 核心條例說明 -->
-          <div class="points-list" style="margin-top: 18px;">
-            <div class="point-item">
-              <span class="point-badge">★</span>
-              <div class="point-text" data-en="<strong>Lifetime Progression:</strong> All valid turnover from certified pokies, live casino, and sports betting accumulates permanently."
-                                      data-zh="<strong>終身累計不降級：</strong>全館拉霸機、真人視訊與體育競猜之有效流水全自動永久累計，達到門檻即時自動升級。">
-                <strong>終身累計不降級：</strong>全館拉霸機、真人視訊與體育競猜之有效流水全自動永久累計，達到門檻即時自動升級。
-              </div>
-            </div>
-            <div class="point-item">
-              <span class="point-badge">★</span>
-              <div class="point-text" data-en="<strong>Automatic Monday Settlement:</strong> Rollover rebates are calculated and dispatched directly to your wallet every Monday with zero turnover hurdles."
-                                      data-zh="<strong>每週一全自動派發：</strong>流水返還金於每週一由系統自動清算直撥錢包，無繁瑣申請程序，讓您長線遊玩無後顧之憂。">
-                <strong>每週一全自動派發：</strong>流水返還金於每週一由系統自動清算直撥錢包，無繁瑣申請程序，讓您長線遊玩無後顧之憂。
-              </div>
-            </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
+            Các bước lấy thông tin số tài khoản ngân hàng đại diện và điền mã nội dung chuyển khoản để điểm cược tự động cập nhật trong 1 phút:
+          </p>
+          <div class="guide-img-wrap">
+            <!-- 替換為你「存款說明」資料夾內的圖檔，例如 ./deposit-bank.jpg -->
+            <img class="guide-img" src="./deposit-bank.jpg" alt="Hướng dẫn nạp tiền qua ngân hàng AE888" onerror="this.src='./10002.jpg'">
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- 
-    ==========================================================================
-    🎡 【區塊 5】原廠 Logo 跑馬燈 (一排無縫循環平滑滾動，全尺寸自動相容)
-    ==========================================================================
-    💡 小抄：想要換圖，直接上傳至 faq/ 資料夾，寫 src="./你的Logo檔名.webp"
-    -->
-    <section class="marquee-section reveal">
-      <div class="marquee-title" data-en="CERTIFIED GAMING PROVIDERS &amp; FINANCIAL STANDARDS" data-zh="國際認證遊戲供應商與資安標準">
-        CERTIFIED GAMING PROVIDERS &amp; FINANCIAL STANDARDS
+      <div class="faq-card" data-cat="deposit">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Nạp Tiền</span>
+            <h3 class="faq-title">4. Hướng dẫn nạp tiền qua Ví Điện Tử MoMo &amp; Quét Mã QR</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
+            Quét mã QR MoMo hoặc ViettelPay siêu tốc, lưu ý luôn nhập đúng mã giao dịch đính kèm:
+          </p>
+          <div class="guide-img-wrap">
+            <!-- 替換為你的圖檔，例如 ./deposit-momo.jpg -->
+            <img class="guide-img" src="./deposit-momo.jpg" alt="Hướng dẫn nạp tiền MoMo AE888" onerror="this.src='./10001.jpg'">
+          </div>
+        </div>
       </div>
-      
-      <div class="marquee-track-wrap">
+
+      <div class="faq-card" data-cat="deposit">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Nạp Tiền</span>
+            <h3 class="faq-title">5. Hướng dẫn nạp tiền bằng Tiền Ảo USDT (TRC20) Ẩn Danh</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
+            Chuyển USDT từ ví Binance, OKX vào địa chỉ ví sàn. Nhận thêm ưu đãi 3% nạp mỗi ngày:
+          </p>
+          <div class="guide-img-wrap">
+            <!-- 替換為你的圖檔，例如 ./deposit-usdt.jpg -->
+            <img class="guide-img" src="./deposit-usdt.jpg" alt="Hướng dẫn nạp USDT AE888" onerror="this.src='./10002.jpg'">
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 3. 提款說明 (Rút Tiền) ================= -->
+      <div class="faq-card" data-cat="withdraw">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Rút Tiền</span>
+            <h3 class="faq-title">6. Hướng dẫn tạo lệnh rút tiền về tài khoản ngân hàng</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
+            Thao tác nhập số điểm cần rút và xác nhận mật khẩu rút tiền. Hệ thống xử lý tự động trong vòng 2-5 phút:
+          </p>
+          <div class="guide-img-wrap">
+            <!-- 替換為你「提款說明」資料夾內的圖檔，例如 ./withdraw.jpg -->
+            <img class="guide-img" src="./withdraw.jpg" alt="Hướng dẫn rút tiền AE888" onerror="this.src='./10002.jpg'">
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 4. 銀行帳戶綁定 (Liên Kết Ngân Hàng) ================= -->
+      <div class="faq-card" data-cat="bank">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Ngân Hàng</span>
+            <h3 class="faq-title">7. Hướng dẫn thêm và liên kết tài khoản ngân hàng chính chủ</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
+            Quy trình thêm thẻ ngân hàng rút tiền lần đầu. Tên chủ thẻ bắt buộc phải trùng khớp với họ tên đã đăng ký:
+          </p>
+          <div class="guide-img-wrap">
+            <!-- 替換為你「銀行帳戶關聯指南」資料夾內的圖檔，例如 ./link-bank.jpg -->
+            <img class="guide-img" src="./link-bank.jpg" alt="Hướng dẫn liên kết ngân hàng AE888" onerror="this.src='./10001.jpg'">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 🏛️ 國際牌照機構與頂級遊戲大廠信任跑馬燈 -->
+    <div class="trust-section">
+      <div class="trust-title">CHỨNG NHẬN QUỐC TẾ &amp; ĐỐI TÁC CHÍNH THỨC</div>
+      <div class="marquee-wrapper">
         <div class="marquee-track">
-          <!-- 第 1 組 Logo (原廠與金流渠道) -->
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./PP.webp" alt="Pragmatic Play" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt gold" style="display:none;">PRAGMATIC PLAY</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./TURBO.webp" alt="BNG Hold & Win" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt gold" style="display:none;">BNG HOLD &amp; WIN</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./PG.webp" alt="PG Soft" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt gold" style="display:none;">PG SOFT</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./TPG.webp" alt="PayID AUD" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt green" style="display:none;">PAYID AUD</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./QT.webp" alt="USDT Crypto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt green" style="display:none;">USDT TRC20</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./GLC.webp" alt="eCOGRA Audited" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt" style="display:none;">eCOGRA AUDITED</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./CQ9.webp" alt="iTech Labs" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt" style="display:none;">iTech Labs</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./77G.webp" alt="18+ Responsible" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt" style="display:none;">18+ GAMCARE</span>
-          </div>
-
-          <!-- 第 2 組 Logo (無縫平滑循環對齊) -->
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./01.webp" alt="Pragmatic Play" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt gold" style="display:none;">PRAGMATIC PLAY</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./02.webp" alt="BNG Hold & Win" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt gold" style="display:none;">BNG HOLD &amp; WIN</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./03.webp" alt="PG Soft" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt gold" style="display:none;">PG SOFT</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./04.webp" alt="PayID AUD" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt green" style="display:none;">PAYID AUD</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./05.webp" alt="USDT Crypto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt green" style="display:none;">USDT TRC20</span>
-          </div>
-          <div class="partner-logo-card">
-            <img class="partner-logo-img" src="./06.webp" alt="eCOGRA Audited" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="partner-logo-txt" style="display:none;">eCOGRA AUDITED</span>
-          </div>
-          
+          <span>PAGCOR LICENSED <i>◆</i></span>
+          <span>ISLE OF MAN GSC <i>◆</i></span>
+          <span>BMM TESTLABS <i>◆</i></span>
+          <span>SV388 OFFICIAL <i>◆</i></span>
+          <span>PG SOFT SLOTS <i>◆</i></span>
+          <span>PRAGMATIC PLAY <i>◆</i></span>
+          <span>SABA SPORTS <i>◆</i></span>
+          <span>EVOLUTION GAMING <i>◆</i></span>
+          <span>SEXY BACCARAT <i>◆</i></span>
+        </div>
+        <div class="marquee-track">
+          <span>PAGCOR LICENSED <i>◆</i></span>
+          <span>ISLE OF MAN GSC <i>◆</i></span>
+          <span>BMM TESTLABS <i>◆</i></span>
+          <span>SV388 OFFICIAL <i>◆</i></span>
+          <span>PG SOFT SLOTS <i>◆</i></span>
+          <span>PRAGMATIC PLAY <i>◆</i></span>
+          <span>SABA SPORTS <i>◆</i></span>
+          <span>EVOLUTION GAMING <i>◆</i></span>
+          <span>SEXY BACCARAT <i>◆</i></span>
         </div>
       </div>
-    </section>
-
-    <!-- ❓ 常見問答手風琴 (Accordion List) -->
-    <section class="reveal">
-      <div class="sec-head">
-        <div class="eyebrow" data-en="FREQUENTLY ASKED QUESTIONS" data-zh="核心疑難解答">FREQUENTLY ASKED QUESTIONS</div>
-        <h2 data-en="CLEAR ANSWERS <em>TO YOUR QUESTIONS</em>" data-zh="透明政策 <em>即時解開您的疑惑</em>">CLEAR ANSWERS <em>TO YOUR QUESTIONS</em></h2>
-      </div>
-
-      <div class="faq-wrapper">
-        
-        <!-- Q1 -->
-        <div class="faq-card" onclick="toggleFaq(this)">
-          <div class="faq-question">
-            <h3 data-en="How do I claim the 'Deposit $20 Get $70' welcome bonus?" data-zh="如何領取「充 $20 送 $50 (得 $70)」的迎新特惠？">How do I claim the 'Deposit $20 Get $70' welcome bonus?</h3>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-answer">
-            <p data-en="Simply complete your 30-second registration, head to the Promotion center within your account dashboard, opt into the welcome package, and make your first qualifying $20 deposit. The $50 bonus is instantly matched to your balance."
-               data-zh="只需完成 30 秒簡易帳號註冊，進入會員中心「優惠活動」頁面勾選專屬迎新禮包，並完成首次 $20 入金。系統將即時自動發放 $50 體驗彩金至您的錢包，總計 $70 資金可立即暢玩全館遊戲。">
-              Simply complete your 30-second registration, head to the Promotion center within your account dashboard, opt into the welcome package, and make your first qualifying $20 deposit.
-            </p>
-          </div>
-        </div>
-
-        <!-- Q2 -->
-        <div class="faq-card" onclick="toggleFaq(this)">
-          <div class="faq-question">
-            <h3 data-en="What are the average withdrawal processing times in Australia?" data-zh="在澳洲本地提款平均需要多久時間到帳？">What are the average withdrawal processing times in Australia?</h3>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-answer">
-            <p data-en="Local Australian payouts via PayID and direct bank transfer are handled through our automated settlement gateway. Once your turnover conditions are met, requests are audited and typically clear into your account within minutes."
-               data-zh="透過澳洲本地 PayID 與銀行快速轉帳的提款申請，均由全自動清算通道處理。在達到相應活動流水門檻後，出款審核通常數分鐘內即可自動劃入您的澳洲銀行帳戶，無任何手續費與匯差折損。">
-              Local Australian payouts via PayID and direct bank transfer are handled through our automated settlement gateway. Once turnover conditions are met, funds typically clear within minutes.
-            </p>
-          </div>
-        </div>
-
-        <!-- Q3 -->
-        <div class="faq-card" onclick="toggleFaq(this)">
-          <div class="faq-question">
-            <h3 data-en="Are the pokie games certified and provably fair?" data-zh="平台上的所有拉霸機台是否具備合規認證與公平性？">Are the pokie games certified and provably fair?</h3>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-answer">
-            <p data-en="Yes, absolutely. All titles from partners like Pragmatic Play, BNG, and PG Soft utilize validated Random Number Generators (RNG) audited by accredited laboratories such as eCOGRA and iTech Labs to guarantee purely random results."
-               data-zh="是的，絕對合規。平台全線引入 Pragmatic Play、BNG、PG Soft 等國際一線大廠，所有機台皆採用通過 eCOGRA 與 iTech Labs 等獨立國際權威實驗室審計的隨機亂數演算法（RNG），確保每一次旋轉完全隨機公正。">
-              Yes, absolutely. All titles utilize validated Random Number Generators (RNG) audited by accredited laboratories such as eCOGRA and iTech Labs.
-            </p>
-          </div>
-        </div>
-
-        <!-- Q4 -->
-        <div class="faq-card" onclick="toggleFaq(this)">
-          <div class="faq-question">
-            <h3 data-en="Do I need to download a mobile app to play on iPhone or Android?" data-zh="在 iPhone 或 Android 手機上遊玩需要下載獨立 APP 嗎？">Do I need to download a mobile app to play on iPhone or Android?</h3>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-answer">
-            <p data-en="No download is required. Our platform is built on native HTML5 protocols optimized for Safari on iOS and Chrome on Android. You can simply add the site to your Home Screen for a full-screen, native application feel."
-               data-zh="完全不需要下載任何安裝檔案。平台架構採用純原生 HTML5 協議開發，深度適配 iOS Safari 與 Android 各大主流瀏覽器。您可直接將網頁「加入主畫面」，即可獲得宛如原生 APP 的沉浸式全螢幕操作體驗。">
-              No download is required. Our platform is built on native HTML5 protocols optimized for Safari on iOS and Chrome on Android.
-            </p>
-          </div>
-        </div>
-
-        <!-- Q5 -->
-        <div class="faq-card" onclick="toggleFaq(this)">
-          <div class="faq-question">
-            <h3 data-en="How does the 12-Tier VIP Loyalty Program work?" data-zh="12 級 VIP 會員晉升制度如何計算與運作？">How does the 12-Tier VIP Loyalty Program work?</h3>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-answer">
-            <p data-en="VIP progress tracks your total accumulated turnover automatically. Status levels never reset, and as you ascend through tiers, you unlock higher weekly loss rebates, prioritized high-limit withdrawals, and personalized birthday gifts."
-               data-zh="VIP 等級由系統全自動根據您的累積有效流水進行即時累計，晉升門檻永不清零。隨著等級逐級提升，您將陸續解鎖更高比例的每週虧損返還、極速高額提款綠色通道以及專屬客製化生日驚喜禮遇。">
-              VIP progress tracks your total accumulated turnover automatically. Status levels never reset, unlocking higher loss rebates and personalized gifts.
-            </p>
-          </div>
-        </div>
-
-        <!-- Q6 -->
-        <div class="faq-card" onclick="toggleFaq(this)">
-          <div class="faq-question">
-            <h3 data-en="What should I do if my deposit or game session experiences an error?" data-zh="若在入金結算或遊戲連線時遇到異常該如何處理？">What should I do if my deposit or game session experiences an error?</h3>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-answer">
-            <p data-en="Our multilingual support team is available 24/7 via the live chat icon located on every page. Provide your registered username and transaction ID for immediate sub-minute technical resolution."
-               data-zh="我們的雙語真人客服團隊全年無休 24/7 在線。您只需點擊頁面上的在線客服圖示，提供您的註冊帳號與交易明細編號，專屬客服專員將在數分鐘內為您排查並排除故障。">
-              Our multilingual support team is available 24/7 via the live chat icon. Provide your registered username and transaction ID for immediate resolution.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 💬 客服聯繫小卡 -->
-    <div class="support-card reveal">
-      <h3 data-en="STILL HAVE QUESTIONS? WE ARE HERE 24/7" data-zh="還有其他疑問？全天候客服隨時為您服務">STILL HAVE QUESTIONS? WE ARE HERE 24/7</h3>
-      <p data-en="Our dedicated support specialists are on standby around the clock to assist you with payments, account settings, and game inquiries."
-         data-zh="專業技術與金流客服專員全天候在線，隨時為您提供入金提款、帳號設定及遊戲操作的即時協助。">
-        Our dedicated support specialists are on standby around the clock to assist you with payments, account settings, and game inquiries.
-      </p>
-      <a class="btn btn-primary track-outbound" data-href="https://t.me/mate369_official" data-en="CONTACT LIVE SUPPORT ›" data-zh="聯絡在線真人客服 ›" href="javascript:void(0);">
-        CONTACT LIVE SUPPORT ›
-      </a>
     </div>
 
     <!-- 頁尾轉換大卡片 -->
-    <div class="final-cta reveal">
-      <h2 data-en="READY TO JOIN<br><em>AUSTRALIA'S TOP PORTAL?</em>" data-zh="準備好加入<br><em>全澳首屈一指的官方旗艦了嗎？</em>">
-        READY TO JOIN<br><em>AUSTRALIA'S TOP PORTAL?</em>
-      </h2>
-      <p data-en="Get started in less than a minute. Claim your $70 welcome boost and experience transparent payouts today."
-         data-zh="不到一分鐘立即完成開戶。領取您的 $70 迎新啟動金，即刻感受極速透明的爆分提款體驗。">
-        Get started in less than a minute. Claim your $70 welcome boost and experience transparent payouts today.
+    <div class="final-cta">
+      <h2>BẠN CẦN HỖ TRỢ TRỰC TIẾP?<br><em>CSKH 24/7 SẴN SÀNG GIÚP ĐỠ</em></h2>
+      <p>
+        Nếu gặp bất kỳ khó khăn nào trong quá trình nạp rút hoặc đặt cược, vui lòng liên hệ ngay với đội ngũ chuyên viên tư vấn trực tuyến để được hỗ trợ tức thì.
       </p>
-      <a class="btn btn-primary btn-large track-outbound" data-href="" data-en="CLAIM $70 &amp; REGISTER ›" data-zh="立即領取 $70 開戶 ›" href="javascript:void(0);">
-        CLAIM $70 &amp; REGISTER ›
+      <a class="btn btn-primary track-outbound" data-href="" href="javascript:void(0);">
+        KẾT NỐI CSKH TRỰC TUYẾN 24/7 ›
       </a>
     </div>
   </main>
+
+  <!-- 🚀 回到頂端火箭按鈕 (外層放置，純原生平滑滾動) -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top" title="Back to Top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.documentElement.scrollTop=0; document.body.scrollTop=0;">
+    <svg viewBox="0 0 24 24"><path d="M18 15 L12 9 L6 15"/><path d="M12 9 L12 21"/></svg>
+  </button>
 
   <!-- 官方正式頁尾 -->
   <footer>
     <div class="wrap">
       <div class="f-links">
-        <a href="../" data-en="Home" data-zh="首頁">Home</a>
-        <a href="../games/" data-en="Games" data-zh="精選遊戲">Games</a>
-        <a href="../features/" data-en="Features" data-zh="特色優勢">Features</a>
-        <a href="./" data-en="FAQ" data-zh="常見問答">FAQ</a>
-        <a href="../about/" data-en="About" data-zh="關於我們">About</a>
+        <a href="../">Trang Chủ</a>
+        <a href="../games/">Trò Chơi</a>
+        <a href="../features/">Khuyến Mãi</a>
+        <a href="../guides/">Hướng Dẫn</a>
+        <a href="./">Hỏi Đáp</a>
+        <a href="../about/">Về Chúng Tôi</a>
       </div>
-      <div style="max-width: 820px; margin: 18px auto; line-height: 1.6; font-size: 0.85rem; color: var(--muted);"
-           data-en="Read official policies, terms of bonus redemption, and fair gaming standards. Please gamble responsibly. 18+ only."
-           data-zh="查閱官方營運政策、優惠領取規範與公平遊戲標準。請落實理性博弈，未成年人嚴禁參與。">
-        Read official policies, terms of bonus redemption, and fair gaming standards. Please gamble responsibly. 18+ only.
+      <div style="max-width: 820px; margin: 18px auto; line-height: 1.6; font-size: 0.85rem; color: #4b5563;">
+        AE888 cung cấp các giải pháp hỗ trợ khách hàng nhanh chóng, minh bạch và an toàn tuyệt đối. Hãy tham gia giải trí có trách nhiệm (18+).
       </div>
-      <div style="font-size: 0.8rem; color: rgba(255,255,255,0.4);"
-           data-en="© 2026 MATE369 · Australia Online Casino Platform · Play Responsibly · 18+ Only"
-           data-zh="© 2026 MATE369 · 澳洲線上娛樂平台 · 請理性娛樂 · 僅限 18 歲以上成年人參與">
-        © 2026 MATE369 · Australia Online Casino Platform · Play Responsibly · 18+ Only
+      <div style="font-size: 0.8rem; color: #6b7280;">
+        © 2026 AE888 · Nền Tảng Cá Cược Trực Tuyến Hàng Đầu Châu Á · Chơi Có Trách Nhiệm · 18+ Only
       </div>
     </div>
   </footer>
 
-  <!-- 💬 懸浮社群氣泡模組 (定稿旗艦版：雷達光環 + 在線燈 + 3秒微晃 + 展開選單) -->
+  <!-- 💬 懸浮社群氣泡模組 -->
   <div class="social-bubble-wrap" id="socialBubbleWrap">
     <div class="social-menu" id="socialMenu">
-      <a class="social-item track-outbound" data-href="https://t.me/mate369_official" href="javascript:void(0);" title="Telegram">
+      <a class="social-item track-outbound" data-href="https://t.me/ae888cskhchinhthuc" href="javascript:void(0);" title="Telegram">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21.5 2L2 9.5l7 3 2.5 7.5 3-4 5.5 3.5L21.5 2z"/>
         </svg>
-        <span class="social-text">Telegram</span>
+        <span class="social-text">Telegram Hỗ Trợ</span>
       </a>
 
-      <a class="social-item track-outbound" data-href="https://x.com/Mate369_ofcl" href="javascript:void(0);" title="X">
+      <a class="social-item track-outbound" data-href="https://t.me/cskhttae888" href="javascript:void(0);" title="Telegram">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21.5 2L2 9.5l7 3 2.5 7.5 3-4 5.5 3.5L21.5 2z"/>
+        </svg>
+        <span class="social-text">Telegram Hỗ Trợ</span>
+      </a>
+
+      <a class="social-item track-outbound" data-href="https://ae888hotro.net/trang-chu/" href="javascript:void(0);" title="QA">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
-        <span class="social-text">X</span>
-      </a>
-
-      <a class="social-item track-outbound" data-href="https://wa.me/61469363369" href="javascript:void(0);" title="WhatsApp">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-        </svg>
-        <span class="social-text">WhatsApp</span>
+        <span class="social-text">QA</span>
       </a>
     </div>
 
@@ -1048,96 +757,60 @@
     </button>
   </div>
 
-  <!-- 【區塊 16】核心動態引擎 -->
   <script>
-    // 1. 操作指南 TAB 標籤切換控制
-    function switchGuideTab(tabId, btn) {
-      document.querySelectorAll('.tab-content').forEach(function(content) {
-        content.classList.remove('active');
-      });
-      document.querySelectorAll('.tab-btn').forEach(function(b) {
-        b.classList.remove('active');
-      });
-      const activeContent = document.getElementById(tabId);
-      if (activeContent) activeContent.classList.add('active');
-      if (btn) btn.classList.add('active');
+    // 📂 手風琴折疊點擊切換邏輯
+    function toggleAccordion(header) {
+      const card = header.closest('.faq-card');
+      card.classList.toggle('active');
     }
 
-    // 2. FAQ 手風琴折疊控制
-    function toggleFaq(card) {
-      card.classList.toggle('open');
+    // 🏷️️ 分類膠囊即時過濾
+    function switchCategory(cat, btn) {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.faq-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     }
 
-    // 3. 手機版抽屜選單控制
+    // 手機抽屜選單
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
 
     function toggleMenu() {
       if (!mobileMenu) return;
-      mobileMenu.classList.toggle('active');
+      const isOpen = mobileMenu.classList.toggle('active');
       if (menuToggle) {
-        menuToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+        menuToggle.innerHTML = isOpen ? '<span>ĐÓNG</span> <span>✕</span>' : '<span>MENU</span> <span>☰</span>';
       }
     }
-    if (menuToggle) {
-      menuToggle.addEventListener('click', toggleMenu);
+    if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+
+    // 火箭按鈕滾動監聽
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', function() {
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop || 0;
+        if (scrollPos > 350) backToTopBtn.classList.add('show');
+        else backToTopBtn.classList.remove('show');
+      }, { passive: true });
     }
 
-    // 4. ✨ 雙語即時切換引擎 (修復刷新後按鈕語系同步)
-    function applyLanguage(targetLang) {
-      const label = (targetLang === 'en') ? '中文' : 'EN';
-      
-      const pcBtn = document.getElementById('langBtn');
-      const drawerBtn = document.getElementById('langBtnDrawer');
-      const topBtn = document.getElementById('langBtnTop');
-      if (pcBtn) pcBtn.textContent = label;
-      if (drawerBtn) drawerBtn.textContent = label;
-      if (topBtn) topBtn.textContent = label;
-
-      document.querySelectorAll('[data-en]').forEach(function(el) {
-        const text = (targetLang === 'en') ? el.getAttribute('data-en') : el.getAttribute('data-zh');
-        if (text !== null) {
-          const tabText = el.querySelector('.tab-text');
-          if (tabText) {
-            tabText.innerHTML = text;
-          } else {
-            el.innerHTML = text;
-          }
-        }
-      });
-      document.documentElement.lang = (targetLang === 'en') ? 'en-AU' : 'zh';
-    }
-
-    function switchLanguage() {
-      const nextLang = (document.documentElement.lang === 'zh') ? 'en' : 'zh';
-      applyLanguage(nextLang);
-    }
-
-    const pcLangBtn = document.getElementById('langBtn');
-    const drawerLangBtn = document.getElementById('langBtnDrawer');
-    const topLangBtn = document.getElementById('langBtnTop');
-    if (pcLangBtn) pcLangBtn.addEventListener('click', switchLanguage);
-    if (drawerLangBtn) drawerLangBtn.addEventListener('click', switchLanguage);
-    if (topLangBtn) topLangBtn.addEventListener('click', switchLanguage);
-
-    // 頁面載入時自動初始化正確語系 (預設為英文 en-AU)
-    (function initLanguage() {
-      const defaultLang = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
-      applyLanguage(defaultLang);
-    })();
-
-    // 5. 🎯 動態跳轉引擎 (廣告參數無損繼承)
+    // 跳轉引擎
     function getFinalTargetUrl(customUrl) {
-      const defaultRegisterUrl = "https://www.mate369.com/Register?p=JC";
+      const defaultRegisterUrl = "https://ae888uytin.com/";
       const targetBase = (customUrl && customUrl.trim() !== "") ? customUrl.trim() : defaultRegisterUrl;
-      
       const targetObj = new URL(targetBase, window.location.origin);
       const currentParams = new URLSearchParams(window.location.search);
   
       currentParams.forEach((val, key) => {
-        if (!targetObj.searchParams.has(key)) {
-          targetObj.searchParams.set(key, val);
-        }
+        if (!targetObj.searchParams.has(key)) targetObj.searchParams.set(key, val);
       });
 
       return targetObj.toString();
@@ -1147,7 +820,6 @@
       const target = e.target.closest('.track-outbound');
       if (!target) return;
       e.preventDefault();
-
       if (window.fbq) {
         try { fbq('track', 'ViewContent', { content_name: 'FAQ_Page_Outbound_Click' }); } catch (err) {}
       }
@@ -1158,34 +830,18 @@
       setTimeout(function() { window.location.href = destination; }, 150);
     });
 
-    // 6. ✨ 滑鼠跟隨光斑
+    // 滑鼠光斑
     (function() {
       const glow = document.getElementById('cursor-glow');
       if (window.matchMedia('(hover: none)').matches || !glow) return;
+
       document.addEventListener('mousemove', function(e) {
         glow.style.left = e.clientX + 'px';
         glow.style.top  = e.clientY + 'px';
       });
     })();
 
-    // 7. 滾動淡入
-    (function() {
-      if (!('IntersectionObserver' in window)) return;
-      const io = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.reveal').forEach(function(el) {
-        io.observe(el);
-      });
-    })();
-
-    // 8. 💬 懸浮社群氣泡點擊開關與全域點擊收合控制
+    // 懸浮社群氣泡開關
     (function() {
       const wrap = document.getElementById('socialBubbleWrap');
       const mainBtn = document.getElementById('socialMainBtn');
