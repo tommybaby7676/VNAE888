@@ -4,7 +4,6 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-  <!-- 像素追蹤 -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -22,34 +21,31 @@
     }
   </script>
 
-  <!-- SEO 標題與標籤 (已配置越南最高權重熱門關鍵字) -->
+  <!-- SEO 標題與標籤  -->
   <title>AE888 | Trang Chủ Đăng Ký & Đăng Nhập Đá Gà SV388 Uy Tín 2026</title>
   <meta name="description" content="AE888 - Nhà cái cá cược trực tuyến hàng đầu Châu Á. Trực tiếp đá gà Thomo CPC7, CPC9, casino online, thể thao SABA, nạp rút siêu tốc không bị chặn 2026.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   
   <link rel="icon" href="AElogo.ico" type="image/x-icon">
 
-  <!-- 字體引入 -->
+  <!-- 字體 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700;1,900&family=Noto+Sans+SC:wght@400;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* 🎨 AE888 官方專屬配色盤 (白底 + 旗艦紅 + 帝王金) */
-      --bg: #f8f9fa;                        /* 網頁主底色：柔和純淨淺灰白 */
-      --panel: rgba(255, 255, 255, 0.95);   /* 卡片背景：純白微透 */
-      --panel-solid: #ffffff;               /* 實心純白底 */
+      --bg: #f8f9fa;                        
+      --panel: rgba(255, 255, 255, 0.95);   
+      --panel-solid: #ffffff;               
 
-      --pink: #d91b24;                      /* AE888 品牌經典大紅 */
-      --purple: #b30f17;                    /* 深紅色 (漸層用) */
-      --magenta: #d91b24;                   /* 醒目正紅 */
-      --gold: #d4a017;                      /* 帝王金 (呼應 Logo 金色) */
-
-      --text: #1f2937;                      /* 主文字：深鐵灰黑 (清晰耐讀) */
-      --muted: #4b5563;                     /* 次要說明文字：質感中灰 */
-      --line: rgba(217, 27, 36, 0.15);      /* 邊框線：極淺紅金色微光線條 */
-
+      --pink: #d91b24;                      
+      --purple: #b30f17;                    
+      --magenta: #d91b24;                  
+      --gold: #d4a017;                     
+      --text: #1f2937;                      
+      --muted: #4b5563;                     
+      --line: rgba(217, 27, 36, 0.15);     
       --nav-height: 64px;
       --logo-height-pc: 40px;
       --logo-height-mobile: 30px;
@@ -70,13 +66,11 @@
       display: none !important;
     }
 
-    /* 2. 質感漸層遮罩：上方帶有極淡的紅金色高光，向下漸變回白底 */
     .bg-overlay {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background: radial-gradient(circle at 50% -10%, rgba(217, 27, 36, 0.06) 0%, rgba(212, 160, 23, 0.03) 45%, transparent 80%);
     }
 
-    /* 3. 科技網格線：淡紅金極淺網格 */
     .grid-bg {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background-image: 
@@ -85,13 +79,11 @@
       background-size: 36px 36px;
     }
 
-    /* 4. 質感細微掃描線 */
     .scan {
       position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.08;
       background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0 1px, transparent 1px 3px);
     }
 
-    /* 5. 滑鼠專屬光暈 */
     #cursor-glow {
       position: fixed; width: 420px; height: 420px; border-radius: 50%;
       pointer-events: none; z-index: 1;
@@ -129,7 +121,6 @@
       box-shadow: 0 0 14px rgba(217, 27, 36, 0.35) !important;
     }
 
-    /* 頂部漢堡按鈕：深色質感白底版 */
     .menu-toggle {
       display: none; 
       background: #ffffff; 
@@ -162,7 +153,7 @@
     }
 
     .mobile-actions { display: none; }
-    @media (max-width: 768px) {
+     @media (max-width: 768px) {
       .nav-links { display: none !important; }
       .mobile-actions { display: flex !important; align-items: center !important; gap: 10px !important; }
       .nav-in { padding: 0 14px !important; }
@@ -187,8 +178,6 @@
        font-size: 0.95rem;
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
-    
-    /* 次要按鈕：實心微白底 + 紅金細邊 */
     .btn-ghost {
       background: #ffffff !important; 
       color: var(--pink) !important;
@@ -208,8 +197,7 @@
       0%, 100% { transform: scale(1); box-shadow: 0 0 16px rgba(217, 27, 36, 0.35); }
       50% { transform: scale(1.03); box-shadow: 0 0 32px rgba(217, 27, 36, 0.7); }
     }
-
-    /* 🎠 核心：等比自相容輪播容器 */
+ 
     .carousel-container {
       position: relative;
       width: 100%;
@@ -303,7 +291,6 @@
     .stat .n { font-family: "Chakra Petch"; font-weight: 700; font-style: italic; font-size: 1.6rem; color: var(--gold); line-height: 1; }
     .stat .t { color: #4b5563; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-top: 4px; }
 
-    /* 🧭 快速導航（AE888 旗艦白金立體版） */
     .toc {
       max-width: 1020px; 
       margin: 22px auto 0; 
@@ -334,7 +321,6 @@
       background: var(--gold);
     }
     
-    /* 網格系統：設定等高對齊 */
     .toc-grid { 
       display: grid; 
       grid-template-columns: repeat(4, 1fr); 
@@ -354,7 +340,7 @@
       background: #ffffff; 
       border: 1px solid rgba(212, 160, 23, 0.28);
       padding: 10px 14px; 
-      min-height: 52px; /* 👈 強制統一高度，確保 100% 齊平 */
+      min-height: 52px; 
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.03);
       transition: all 0.22s ease;
@@ -387,7 +373,6 @@
     .sec-head { margin-bottom: 24px; max-width: 680px; }
     #about .sec-head { max-width: 960px; }
 
-    /* 遊戲卡槽 */
     .games { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .game {
       position: relative; border: 1px solid #e5e7eb; overflow: hidden;
@@ -493,12 +478,10 @@
     .back-to-top:hover { background: var(--pink); color: #ffffff; }
     .back-to-top svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2.5; }
 
-    /* 📱 手機端極致排版防擠壓修正 */
     @media (max-width: 768px) {
       .cta-row { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
       .cta-row .btn { width: 100% !important; padding: 11px 4px !important; font-size: 0.8rem !important; }
       
-      /* 📊 核心：修復 3 欄數據區擠壓斷行問題 */
       .stats {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
@@ -521,7 +504,6 @@
         overflow-wrap: normal !important;
       }
 
-      /* 📱 快速導航兩欄等高對齊 */
       .toc-grid { 
         grid-template-columns: repeat(2, 1fr) !important; 
         gap: 8px !important;
@@ -578,7 +560,7 @@
     </div>
   </nav>
 
-  <!-- 手機抽屜選單 -->
+  <!-- 手機選單 -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="./games/">Trò Chơi (Game Đại Sảnh)</a>
     <a href="./features/">Khuyến Mãi (Ưu Đãi Hot)</a>
@@ -593,21 +575,23 @@
       
       <div class="carousel-container" id="heroCarousel">
         <div class="carousel-track" id="carouselTrack">
-          <!-- Banner 1: 柬埔寨 Thomo 鬥雞專場 -->
+          <!-- Banner -->
           <div class="carousel-slide">
             <img src="A1.webp" alt="Trực Tiếp Đá Gà CPC7 và CPC9">
           </div>
-          <!-- Banner 2: 英超賽事體育盤口 -->
+          <!-- Banner -->
           <div class="carousel-slide">
             <img src="A2.webp" alt="Đại Chiến Ngoại Hạng Anh">
           </div>
-          <!-- Banner 3: USDT 虛擬幣充提出金特惠 -->
+          <!-- Banner -->
           <div class="carousel-slide">
             <img src="A3.webp" alt="Nạp Rút USDT Siêu Ưu Đãi">
           </div>
+          <!-- Banner -->
           <div class="carousel-slide">
             <img src="A4.webp" alt="Đại Chiến Ngoại Hạng Anh">
           </div>
+          
         </div>
         <div class="carousel-dots" id="carouselDots"></div>
       </div>
@@ -626,13 +610,13 @@
         Đăng ký AE888 nhận ngay khuyến mãi nạp đầu 100%. Trực tiếp đá gà Thomo CPC7, CPC9 độc quyền, sảnh cá cược thể thao SABA, casino Sexy Gaming và nạp rút 2 phút an toàn tuyệt đối.
       </p>
 
-      <!-- 首屏 CTA 按鈕 -->
+      <!-- 首屏 CTA -->
       <div class="cta-row">
         <a class="btn btn-primary track-outbound" href="javascript:void(0);">NHẬN THƯỞNG 100K ›</a>
         <a class="btn btn-ghost" href="./features/">XEM KHUYẾN MÃI</a>
       </div>
 
-      <!-- 跑馬燈 -->
+      <!-- 跑馬 -->
       <div class="marquee-container">
         <div class="marquee-inner">
           <div class="marquee-group">
@@ -646,7 +630,6 @@
         </div>
       </div>
 
-      <!-- 數據統計列 (已修復手機端文字長度與斷行) -->
       <div class="stats">
         <div class="stat">
           <div class="n">SV388</div>
@@ -662,7 +645,7 @@
         </div>
       </div>
 
-      <!-- 快速導航 (已升級：100% 等高齊平、金紅旗艦版) -->
+      <!-- 快速導航 -->
       <div class="toc">
         <div class="toc-title">ĐIỀU HƯỚNG NHANH</div>
         <div class="toc-grid">
@@ -731,7 +714,7 @@
           </div>
         </a>
 
-        <!-- 5. 捕魚換現金 -->
+        
         <a class="game track-outbound" data-href="https://www.ae888.com/promotions/b4ff6e11-cab3-48a1-994b-e11f9873491b" href="javascript:void(0);">
           <div class="cover">
             <img src="B5.webp" alt="Bắn Cá Đổi Thưởng">
@@ -742,7 +725,7 @@
           </div>
         </a>
 
-        <!-- 6. 樂透彩票 -->
+      
         <a class="game track-outbound" data-href="https://www.ae888.com/promotions/13b5a0eb-79da-4104-b980-fec6166c9031" href="javascript:void(0);">
           <div class="cover">
             <img src="B6.webp" alt="Xổ Số Lô Đề Online">
@@ -798,7 +781,6 @@
     </div>
   </section>
 
-  <!-- 營運指標表 -->
   <section id="info">
     <div class="wrap">
       <div class="sec-head">
@@ -827,7 +809,7 @@
     </div>
   </section>
 
-  <!-- SEO （核心吃詞區） -->
+  <!-- SEO  -->
   <section id="about">
     <div class="wrap">
       <div class="sec-head">
@@ -856,7 +838,7 @@
     </div>
   </section>
 
-  <!-- 常見問答 (FAQ) -->
+  <!-- (FAQ) -->
   <section id="faq">
     <div class="wrap">
       <div class="sec-head">
@@ -885,7 +867,7 @@
     </div>
   </section>
 
-  <!-- 底部轉化區 -->
+  <!-- 底部轉化 -->
   <section id="final">
     <div class="wrap">
       <div class="final-cta">
@@ -904,7 +886,7 @@
     <svg viewBox="0 0 24 24"><path d="M18 15 L12 9 L6 15"/><path d="M12 9 L12 21"/></svg>
   </button>
 
-  <!-- 官方頁尾 -->
+  <!-- 頁尾 -->
   <footer>
     <div class="wrap">
       <div class="f-links">
