@@ -23,8 +23,8 @@
   </script>
 
   <!-- SEO 標題與標籤 -->
-  <title>AE888 | Trung Tâm Hỗ Trợ &amp; Hướng Dẫn Thao Tác Chi Tiết 2026</title>
-  <meta name="description" content="Trung tâm hỗ trợ chính thức AE888: Hướng dẫn đăng ký tài khoản, nạp tiền, rút tiền, liên kết ngân hàng qua hình ảnh trực quan chi tiết từng bước.">
+  <title>AE888 | Hướng Dẫn Thao Tác &amp; Trung Tâm Trợ Giúp Hình Ảnh 2026</title>
+  <meta name="description" content="Trung tâm trợ giúp AE888: Hướng dẫn đăng ký, nạp tiền ngân hàng, MoMo, USDT, nạp thẻ cào, liên kết tài khoản ngân hàng và rút tiền với hình ảnh trực quan từng bước.">
   <meta name="robots" content="index,follow,max-image-preview:large">
 
   <link rel="icon" href="../AElogo.ico" type="image/x-icon">
@@ -36,6 +36,7 @@
 
   <style>
     :root {
+      /* 🎨 AE888 官方專屬白底旗艦色盤 */
       --bg: #f8f9fa;                        
       --panel: rgba(255, 255, 255, 0.95);   
       --panel-solid: #ffffff;               
@@ -95,6 +96,7 @@
 
     .wrap { position: relative; z-index: 3; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
+    /* 📌 導航欄 */
     nav {
       position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height);
       z-index: 999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
@@ -191,7 +193,7 @@
     }
     .sub { max-width: 760px; margin: 10px auto 0; color: #4b5563; font-size: 0.98rem; font-weight: 500; line-height: 1.55; }
 
-    /* 🏷️ 分類選單膠囊 */
+    /* 🏷️ 分類膠囊選單 */
     .cat-tabs {
       display: flex; justify-content: center; gap: 10px; margin: 24px 0 32px; flex-wrap: wrap;
     }
@@ -206,19 +208,17 @@
       border-color: var(--pink); color: #ffffff; box-shadow: 0 4px 14px rgba(217, 27, 36, 0.25);
     }
 
-    /* 📂 手風琴折疊容器 (Accordion) */
+    /* 📂 手風琴折疊容器 */
     .faq-container { display: flex; flex-direction: column; gap: 14px; margin-bottom: 50px; }
-    .faq-group { display: flex; flex-direction: column; gap: 12px; }
-    
     .faq-card {
       background: var(--panel-solid);
       border: 1px solid #e5e7eb;
-      border-radius: 6px;
+      border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      transition: border-color 0.2s;
+      transition: all 0.2s ease;
     }
-    .faq-card:hover { border-color: rgba(217, 27, 36, 0.4); }
+    .faq-card:hover { border-color: rgba(217, 27, 36, 0.35); }
 
     .faq-header {
       padding: 16px 20px;
@@ -257,7 +257,7 @@
     }
     .faq-card.active .faq-arrow { transform: rotate(180deg); }
 
-    /* 折疊展開內容 */
+    /* 折疊展開內部 */
     .faq-body {
       display: none;
       padding: 18px 20px;
@@ -267,7 +267,41 @@
     .faq-card.active .faq-body { display: block; animation: accordionDown 0.25s ease; }
     @keyframes accordionDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* 🖼️ 教學長圖容器 (不裁切、完全展開、等比縮放) */
+    /* 📱 💻 裝置分頁切換按鈕組 */
+    .device-switcher {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 10px;
+    }
+    .dev-tab {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      color: #4b5563;
+      font-family: "Chakra Petch";
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .dev-tab:hover { border-color: var(--pink); color: var(--pink); }
+    .dev-tab.active {
+      background: var(--pink);
+      border-color: var(--pink);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(217, 27, 36, 0.25);
+    }
+
+    .dev-view { display: none; }
+    .dev-view.active { display: block; }
+
+    /* 🖼️ 教學長圖容器 (自適應等比縮放、不切邊、柔和白底) */
     .guide-img-wrap {
       width: 100%;
       margin: 10px auto;
@@ -285,7 +319,7 @@
       object-fit: contain;
     }
 
-    /* 🏛️ 牌照機構與合作大廠信任跑馬燈 */
+    /* 🏛️ 牌照機構跑馬燈 */
     .trust-section {
       background: #ffffff;
       border: 1px solid #e5e7eb;
@@ -496,11 +530,11 @@
       </h1>
 
       <p class="sub">
-        Lựa chọn chuyên mục bên dưới và bấm vào thao tác bạn cần hỗ trợ để xem ảnh chụp màn hình hướng dẫn chi tiết (hỗ trợ cả phiên bản Điện Thoại và Máy Tính).
+        Lựa chọn chuyên mục bên dưới và bấm vào thao tác để xem ảnh chụp màn hình chi tiết. Tùy chọn chuyển đổi nhanh giữa giao diện <strong>Điện Thoại</strong> hoặc <strong>Máy Tính</strong>.
       </p>
     </header>
 
-    <!-- 🏷️ 分類切換膠囊 (對應你的 4 個資料夾) -->
+    <!-- 🏷️ 分類切換膠囊 (對應 4 大核心流程) -->
     <div class="cat-tabs">
       <button class="cat-btn active" onclick="switchCategory('all', this)">Tất Cả Thao Tác</button>
       <button class="cat-btn" onclick="switchCategory('register', this)">Đăng Ký Tài Khoản</button>
@@ -509,7 +543,7 @@
       <button class="cat-btn" onclick="switchCategory('bank', this)">Liên Kết Ngân Hàng</button>
     </div>
 
-    <!-- 📂 手風琴折疊區域 (點擊展開操作說明長圖) -->
+    <!-- 📂 手風琴折疊區域 -->
     <div class="faq-container" id="faqContainer">
 
       <!-- ================= 1. 建立帳戶 (Đăng Ký) ================= -->
@@ -517,94 +551,187 @@
         <div class="faq-header" onclick="toggleAccordion(this)">
           <div class="faq-title-wrap">
             <span class="faq-icon-tag">Đăng Ký</span>
-            <h3 class="faq-title">1. Hướng dẫn đăng ký tài khoản trên Điện Thoại (Mobile)</h3>
+            <h3 class="faq-title">1. Hướng dẫn đăng ký tài khoản AE888 chính chủ</h3>
           </div>
           <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
         <div class="faq-body">
-          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
-            Thao tác đăng ký tài khoản chính chủ qua giao diện di động. Vui lòng chuẩn bị số điện thoại và điền đúng họ tên thật để thuận tiện cho việc rút tiền sau này:
-          </p>
-          <div class="guide-img-wrap">
-            <!-- 🖼️ 讀取你下載的說明圖 (範例 10001.jpg 手機版) -->
-            <img class="guide-img" src="./10001.jpg" alt="Hướng dẫn đăng ký tài khoản AE888 trên điện thoại">
+          <div class="device-switcher">
+            <button class="dev-tab active" onclick="switchDevice(this, 'reg-mobile')">📱 Phiên Bản Điện Thoại</button>
+            <button class="dev-tab" onclick="switchDevice(this, 'reg-pc')">💻 Phiên Bản Máy Tính</button>
           </div>
-        </div>
-      </div>
-
-      <div class="faq-card" data-cat="register">
-        <div class="faq-header" onclick="toggleAccordion(this)">
-          <div class="faq-title-wrap">
-            <span class="faq-icon-tag">Đăng Ký</span>
-            <h3 class="faq-title">2. Hướng dẫn đăng ký tài khoản trên Máy Tính (PC / Laptop)</h3>
+          <div class="dev-view reg-mobile active">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./register/register1.webp" alt="Đăng ký tài khoản trên điện thoại">
+            </div>
           </div>
-          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </div>
-        <div class="faq-body">
-          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
-            Thao tác đăng ký tài khoản chi tiết trên trình duyệt máy tính. Điền đầy đủ tên đăng nhập, mật khẩu và xác nhận điều khoản:
-          </p>
-          <div class="guide-img-wrap">
-            <!-- 🖼️ 讀取你下載的說明圖 (範例 10002.jpg 電腦版) -->
-            <img class="guide-img" src="./10002.jpg" alt="Hướng dẫn đăng ký tài khoản AE888 trên máy tính">
+          <div class="dev-view reg-pc">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./register/register2.webp" alt="Đăng ký tài khoản trên máy tính">
+            </div>
           </div>
         </div>
       </div>
 
       <!-- ================= 2. 存款說明 (Nạp Tiền) ================= -->
+      <!-- 2.1 本地銀行轉帳 -->
       <div class="faq-card" data-cat="deposit">
         <div class="faq-header" onclick="toggleAccordion(this)">
           <div class="faq-title-wrap">
             <span class="faq-icon-tag">Nạp Tiền</span>
-            <h3 class="faq-title">3. Hướng dẫn nạp tiền chuyển khoản ngân hàng 24/7</h3>
+            <h3 class="faq-title">2. Nạp tiền chuyển khoản Ngân Hàng Địa Phương 24/7</h3>
           </div>
           <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
         <div class="faq-body">
-          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
-            Các bước lấy thông tin số tài khoản ngân hàng đại diện và điền mã nội dung chuyển khoản để điểm cược tự động cập nhật trong 1 phút:
-          </p>
-          <div class="guide-img-wrap">
-            <!-- 替換為你「存款說明」資料夾內的圖檔，例如 ./deposit-bank.jpg -->
-            <img class="guide-img" src="./deposit-bank.jpg" alt="Hướng dẫn nạp tiền qua ngân hàng AE888" onerror="this.src='./10002.jpg'">
+          <div class="device-switcher">
+            <button class="dev-tab active" onclick="switchDevice(this, 'dep-bank-mobile')">📱 Phiên Bản Điện Thoại</button>
+            <button class="dev-tab" onclick="switchDevice(this, 'dep-bank-pc')">💻 Phiên Bản Máy Tính</button>
+          </div>
+          <div class="dev-view dep-bank-mobile active">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit7.webp" alt="Nạp ngân hàng trên điện thoại">
+            </div>
+          </div>
+          <div class="dev-view dep-bank-pc">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit1.webp" alt="Nạp ngân hàng trên máy tính">
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- 2.2 MoMo Pay -->
       <div class="faq-card" data-cat="deposit">
         <div class="faq-header" onclick="toggleAccordion(this)">
           <div class="faq-title-wrap">
             <span class="faq-icon-tag">Nạp Tiền</span>
-            <h3 class="faq-title">4. Hướng dẫn nạp tiền qua Ví Điện Tử MoMo &amp; Quét Mã QR</h3>
+            <h3 class="faq-title">3. Nạp tiền qua Ví Điện Tử MoMo Pay</h3>
           </div>
           <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
         <div class="faq-body">
-          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
-            Quét mã QR MoMo hoặc ViettelPay siêu tốc, lưu ý luôn nhập đúng mã giao dịch đính kèm:
-          </p>
-          <div class="guide-img-wrap">
-            <!-- 替換為你的圖檔，例如 ./deposit-momo.jpg -->
-            <img class="guide-img" src="./deposit-momo.jpg" alt="Hướng dẫn nạp tiền MoMo AE888" onerror="this.src='./10001.jpg'">
+          <div class="device-switcher">
+            <button class="dev-tab active" onclick="switchDevice(this, 'dep-momo-mobile')">📱 Phiên Bản Điện Thoại</button>
+            <button class="dev-tab" onclick="switchDevice(this, 'dep-momo-pc')">💻 Phiên Bản Máy Tính</button>
+          </div>
+          <div class="dev-view dep-momo-mobile active">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit8.webp" alt="Nạp MoMo trên điện thoại">
+            </div>
+          </div>
+          <div class="dev-view dep-momo-pc">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit2.webp" alt="Nạp MoMo trên máy tính">
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- 2.3 VietQR Napas -->
       <div class="faq-card" data-cat="deposit">
         <div class="faq-header" onclick="toggleAccordion(this)">
           <div class="faq-title-wrap">
             <span class="faq-icon-tag">Nạp Tiền</span>
-            <h3 class="faq-title">5. Hướng dẫn nạp tiền bằng Tiền Ảo USDT (TRC20) Ẩn Danh</h3>
+            <h3 class="faq-title">4. Nạp tiền quét mã QR Ngân Hàng (VietQR Pay)</h3>
           </div>
           <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
         <div class="faq-body">
-          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
-            Chuyển USDT từ ví Binance, OKX vào địa chỉ ví sàn. Nhận thêm ưu đãi 3% nạp mỗi ngày:
-          </p>
-          <div class="guide-img-wrap">
-            <!-- 替換為你的圖檔，例如 ./deposit-usdt.jpg -->
-            <img class="guide-img" src="./deposit-usdt.jpg" alt="Hướng dẫn nạp USDT AE888" onerror="this.src='./10002.jpg'">
+          <div class="device-switcher">
+            <button class="dev-tab active" onclick="switchDevice(this, 'dep-qr-mobile')">📱 Phiên Bản Điện Thoại</button>
+            <button class="dev-tab" onclick="switchDevice(this, 'dep-qr-pc')">💻 Phiên Bản Máy Tính</button>
+          </div>
+          <div class="dev-view dep-qr-mobile active">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit12.webp" alt="Thanh toán QR trên điện thoại">
+            </div>
+          </div>
+          <div class="dev-view dep-qr-pc">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit5.webp" alt="Thanh toán QR trên máy tính">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2.4 Viettel Pay -->
+      <div class="faq-card" data-cat="deposit">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Nạp Tiền</span>
+            <h3 class="faq-title">5. Nạp tiền qua Viettel Money (Viettel Pay)</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <div class="device-switcher">
+            <button class="dev-tab active" onclick="switchDevice(this, 'dep-vtp-mobile')">📱 Phiên Bản Điện Thoại</button>
+            <button class="dev-tab" onclick="switchDevice(this, 'dep-vtp-pc')">💻 Phiên Bản Máy Tính</button>
+          </div>
+          <div class="dev-view dep-vtp-mobile active">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit10.webp" alt="Nạp Viettel Pay trên điện thoại">
+            </div>
+          </div>
+          <div class="dev-view dep-vtp-pc">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit6.webp" alt="Nạp Viettel Pay trên máy tính">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2.5 Nạp Thẻ Cào -->
+      <div class="faq-card" data-cat="deposit">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Nạp Tiền</span>
+            <h3 class="faq-title">6. Nạp tiền ẩn danh bằng Thẻ Cào Điện Thoại</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <div class="device-switcher">
+            <button class="dev-tab active" onclick="switchDevice(this, 'dep-card-mobile')">📱 Phiên Bản Điện Thoại</button>
+            <button class="dev-tab" onclick="switchDevice(this, 'dep-card-pc')">💻 Phiên Bản Máy Tính</button>
+          </div>
+          <div class="dev-view dep-card-mobile active">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit9.webp" alt="Nạp thẻ cào trên điện thoại">
+            </div>
+          </div>
+          <div class="dev-view dep-card-pc">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit4.webp" alt="Nạp thẻ cào trên máy tính">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2.6 Nạp Tiền USDT -->
+      <div class="faq-card" data-cat="deposit">
+        <div class="faq-header" onclick="toggleAccordion(this)">
+          <div class="faq-title-wrap">
+            <span class="faq-icon-tag">Nạp Tiền</span>
+            <h3 class="faq-title">7. Nạp tiền Tiền Ảo USDT (TRC20) Ẩn Danh</h3>
+          </div>
+          <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-body">
+          <div class="device-switcher">
+            <button class="dev-tab active" onclick="switchDevice(this, 'dep-usdt-mobile')">📱 Phiên Bản Điện Thoại</button>
+            <button class="dev-tab" onclick="switchDevice(this, 'dep-usdt-pc')">💻 Phiên Bản Máy Tính</button>
+          </div>
+          <div class="dev-view dep-usdt-mobile active">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit11.webp" alt="Nạp USDT trên điện thoại">
+            </div>
+          </div>
+          <div class="dev-view dep-usdt-pc">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./deposit/deposit3.webp" alt="Nạp USDT trên máy tính">
+            </div>
           </div>
         </div>
       </div>
@@ -614,17 +741,16 @@
         <div class="faq-header" onclick="toggleAccordion(this)">
           <div class="faq-title-wrap">
             <span class="faq-icon-tag">Rút Tiền</span>
-            <h3 class="faq-title">6. Hướng dẫn tạo lệnh rút tiền về tài khoản ngân hàng</h3>
+            <h3 class="faq-title">8. Hướng dẫn tạo lệnh rút tiền về tài khoản ngân hàng</h3>
           </div>
           <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
         <div class="faq-body">
-          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
-            Thao tác nhập số điểm cần rút và xác nhận mật khẩu rút tiền. Hệ thống xử lý tự động trong vòng 2-5 phút:
+          <p style="margin-bottom:12px; color:#4b5563; font-size:0.92rem;">
+            Quy trình tạo lệnh rút tiền về tài khoản ngân hàng đã liên kết. Hệ thống duyệt tự động trong 2-5 phút:
           </p>
           <div class="guide-img-wrap">
-            <!-- 替換為你「提款說明」資料夾內的圖檔，例如 ./withdraw.jpg -->
-            <img class="guide-img" src="./withdraw.jpg" alt="Hướng dẫn rút tiền AE888" onerror="this.src='./10002.jpg'">
+            <img class="guide-img" src="./withdraw/withdraw1.webp" alt="Hướng dẫn rút tiền AE888">
           </div>
         </div>
       </div>
@@ -634,24 +760,31 @@
         <div class="faq-header" onclick="toggleAccordion(this)">
           <div class="faq-title-wrap">
             <span class="faq-icon-tag">Ngân Hàng</span>
-            <h3 class="faq-title">7. Hướng dẫn thêm và liên kết tài khoản ngân hàng chính chủ</h3>
+            <h3 class="faq-title">9. Hướng dẫn liên kết và thêm tài khoản ngân hàng chính chủ</h3>
           </div>
           <svg class="faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
         <div class="faq-body">
-          <p style="margin-bottom:10px; color:#4b5563; font-size:0.92rem;">
-            Quy trình thêm thẻ ngân hàng rút tiền lần đầu. Tên chủ thẻ bắt buộc phải trùng khớp với họ tên đã đăng ký:
-          </p>
-          <div class="guide-img-wrap">
-            <!-- 替換為你「銀行帳戶關聯指南」資料夾內的圖檔，例如 ./link-bank.jpg -->
-            <img class="guide-img" src="./link-bank.jpg" alt="Hướng dẫn liên kết ngân hàng AE888" onerror="this.src='./10001.jpg'">
+          <div class="device-switcher">
+            <button class="dev-tab active" onclick="switchDevice(this, 'bank-mobile')">📱 Phiên Bản Điện Thoại</button>
+            <button class="dev-tab" onclick="switchDevice(this, 'bank-pc')">💻 Phiên Bản Máy Tính</button>
+          </div>
+          <div class="dev-view bank-mobile active">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./bank/bank2.webp" alt="Liên kết ngân hàng trên điện thoại">
+            </div>
+          </div>
+          <div class="dev-view bank-pc">
+            <div class="guide-img-wrap">
+              <img class="guide-img" src="./bank/bank1.webp" alt="Liên kết ngân hàng trên máy tính">
+            </div>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- 🏛️ 國際牌照機構與頂級遊戲大廠信任跑馬燈 -->
+    <!-- 🏛️ 國際牌照機構與合作大廠跑馬燈 -->
     <div class="trust-section">
       <div class="trust-title">CHỨNG NHẬN QUỐC TẾ &amp; ĐỐI TÁC CHÍNH THỨC</div>
       <div class="marquee-wrapper">
@@ -659,7 +792,7 @@
           <span>PAGCOR LICENSED <i>◆</i></span>
           <span>ISLE OF MAN GSC <i>◆</i></span>
           <span>BMM TESTLABS <i>◆</i></span>
-          <span>SV388 OFFICIAL <i>◆</i></span>
+          <span>SV388 THOMO <i>◆</i></span>
           <span>PG SOFT SLOTS <i>◆</i></span>
           <span>PRAGMATIC PLAY <i>◆</i></span>
           <span>SABA SPORTS <i>◆</i></span>
@@ -670,7 +803,7 @@
           <span>PAGCOR LICENSED <i>◆</i></span>
           <span>ISLE OF MAN GSC <i>◆</i></span>
           <span>BMM TESTLABS <i>◆</i></span>
-          <span>SV388 OFFICIAL <i>◆</i></span>
+          <span>SV388 THOMO <i>◆</i></span>
           <span>PG SOFT SLOTS <i>◆</i></span>
           <span>PRAGMATIC PLAY <i>◆</i></span>
           <span>SABA SPORTS <i>◆</i></span>
@@ -684,7 +817,7 @@
     <div class="final-cta">
       <h2>BẠN CẦN HỖ TRỢ TRỰC TIẾP?<br><em>CSKH 24/7 SẴN SÀNG GIÚP ĐỠ</em></h2>
       <p>
-        Nếu gặp bất kỳ khó khăn nào trong quá trình nạp rút hoặc đặt cược, vui lòng liên hệ ngay với đội ngũ chuyên viên tư vấn trực tuyến để được hỗ trợ tức thì.
+        Nếu gặp bất kỳ khó khăn nào trong quá trình nạp rút hoặc đặt cược, vui lòng liên hệ ngay với đội ngũ CSKH trực tuyến của chúng tôi.
       </p>
       <a class="btn btn-primary track-outbound" data-href="" href="javascript:void(0);">
         KẾT NỐI CSKH TRỰC TUYẾN 24/7 ›
@@ -692,7 +825,7 @@
     </div>
   </main>
 
-  <!-- 🚀 回到頂端火箭按鈕 (外層放置，純原生平滑滾動) -->
+  <!-- 🚀 回到頂端火箭按鈕 (純原生平滑滾動) -->
   <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top" title="Back to Top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.documentElement.scrollTop=0; document.body.scrollTop=0;">
     <svg viewBox="0 0 24 24"><path d="M18 15 L12 9 L6 15"/><path d="M12 9 L12 21"/></svg>
   </button>
@@ -758,13 +891,24 @@
   </div>
 
   <script>
-    // 📂 手風琴折疊點擊切換邏輯
+    // 📂 手風琴折疊展開
     function toggleAccordion(header) {
       const card = header.closest('.faq-card');
       card.classList.toggle('active');
     }
 
-    // 🏷️️ 分類膠囊即時過濾
+    // 📱 💻 裝置分頁切換
+    function switchDevice(btn, targetClass) {
+      const parent = btn.closest('.faq-body');
+      parent.querySelectorAll('.dev-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      parent.querySelectorAll('.dev-view').forEach(v => v.classList.remove('active'));
+      const activeView = parent.querySelector('.' + targetClass);
+      if (activeView) activeView.classList.add('active');
+    }
+
+    // 🏷 分類膠囊過濾
     function switchCategory(cat, btn) {
       document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
